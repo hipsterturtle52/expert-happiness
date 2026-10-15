@@ -154,7 +154,7 @@ label.f{display:inline-flex;flex-direction:column;gap:.2rem;margin:.3rem 1rem .3
  <a class="brand" href="#/">CLEP Sociology</a>
  <span class="spacer"></span>
  <a id="examBanner" href="#/exam"></a>
- <button id="themeBtn" class="iconbtn" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+ <button id="themeBtn" class="iconbtn" aria-label="Toggle dark mode" title="Toggle dark mode">Dark</button>
 </header>
 <div class="layout">
  <nav id="nav" aria-label="Sections"></nav>
@@ -2483,10 +2483,10 @@ visual:`<svg viewBox="0 0 540 250" role="img" aria-label="Demographic transition
 <rect x="160" y="20" width="240" height="180" fill="var(--accent-soft)"/>
 <line x1="160" y1="20" x2="160" y2="200" stroke="var(--line)"/><line x1="280" y1="20" x2="280" y2="200" stroke="var(--line)"/><line x1="400" y1="20" x2="400" y2="200" stroke="var(--line)"/>
 <path d="M40,45 L280,47 C320,60 360,140 400,152 L520,154" fill="none" stroke="var(--accent)" stroke-width="3"/>
-<path d="M40,52 Q70,40 100,55 T160,52 C200,75 240,130 280,145 L400,162 L520,160" fill="none" stroke="var(--bad)" stroke-width="3" stroke-dasharray="7 5"/>
+<path d="M40,56 Q70,48 100,60 T160,54 C200,75 240,130 280,145 L400,162 L520,160" fill="none" stroke="var(--bad)" stroke-width="3" stroke-dasharray="7 5"/>
 <text x="100" y="218" text-anchor="middle" fill="currentColor">Stage 1</text><text x="220" y="218" text-anchor="middle" fill="currentColor">Stage 2</text><text x="340" y="218" text-anchor="middle" fill="currentColor">Stage 3</text><text x="460" y="218" text-anchor="middle" fill="currentColor">Stage 4</text>
 <text x="100" y="232" text-anchor="middle" fill="currentColor" font-size="10">high B, high D</text><text x="220" y="232" text-anchor="middle" fill="currentColor" font-size="10">high B, falling D</text><text x="340" y="232" text-anchor="middle" fill="currentColor" font-size="10">falling B, low D</text><text x="460" y="232" text-anchor="middle" fill="currentColor" font-size="10">low B, low D</text>
-<text x="280" y="100" text-anchor="middle" fill="currentColor" font-weight="700">rapid growth</text>
+<text x="225" y="80" text-anchor="middle" fill="currentColor" font-weight="700">rapid growth</text><text x="340" y="120" text-anchor="middle" fill="currentColor" font-size="10">growth slows</text>
 <text x="18" y="110" transform="rotate(-90 18 110)" text-anchor="middle" fill="currentColor">rate per 1,000</text>
 <line x1="300" y1="242" x2="325" y2="242" stroke="var(--accent)" stroke-width="3"/><text x="330" y="246" fill="currentColor">birth rate</text>
 <line x1="400" y1="242" x2="425" y2="242" stroke="var(--bad)" stroke-width="3" stroke-dasharray="7 5"/><text x="430" y="246" fill="currentColor">death rate</text>
@@ -2650,6 +2650,447 @@ Q("u12","q","H","If a country's total fertility rate stays well below about 2.1 
 <!--@@UNITS@@-->
 
 <!-- ============ DIAGNOSTIC + PRACTICE EXAM QUESTION BANK ============ -->
+<script>
+/* ---------- U1 History & theory: diagnostic (3), exam 1 (10), exam 2 (10) ---------- */
+Q("u1","d","E","In Karl Marx's analysis of capitalism, the class that owns the factories, land, and machinery is the",
+["bourgeoisie","proletariat","petty bureaucracy","lumpen class","power elite"],
+["Marx called the owners of the means of production the bourgeoisie.",
+"The proletariat are workers who own no means of production and sell their labor.",
+"“Petty bureaucracy” is not one of Marx's two main classes.",
+"Marx used “lumpenproletariat” for the very bottom of society, not owners.",
+"The power elite is C. Wright Mills's term for top U.S. leaders."]);
+Q("u1","d","M","A sociologist explains that a nation's prisons persist because they protect the public, deter crime, and provide jobs in rural towns. This explanation reflects which perspective?",
+["Structural functionalism","Conflict theory","Symbolic interactionism","Ethnomethodology","Social exchange theory"],
+["Explaining an institution by the functions it serves for society is structural functionalism.",
+"Conflict theory would ask whose interests prisons serve and stress inequality.",
+"Symbolic interactionism would focus on meanings and labels in interaction.",
+"Ethnomethodology studies the hidden rules of everyday interaction.",
+"Exchange theory explains individual choices by costs and rewards."]);
+Q("u1","d","H","After a sudden stock market crash wipes out their savings and the rules that guided their lives, some investors take their own lives. Durkheim would classify these as",
+["anomic suicides","altruistic suicides","fatalistic suicides","egoistic suicides","ritual suicides"],
+["Anomic suicide results from too little regulation when sudden change leaves norms unclear.",
+"Altruistic suicide results from excessive integration, as when people die for their group.",
+"Fatalistic suicide results from excessive regulation, as among prisoners.",
+"Egoistic suicide results from weak integration into groups, not sudden normlessness.",
+"Ritual suicide is not one of Durkheim's four types."]);
+Q("u1","a","E","Which thinker coined the phrase “survival of the fittest” and applied evolutionary ideas to society?",
+["Herbert Spencer","Auguste Comte","Max Weber","George Herbert Mead","W.E.B. Du Bois"],
+["Spencer coined the phrase and his ideas became the basis of social Darwinism.",
+"Comte coined “sociology” and promoted positivism.",
+"Weber studied rationalization and bureaucracy.",
+"Mead studied the development of the self.",
+"Du Bois studied race and coined double consciousness."]);
+Q("u1","a","M","Durkheim argued that sociologists should study <i>social facts</i>. By this he meant",
+["patterns such as laws, customs, and rates that exist outside individuals and constrain their behavior","the private feelings and motives of individuals","biological traits shared by members of a group","facts gathered only through participant observation","the subjective meanings people attach to their actions"],
+["Social facts are external to individuals and exert constraint on them, such as norms and suicide rates.",
+"Durkheim insisted social facts are not reducible to individual psychology.",
+"He explicitly rejected biological explanations of social patterns.",
+"Social facts can be studied with many methods; Durkheim himself used official statistics.",
+"Subjective meanings are Weber's focus (verstehen)."]);
+Q("u1","a","M","Max Weber worried that modern life was becoming an “iron cage” in which efficiency, calculation, and rules crowd out tradition and emotion. He called this process",
+["rationalization","alienation","anomie","positivism","mechanical solidarity"],
+["Rationalization is the spread of efficiency, calculation, and rule-based organization.",
+"Alienation is Marx's term for workers' separation from their labor.",
+"Anomie is Durkheim's term for normlessness.",
+"Positivism is Comte's scientific approach to studying society.",
+"Mechanical solidarity is unity through sameness in traditional societies."]);
+Q("u1","a","E","Who translated Auguste Comte's work into English and is often called the first woman sociologist?",
+["Harriet Martineau","Jane Addams","Margaret Mead","Betty Friedan","Carol Gilligan"],
+["Martineau translated Comte in 1853 and wrote <i>Society in America</i>.",
+"Addams founded Hull House in Chicago.",
+"Mead was an anthropologist who studied gender in New Guinea.",
+"Friedan wrote <i>The Feminine Mystique</i> in 1963.",
+"Gilligan studied gender differences in moral reasoning."]);
+Q("u1","a","M","A student deliberately tries to bargain over the price of a candy bar at a supermarket checkout to see how the cashier and other shoppers react. This technique comes from",
+["ethnomethodology","structural functionalism","conflict theory","positivism","social Darwinism"],
+["Garfinkel's ethnomethodology uses “breaching experiments” to expose taken-for-granted rules.",
+"Functionalism studies how social structures maintain stability.",
+"Conflict theory studies inequality and power struggles.",
+"Positivism is a general philosophy of scientific method.",
+"Social Darwinism is a discredited theory that inequality reflects fitness."]);
+Q("u1","a","H","An assembly-line worker attaches the same part thousands of times a day, never sees the finished product, and feels the work has no connection to who he is. Marx would describe this condition as",
+["alienation","anomie","false consciousness","rationalization","altruism"],
+["Marx's alienation is separation from the product, the process, and one's human potential.",
+"Anomie is normlessness in society (Durkheim), not estrangement from work.",
+"False consciousness is accepting beliefs that hide one's class interests.",
+"Rationalization is Weber's broader term for efficiency and rules spreading through society.",
+"Altruism concerns sacrifice for others, unrelated to the worker's experience."]);
+Q("u1","a","M","Which research question is the best example of <b>micro-level</b> analysis?",
+["How do strangers decide who speaks first in an elevator?","How does globalization affect national unemployment rates?","Why do some nations have higher birth rates than others?","How does the capitalist economy shape the political system?","How does the class structure change during industrialization?"],
+["Face-to-face interaction between individuals is micro-level analysis.",
+"Global economic forces and national rates are macro-level.",
+"Comparing nations' birth rates is macro-level.",
+"Relations between the economy and politics are macro-level.",
+"Change in class structure is macro-level."]);
+Q("u1","a","M","Highways built to speed travel also divide neighborhoods and increase air pollution for nearby residents. Robert Merton would call these harmful effects",
+["dysfunctions","manifest functions","latent functions","social facts","ideal types"],
+["Dysfunctions are consequences that undermine social stability or well-being.",
+"Manifest functions are intended purposes, such as faster travel.",
+"Latent functions are unintended consequences that are beneficial; these effects are harmful.",
+"Social facts are external patterns that constrain behavior, a broader concept.",
+"Ideal types are Weber's analytical models."]);
+Q("u1","a","H","Weber's <i>The Protestant Ethic and the Spirit of Capitalism</i> challenged which idea?",
+["That economic conditions alone determine a society's ideas and beliefs","That religion can influence economic behavior","That bureaucracy is the most efficient form of organization","That sociology should understand action from the actor's viewpoint","That social facts constrain individuals"],
+["Weber showed that religious ideas helped shape capitalism, challenging Marx's economic determinism.",
+"Weber argued that religion does influence economic behavior; he did not challenge this.",
+"Weber himself argued bureaucracy is highly efficient.",
+"Verstehen was Weber's own principle.",
+"This is Durkheim's idea, which the Protestant ethic thesis did not address."]);
+Q("u1","a","E","Jane Addams is best known for",
+["co-founding Hull House, a Chicago settlement house serving immigrants","coining the term sociology","writing <i>The Communist Manifesto</i>","developing the concept of the looking-glass self","founding the first sociology department in France"],
+["Addams co-founded Hull House in 1889 and won the Nobel Peace Prize in 1931.",
+"Comte coined the term sociology.",
+"Marx and Engels wrote <i>The Communist Manifesto</i>.",
+"Cooley developed the looking-glass self.",
+"Durkheim established sociology at the University of Bordeaux."]);
+Q("u1","b","E","W.E.B. Du Bois's <i>The Philadelphia Negro</i> (1899) is significant because it",
+["was an early empirical community study of Black Americans in a U.S. city","introduced the theory of social Darwinism","translated Comte's work into English","proposed the law of three stages","described the iron law of oligarchy"],
+["Du Bois combined surveys, interviews, and records to study Philadelphia's Black community.",
+"Social Darwinism is associated with Spencer.",
+"Martineau translated Comte.",
+"The law of three stages is Comte's.",
+"The iron law of oligarchy is Michels's."]);
+Q("u1","b","M","A soldier throws himself on a grenade to save the members of his unit. Durkheim would classify this as",
+["altruistic suicide","egoistic suicide","anomic suicide","fatalistic suicide","deviant suicide"],
+["Altruistic suicide results from very strong integration — sacrificing oneself for the group.",
+"Egoistic suicide results from weak integration and isolation.",
+"Anomic suicide results from weak regulation during sudden change.",
+"Fatalistic suicide results from oppressive over-regulation.",
+"“Deviant suicide” is not one of Durkheim's types."]);
+Q("u1","b","M","A theorist explains that people stay in friendships and marriages as long as the rewards they receive outweigh the costs. This reflects",
+["social exchange theory","conflict theory","dramaturgy","structural functionalism","positivism"],
+["Exchange theory (Homans, Blau) sees relationships as weighing costs and rewards.",
+"Conflict theory focuses on group struggles over scarce resources.",
+"Dramaturgy focuses on impression management.",
+"Functionalism explains social structures by their contributions to stability.",
+"Positivism is a philosophy of scientific method, not a theory of relationships."]);
+Q("u1","b","H","Lewis Coser, a conflict theorist, argued that conflict with an outside group can",
+["increase solidarity and unity within a group","always lead to the collapse of society","only occur in capitalist economies","be explained entirely by individual psychology","eliminate inequality between classes"],
+["Coser identified functions of conflict, such as strengthening in-group cohesion against an outside enemy.",
+"Coser argued conflict can be functional, not always destructive.",
+"He did not limit conflict to capitalism.",
+"He analyzed conflict as a social process, not individual psychology.",
+"He did not claim conflict eliminates inequality."]);
+Q("u1","b","E","Sociology first emerged in nineteenth-century Europe mainly as a response to",
+["the social upheaval caused by industrialization, urbanization, and political revolution","the invention of the computer","the end of World War II","the rise of television","the decline of cities"],
+["Early sociologists sought to explain the dramatic changes brought by the Industrial and French Revolutions.",
+"Computers came more than a century later.",
+"Sociology was established long before World War II.",
+"Television arrived in the twentieth century.",
+"Cities were growing rapidly, not declining."]);
+Q("u1","b","M","Weber's <i>ideal type</i> is best described as",
+["an abstract model that highlights a phenomenon's essential features for comparison","a description of the morally best form of society","the average of all real cases","a type of research subject chosen at random","a set of values the researcher hopes to promote"],
+["An ideal type is a deliberately exaggerated analytical model used as a yardstick, as in his model of bureaucracy.",
+"“Ideal” means pure or conceptual, not morally best.",
+"It is not a statistical average of real cases.",
+"It is a concept, not a sampling procedure.",
+"Weber advocated value-free research, not promoting values through types."]);
+Q("u1","b","M","Which is the most common criticism of structural functionalism?",
+["It has difficulty explaining conflict and social change and tends to justify the status quo.","It ignores large-scale social structures.","It focuses too heavily on inequality and power.","It relies only on qualitative methods.","It denies that institutions have any functions."],
+["Critics argue functionalism overemphasizes stability and consensus.",
+"Ignoring large structures is a criticism of symbolic interactionism.",
+"Overemphasizing inequality is a criticism of conflict theory.",
+"Functionalism is not tied to qualitative methods.",
+"Functionalism is defined by its focus on institutions' functions."]);
+Q("u1","b","H","According to Durkheim, modern industrial societies are held together mainly by",
+["interdependence among people who perform specialized tasks","shared beliefs among people doing similar work","the coercive power of the state","common kinship ties","religious uniformity"],
+["Organic solidarity arises from the division of labor: specialists depend on one another.",
+"Shared beliefs among similar people describe mechanical solidarity in traditional societies.",
+"Durkheim did not see force as the main basis of modern unity.",
+"Kinship ties are central in traditional societies.",
+"Religious uniformity is characteristic of mechanical solidarity."]);
+Q("u1","b","M","Factory workers come to recognize that they share common interests against their employers and organize a union to fight for them. Marx would say they have developed",
+["class consciousness","false consciousness","alienation","anomie","double consciousness"],
+["Class consciousness is workers' recognition of their shared exploitation and interests.",
+"False consciousness is the opposite — accepting beliefs that serve the ruling class.",
+"Alienation describes estrangement from work, not collective awareness.",
+"Anomie is normlessness.",
+"Double consciousness is Du Bois's concept about racial identity."]);
+Q("u1","b","E","Which university is usually credited with establishing the first department of sociology in the United States, in 1892?",
+["The University of Chicago","Harvard University","The University of Bordeaux","Oxford University","Stanford University"],
+["The University of Chicago's department, led by Albion Small, is usually credited as first and gave rise to the Chicago School.",
+"Harvard's department came decades later; Talcott Parsons later made it influential.",
+"Bordeaux, in France, is associated with Durkheim, not the United States.",
+"Oxford is in England, not the United States.",
+"Stanford is not credited with the first U.S. department."]);
+
+/* ---------- U2 Research methods: diagnostic (3), exam 1 (10), exam 2 (10) ---------- */
+Q("u2","d","E","As the number of hours people spend commuting increases, the number of hours they sleep tends to decrease. This is an example of",
+["a negative correlation","a positive correlation","a spurious correlation","no correlation","a causal law"],
+["When one variable rises as the other falls, the correlation is negative (inverse).",
+"A positive correlation means both variables move in the same direction.",
+"Spurious means a third variable explains both; nothing indicates that here.",
+"The variables clearly change together.",
+"A correlation alone does not establish a causal law."]);
+Q("u2","d","M","A researcher divides a university's students by class year and then randomly selects students from each year in proportion to its size. This is a",
+["stratified random sample","convenience sample","snowball sample","quota sample with volunteers","case study"],
+["Dividing a population into subgroups and randomly sampling each in proportion is stratified random sampling.",
+"A convenience sample uses whoever is easily available.",
+"A snowball sample asks subjects to recruit others.",
+"Volunteers are self-selected, not randomly drawn.",
+"A case study examines one case in depth."]);
+Q("u2","d","H","<table><tr><th></th><th>Population</th><th>Robberies last year</th></tr><tr><th>City A</th><td>2,000,000</td><td>400</td></tr><tr><th>City B</th><td>200,000</td><td>100</td></tr></table><p>Based on the table, which statement is correct?</p>",
+["City B has the higher robbery rate even though it had fewer robberies.","City A has the higher robbery rate because it had more robberies.","The two cities have the same robbery rate.","City A's robbery rate is 400 per 100,000 people.","City B's robbery rate is 10 per 100,000 people."],
+["City A: 400 ÷ 2,000,000 = 20 per 100,000. City B: 100 ÷ 200,000 = 50 per 100,000. B's rate is higher.",
+"Raw counts ignore population size; A's rate (20 per 100,000) is lower.",
+"The rates are 20 and 50 per 100,000, not equal.",
+"400 is the number of robberies; the rate is 20 per 100,000.",
+"City B's rate is 50 per 100,000."]);
+Q("u2","a","E","A testable statement predicting a relationship between two variables is a",
+["hypothesis","theory","concept","sample","paradigm"],
+["A hypothesis states an expected relationship that research can test.",
+"A theory is a broader explanation linking many facts.",
+"A concept is an abstract idea, such as social class.",
+"A sample is the subset of people studied.",
+"A paradigm is a broad theoretical framework."]);
+Q("u2","a","M","In an experiment testing whether a training video reduces prejudice, one group watches the video and another group watches an unrelated video. The second group is the",
+["control group","experimental group","dependent variable","population","reference group"],
+["The control group is not exposed to the independent variable and serves as a baseline.",
+"The experimental group is the one that sees the training video.",
+"The dependent variable is the measured outcome (prejudice).",
+"The population is everyone the study is meant to describe.",
+"A reference group is a standard for self-evaluation, not a research term here."]);
+Q("u2","a","M","A survey item asks: “How satisfied are you with your job? (a) very satisfied (b) somewhat satisfied (c) not satisfied.” This is a",
+["closed-ended question","open-ended question","leading question","double-barreled question","projective test"],
+["Fixed response choices make it a closed-ended question, easy to tabulate.",
+"An open-ended question would let respondents answer in their own words.",
+"A leading question pushes respondents toward an answer; this one is neutral.",
+"A double-barreled question asks two things at once; this asks one.",
+"A projective test asks for interpretations of ambiguous images."]);
+Q("u2","a","E","An in-depth study of a single person, group, or event, such as one religious commune, is called a",
+["case study","random survey","laboratory experiment","cross-sectional survey","meta-analysis"],
+["A case study examines one case in great depth.",
+"A random survey gathers data from many people.",
+"A laboratory experiment manipulates variables in controlled conditions.",
+"A cross-sectional survey collects data from many people at one time.",
+"A meta-analysis statistically combines results of many studies."]);
+Q("u2","a","M","A researcher knows which respondent gave each answer but promises never to reveal anyone's identity. The researcher is protecting respondents'",
+["confidentiality","anonymity","informed consent","random assignment","validity"],
+["Confidentiality means the researcher knows identities but will not disclose them.",
+"Anonymity means even the researcher cannot link answers to individuals.",
+"Informed consent concerns agreeing to participate after learning the risks.",
+"Random assignment places subjects into experimental and control groups.",
+"Validity concerns accuracy of measurement."]);
+Q("u2","a","H","A study finds that teenagers who play violent video games are more aggressive. Which additional information is needed before concluding that the games cause aggression?",
+["Evidence that game playing came before the increase in aggression","Evidence that the correlation is strong","Evidence that the sample was large","Evidence that both variables were measured reliably","Evidence that the study was published"],
+["Causation requires time order: the cause must precede the effect. Aggressive teens might simply choose violent games.",
+"A strong correlation still does not establish which variable came first.",
+"Sample size improves precision but not causal direction.",
+"Reliable measurement does not establish time order or rule out third variables.",
+"Publication status says nothing about causation."]);
+Q("u2","a","M","A researcher studies homelessness by combining a city-wide survey, in-depth interviews with shelter residents, and analysis of police records. Using several methods to cross-check findings is called",
+["triangulation","replication","operationalization","stratification","content analysis"],
+["Triangulation uses multiple methods or data sources to confirm findings.",
+"Replication means repeating a study to see if results hold.",
+"Operationalization means defining how a concept will be measured.",
+"Stratification here would refer to sampling subgroups, not combining methods.",
+"Content analysis is a single method of coding documents."]);
+Q("u2","a","M","Laud Humphreys's study <i>Tearoom Trade</i> is often cited in discussions of research ethics because he",
+["observed and later identified subjects without their informed consent","fabricated his data","used only official crime statistics","paid subjects to commit crimes","refused to publish his findings"],
+["Humphreys secretly observed men and traced them through license plates to interview them under false pretenses.",
+"His data were not fabricated; the controversy was deception and lack of consent.",
+"He used participant observation and interviews, not only statistics.",
+"He did not pay subjects to commit crimes.",
+"He did publish his findings in 1970."]);
+Q("u2","a","H","<p>Percentage of adults who support a new public transit tax, by education:</p><table><tr><th>High school or less</th><th>Some college</th><th>Bachelor's degree or more</th></tr><tr><td>40%</td><td>52%</td><td>65%</td></tr></table><p>Which conclusion is best supported by the table?</p>",
+["Support for the tax is positively associated with education.","Earning a college degree causes people to support the tax.","Most adults with a high school education or less support the tax.","Sixty-five percent of all adults support the tax.","Support for the tax and education are negatively correlated."],
+["Support rises steadily as education rises — a positive association.",
+"The table shows association only; other factors such as income could explain it.",
+"Only 40% of that group supports the tax, which is not a majority.",
+"65% applies only to college graduates, not all adults.",
+"Support increases with education, so the correlation is positive."]);
+Q("u2","a","E","Research that relies mainly on words, observations, and interpretation of meanings rather than on numbers is called",
+["qualitative research","quantitative research","experimental research","secondary analysis","survey research"],
+["Qualitative research analyzes non-numerical data such as interviews and field notes.",
+"Quantitative research analyzes numerical data.",
+"Experiments typically produce quantitative data on cause and effect.",
+"Secondary analysis uses existing data, often numerical.",
+"Survey research usually produces quantitative data."]);
+Q("u2","b","E","A researcher hypothesizes that living in a high-crime neighborhood increases residents' fear of walking alone at night. The independent variable is",
+["living in a high-crime neighborhood","fear of walking alone at night","the time of night","the residents' age","the research hypothesis"],
+["Neighborhood crime level is the presumed cause.",
+"Fear is the presumed effect, the dependent variable.",
+"Time of night is part of the measurement, not the cause being tested.",
+"Age is not the variable being tested.",
+"The hypothesis is the whole statement, not a variable."]);
+Q("u2","b","M","To study undocumented workers, a researcher interviews a few workers and asks each to introduce her to others they know. This sampling method is",
+["snowball sampling","random sampling","stratified random sampling","systematic sampling","census enumeration"],
+["Snowball sampling uses referrals from participants, useful for hidden populations.",
+"Random sampling would require a list of the whole population, which does not exist here.",
+"Stratified sampling also requires a sampling frame.",
+"Systematic sampling selects every nth name from a list.",
+"A census counts the entire population."]);
+Q("u2","b","M","A survey collects data on the attitudes of people of all ages at one point in time. This design is",
+["cross-sectional","longitudinal","experimental","ethnographic","a panel study"],
+["A one-time snapshot of a population is cross-sectional.",
+"Longitudinal designs follow the same subjects over time.",
+"No variable is manipulated.",
+"Ethnography involves fieldwork in a group's daily life.",
+"A panel study re-surveys the same people repeatedly, which is longitudinal."]);
+Q("u2","b","H","A nineteenth-century scientist measured intelligence by the size of people's skulls. Even though the measurements were consistent, the measure was flawed because it lacked",
+["validity","reliability","replicability","a control group","a hypothesis"],
+["Skull size does not actually measure intelligence, so the measure is not valid.",
+"Consistent measurements mean it was reliable.",
+"The problem is what is measured, not whether others can repeat it.",
+"A control group is part of experimental design, not measurement accuracy.",
+"The researcher clearly had a hypothesis."]);
+Q("u2","b","E","In the set of values 2, 3, 3, 3, 5, 8, the mode is",
+["3","4","3.5","8","6"],
+["The mode is the most frequent value, and 3 appears three times.",
+"4 is the mean (24 ÷ 6), not the mode.",
+"3.5 is not the mode; the median is 3 (average of 3 and 3).",
+"8 is the largest value.",
+"6 is the number of values, not the mode."]);
+Q("u2","b","M","Other researchers repeat a well-known study using the same methods with a new sample and get similar results. This process is called",
+["replication","triangulation","operationalization","generalization","verstehen"],
+["Repeating a study to check whether results hold is replication.",
+"Triangulation combines different methods in one study.",
+"Operationalization specifies how to measure a concept.",
+"Generalization applies findings from a sample to a population.",
+"Verstehen is Weber's interpretive understanding."]);
+Q("u2","b","M","In a face-to-face survey, many respondents overreport how often they vote and underreport how much they drink. This problem is known as",
+["social desirability bias","the Hawthorne effect","spurious correlation","sampling error","cultural relativism"],
+["Respondents give answers that make them look good — social desirability bias.",
+"The Hawthorne effect is a change in behavior from being observed, not misreporting.",
+"Spurious correlation involves a third variable.",
+"Sampling error arises from studying a sample rather than the whole population.",
+"Cultural relativism is a stance toward other cultures."]);
+Q("u2","b","H","Which sequence best describes the standard steps of the research process?",
+["Define the problem, review the literature, form a hypothesis, collect data, analyze results, draw conclusions","Collect data, form a hypothesis, review the literature, define the problem, draw conclusions","Draw conclusions, collect data, define the problem, analyze results","Form a hypothesis, draw conclusions, review the literature, collect data","Analyze results, define the problem, collect data, review the literature"],
+["Researchers define a problem, learn what is known, state a hypothesis, then gather and analyze data before concluding.",
+"Data collection should follow, not precede, defining the problem and hypothesis.",
+"Conclusions come last, after analysis.",
+"Conclusions cannot come before data collection.",
+"Results cannot be analyzed before data exist."]);
+Q("u2","b","M","Archaeology-style studies of household garbage to learn how much alcohol people really drink are an example of",
+["unobtrusive measures","participant observation","structured interviews","laboratory experiments","self-administered questionnaires"],
+["Studying physical traces without contacting people is an unobtrusive measure; subjects cannot alter their behavior.",
+"Participant observation requires joining the group.",
+"Interviews ask people directly.",
+"Laboratory experiments manipulate variables.",
+"Questionnaires ask people to report their behavior."]);
+Q("u2","b","E","A television station invites viewers to vote online about a new law, and 80% oppose it. The main problem with concluding that 80% of the public opposes the law is that",
+["the respondents are a self-selected, nonrandom sample","the question was open-ended","the results were not reliable","the sample was too large","online data cannot be quantified"],
+["Viewers who choose to respond are not representative of the whole public.",
+"A yes/no vote is closed-ended, and that is not the main problem.",
+"The poll could give consistent results and still be unrepresentative.",
+"Large size does not fix a biased, self-selected sample.",
+"Online votes are easily counted."]);
+
+/* ---------- U3 Culture & socialization: diagnostic (2), exam 1 (7), exam 2 (7) ---------- */
+Q("u3","d","E","Which is an example of <b>nonmaterial</b> culture?",
+["A belief that hard work leads to success","A smartphone","A church building","A pair of running shoes","A highway"],
+["Beliefs and values are nonmaterial (symbolic) culture.",
+"A smartphone is a physical object — material culture.",
+"Buildings are material culture.",
+"Clothing is material culture.",
+"Roads are material culture."]);
+Q("u3","d","M","According to Freud, the part of the personality that represents internalized cultural rules and acts as a conscience is the",
+["superego","id","ego","generalized other","looking-glass self"],
+["The superego is the internalized voice of society's rules.",
+"The id consists of biological drives seeking pleasure.",
+"The ego balances the id and superego against reality.",
+"The generalized other is Mead's concept, not Freud's.",
+"The looking-glass self is Cooley's concept."]);
+Q("u3","a","E","Wearing a swimsuit to a formal business meeting would most likely violate a",
+["folkway","more","taboo","law","value"],
+["Dress customs are folkways; violators seem odd but are not considered immoral.",
+"Mores carry strong moral weight, as with theft.",
+"Taboos are extreme prohibitions such as incest.",
+"No law requires business attire.",
+"A value is a broad ideal, not a specific rule of behavior."]);
+Q("u3","a","M","An anthropologist studying a society that arranges marriages tries to understand how the practice supports family alliances and economic security there, rather than judging it by Western ideals of romantic love. She is practicing",
+["cultural relativism","ethnocentrism","xenocentrism","cultural lag","assimilation"],
+["Cultural relativism means interpreting practices within their own cultural context.",
+"Ethnocentrism would mean judging the practice by her own culture's standards.",
+"Xenocentrism means believing another culture is superior.",
+"Cultural lag concerns norms lagging behind technology.",
+"Assimilation means adopting a dominant culture."]);
+Q("u3","a","M","Harry Harlow's experiments with infant rhesus monkeys showed that",
+["social contact and comfort are essential for normal development","food is the only need infants have","monkeys raised alone develop normally","intelligence is inherited","language develops without interaction"],
+["Isolated monkeys developed severe problems, and infants preferred a soft cloth “mother” over a wire one with milk.",
+"Infants chose comfort over food, contradicting this claim.",
+"Isolated monkeys became fearful and socially impaired.",
+"The studies concerned social contact, not inherited intelligence.",
+"Monkeys do not develop language; the study was about attachment."]);
+Q("u3","a","H","A woman breaks an unjust law by sitting in a segregated restaurant, explaining that universal principles of human dignity outweigh the law. In Kohlberg's terms, she is reasoning at the",
+["postconventional level","preconventional level","conventional level","concrete operational stage","play stage"],
+["Postconventional reasoning appeals to abstract ethical principles beyond society's rules.",
+"Preconventional reasoning focuses on avoiding punishment and gaining rewards.",
+"Conventional reasoning centers on obeying society's rules and laws.",
+"Concrete operational is one of Piaget's cognitive stages.",
+"The play stage is one of Mead's stages of self-development."]);
+Q("u3","a","E","Skateboarders who share their own slang, style, and norms while still accepting most mainstream values form a",
+["subculture","counterculture","dominant culture","total institution","cultural universal"],
+["A subculture has distinctive features but does not reject mainstream values.",
+"A counterculture actively rejects mainstream values.",
+"The dominant culture is the most powerful culture in society.",
+"A total institution controls every aspect of residents' lives.",
+"Cultural universals are found in every society."]);
+Q("u3","a","M","Yoga, originally from India, has become a common exercise practice in the United States. This spread of a cultural trait from one society to another is",
+["diffusion","invention","discovery","cultural lag","resocialization"],
+["Diffusion is the spread of cultural traits between societies.",
+"Invention creates something new from existing elements.",
+"Discovery is finding something that already exists.",
+"Cultural lag is nonmaterial culture lagging behind technology.",
+"Resocialization is replacing old norms with new ones."]);
+Q("u3","a","M","George Herbert Mead divided the self into two parts. The “me” refers to",
+["the socialized self that sees itself as others do","the spontaneous, creative, acting self","biological drives seeking pleasure","the part that mediates between drives and reality","an internalized sense of guilt"],
+["The “me” is the self as an object, shaped by internalized attitudes of others.",
+"The spontaneous, acting self is the “I.”",
+"Biological drives are Freud's id.",
+"Mediating between drives and reality is Freud's ego.",
+"Guilt as conscience fits Freud's superego, not Mead's “me.”"]);
+Q("u3","b","E","An exchange student arriving in a new country feels disoriented and anxious because the customs, food, and language are unfamiliar. She is experiencing",
+["culture shock","cultural lag","ethnocentrism","cultural diffusion","a counterculture"],
+["Culture shock is the disorientation people feel in an unfamiliar culture.",
+"Cultural lag concerns nonmaterial culture lagging behind technology.",
+"Ethnocentrism is judging the new culture as inferior; she is describing discomfort, not judgment.",
+"Diffusion is the spread of traits between cultures.",
+"A counterculture is a group rejecting mainstream values."]);
+Q("u3","b","M","Americans say they value equal opportunity, yet children from wealthy families have far better chances of attending top colleges. This gap illustrates the difference between",
+["ideal culture and real culture","material and nonmaterial culture","folkways and mores","subcultures and countercultures","ethnocentrism and cultural relativism"],
+["Ideal culture is what people claim to value; real culture is what actually happens.",
+"Material culture is objects; this concerns values versus practice.",
+"Folkways and mores are types of norms by moral weight.",
+"Subcultures and countercultures are kinds of groups within a society.",
+"Ethnocentrism and relativism are ways of viewing other cultures."]);
+Q("u3","b","M","A child understands that a tall, thin glass and a short, wide glass can hold the same amount of water and can reason logically about concrete objects, but cannot yet think about abstract ideas. Piaget would place the child in the",
+["concrete operational stage","sensorimotor stage","preoperational stage","formal operational stage","game stage"],
+["Concrete operational children (about 7–11) grasp conservation and logic about concrete events.",
+"Sensorimotor infants learn through senses and movement.",
+"Preoperational children typically fail conservation tasks.",
+"Formal operational thinkers can reason abstractly.",
+"The game stage belongs to Mead's theory of the self."]);
+Q("u3","b","H","Carol Gilligan criticized Kohlberg's theory of moral development on the grounds that",
+["it was based mainly on male subjects and undervalued a care-and-responsibility approach to morality","it ignored the role of the id and superego","it applied only to adults over age sixty","it relied on animal experiments","it claimed morality was entirely genetic"],
+["Gilligan argued Kohlberg's mostly male samples led him to rank justice-based reasoning above care-based reasoning.",
+"Id and superego are Freud's concepts and were not her critique.",
+"Kohlberg studied children and adolescents.",
+"Kohlberg used interviews about moral dilemmas, not animal studies.",
+"Kohlberg's theory is developmental, not genetic."]);
+Q("u3","b","E","A coworker's approving smile when you hold the door for someone is an example of",
+["a positive informal sanction","a negative formal sanction","a positive formal sanction","a negative informal sanction","a taboo"],
+["A smile is an informal reward for following a norm.",
+"A negative formal sanction would be an official penalty, such as a fine.",
+"A positive formal sanction would be an official reward, such as an award.",
+"A negative informal sanction would be a frown or ridicule.",
+"A taboo is a powerful prohibition, not a reaction."]);
+Q("u3","b","M","Students learn to raise their hands, wait their turn, arrive on time, and obey authority, although none of this is part of the official lesson plan. Sociologists call this",
+["the hidden curriculum","anticipatory socialization","the generalized other","cultural relativism","the looking-glass self"],
+["The hidden curriculum is the unofficial lessons of conformity taught in school.",
+"Anticipatory socialization is learning a future role.",
+"The generalized other is Mead's term for society's general expectations.",
+"Cultural relativism is a way of viewing other cultures.",
+"The looking-glass self concerns self-image."]);
+Q("u3","b","M","George Murdock's finding that every known society has some form of family, funeral rites, and language identifies",
+["cultural universals","cultural relativism","countercultures","cultural lag","xenocentrism"],
+["Cultural universals are practices found in all societies, though their forms vary.",
+"Cultural relativism is a stance for studying cultures.",
+"Countercultures reject mainstream values.",
+"Cultural lag concerns uneven cultural change.",
+"Xenocentrism is preferring another culture."]);
+</script>
 <!--@@QUESTIONS@@-->
 
 <!-- ============ CHEAT SHEET ============ -->
@@ -2708,7 +3149,7 @@ function us(id){return S.units[id]||(S.units[id]={read:false,best:null,last:null
 function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2200);}
 
 /* ---------- theme ---------- */
-function applyTheme(){const dark=S.theme?S.theme==='dark':(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dark?'dark':'light';}
+function applyTheme(){const dark=S.theme?S.theme==='dark':(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dark?'dark':'light';const b=document.getElementById('themeBtn');if(b)b.textContent=dark?'Light':'Dark';}
 applyTheme();
 $('#themeBtn').onclick=()=>{S.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';save();applyTheme();};
 $('#menuBtn').onclick=()=>document.body.classList.toggle('navopen');
@@ -2735,6 +3176,8 @@ function hoursLeft(){
  const mist=Object.values(S.mistakes).filter(x=>x.streak<2).length;m+=mist*1.5;
  ['a','b'].forEach(k=>{const e=lastExam(k);if(!e)m+=150;else if(e.score<75)m+=60;});
  if(!S.cheatDone)m+=45;
+ // spaced-repetition reviews still to come: ~15 s per remaining Leitner promotion
+ m+=CARDS.reduce((a,c)=>a+(5-(S.cards[c.id]?S.cards[c.id].box:0))*0.25,0);
  return Math.max(0,m/60);
 }
 function readiness(){
