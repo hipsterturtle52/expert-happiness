@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CLEP Introductory Sociology Study Guide</title>
+<title>CLEP Sociology Study Guide</title>
 <meta name="description" content="Self-paced, offline study guide for the CLEP Introductory Sociology exam: lessons, quizzes, flashcards, practice exams.">
 <style>
 :root{--bg:#f8f7f4;--panel:#fff;--ink:#1c2127;--muted:#5b646e;--line:#e2dfd8;--soft:#f1efea;--accent:#2b5b87;--accent-ink:#fff;--accent-soft:#e7eef6;--ok:#1d7446;--okbg:#e5f3ea;--bad:#b0261c;--badbg:#fbe8e6;--warn:#7d5300;--warnbg:#fff3d6;--chip:#eceff3;--shadow:0 1px 2px rgba(0,0,0,.05);color-scheme:light}
@@ -133,6 +133,10 @@ label.f{display:inline-flex;flex-direction:column;gap:.2rem;margin:.3rem 1rem .3
 .cheat p{margin:.15rem 0}
 body.examing nav#nav,body.examing #menuBtn{display:none!important}
 body.examing main#view{margin:0 auto}
+.modal{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.45);display:grid;place-items:center;padding:1rem}
+.modalbox{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;max-width:26rem;width:100%}
+.modalbox p{margin:0 0 .6rem}
+body.framed .printonly{display:none!important}
 .toast{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:.5rem 1rem;border-radius:9px;font-size:.9rem;z-index:50}
 @media print{
  .top,nav#nav,.noprint{display:none!important}
@@ -4426,10 +4430,22 @@ function load(){try{const raw=localStorage.getItem(KEY);if(raw){const o=JSON.par
 let S=load();
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));storageOK=true;}catch(e){storageOK=false;}}
 function us(id){return S.units[id]||(S.units[id]={read:false,best:null,last:null,attempts:0});}
+const FRAMED=(()=>{try{return window.self!==window.top;}catch(e){return true;}})();
+function askConfirm(msg,okLabel,onOk){
+ const prevKeys=keyHandler,w=document.createElement('div');w.className='modal';
+ w.innerHTML='<div class="modalbox" role="dialog" aria-modal="true"><p>'+esc(msg)+'</p><div class="ractions"><button class="btn primary" id="mOk">'+esc(okLabel)+'</button><button class="btn" id="mNo">Cancel</button></div></div>';
+ document.body.appendChild(w);
+ const close=()=>{w.remove();keyHandler=prevKeys;};
+ w.querySelector('#mNo').onclick=close;
+ w.querySelector('#mOk').onclick=()=>{close();onOk();};
+ keyHandler=e=>{if(e.key==='Escape')close();else if(e.key==='Enter'){e.preventDefault();close();onOk();}};
+ w.querySelector('#mOk').focus();
+}
 function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2200);}
 
 /* ---------- theme ---------- */
 function applyTheme(){const dark=S.theme?S.theme==='dark':(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dark?'dark':'light';const b=document.getElementById('themeBtn');if(b)b.textContent=dark?'Light':'Dark';}
+if(FRAMED)document.body.classList.add('framed');
 applyTheme();
 $('#themeBtn').onclick=()=>{S.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';save();applyTheme();};
 $('#menuBtn').onclick=()=>document.body.classList.toggle('navopen');
@@ -4703,7 +4719,7 @@ function examRun(k){
  }
  function pick(j){L.ans[qs[L.cur].id]=j;save();$$('.opt').forEach((b,x)=>b.classList.toggle('sel',x===j));}
  function go(j){if(j<0||j>=qs.length)return;L.cur=j;save();draw();}
- function submitAsk(){const un=qs.length-Object.keys(L.ans).length;if(confirm('Submit '+EXAMS[k]+'?'+(un?' '+un+' question(s) unanswered.':'')+' You cannot change answers afterward.')){if(viewTimer){clearInterval(viewTimer);viewTimer=null;}keyHandler=null;submitExam(k,false);document.body.classList.remove('examing');viewExamResult(k);drawNav();}}
+ function submitAsk(){const un=qs.length-Object.keys(L.ans).length;askConfirm('Submit '+EXAMS[k]+'?'+(un?' '+un+' question(s) unanswered.':'')+' You cannot change answers afterward.','Submit exam',()=>{if(viewTimer){clearInterval(viewTimer);viewTimer=null;}keyHandler=null;submitExam(k,false);document.body.classList.remove('examing');viewExamResult(k);drawNav();});}
  keyHandler=e=>{const x=e.key.toLowerCase();if(/^[1-5]$/.test(x))pick(+x-1);else if(/^[a-e]$/.test(x))pick(LETTERS.toLowerCase().indexOf(x));else if(x==='enter'){e.preventDefault();L.cur<qs.length-1?go(L.cur+1):submitAsk();}else if(x==='arrowleft')go(L.cur-1);else if(x==='arrowright')go(L.cur+1);else if(x==='f'){L.flag[qs[L.cur].id]=!L.flag[qs[L.cur].id];save();draw();}};
  viewTimer=setInterval(()=>{if(!S.exams[k].live){clearInterval(viewTimer);viewTimer=null;return;}const t=timeLeft(k),el=$('#tm');if(el){el.textContent=fmt(t);el.classList.toggle('low',t<5*60000);}if(t<=0){clearInterval(viewTimer);viewTimer=null;keyHandler=null;submitExam(k,true);document.body.classList.remove('examing');viewExamResult(k);drawNav();toast('Time is up — exam submitted.');}},500);
  draw();
@@ -4734,7 +4750,7 @@ function viewExamResult(k){
 
 /* ---------- cheat sheet ---------- */
 function viewCheat(){
- V().innerHTML='<div class="noprint" style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;justify-content:space-between"><p class="muted" style="margin:0">One page. Print it, then practice redrawing each box from memory.</p><span><button class="btn primary" id="pr">Print (1 page)</button><button class="btn" id="cd">'+(S.cheatDone?'✓ Redrawn from memory':'Mark: redrawn from memory')+'</button></span></div><h1>Introductory Sociology — Cheat Sheet</h1><div class="cheat">'+$('#tpl-cheat').innerHTML+'</div>';
+ V().innerHTML='<div class="noprint" style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;justify-content:space-between"><p class="muted" style="margin:0">'+(FRAMED?'Read it, then practice redrawing each box from memory. To print it on one page, open the HTML file itself in your browser.':'One page. Print it, then practice redrawing each box from memory.')+'</p><span><button class="btn primary printonly" id="pr">Print (1 page)</button><button class="btn" id="cd">'+(S.cheatDone?'✓ Redrawn from memory':'Mark: redrawn from memory')+'</button></span></div><h1>Introductory Sociology — Cheat Sheet</h1><div class="cheat">'+$('#tpl-cheat').innerHTML+'</div>';
  $('#pr').onclick=()=>{document.body.classList.add('printcheat');window.print();setTimeout(()=>document.body.classList.remove('printcheat'),500);};
  $('#cd').onclick=()=>{S.cheatDone=!S.cheatDone;save();viewCheat();};
 }
@@ -4780,7 +4796,7 @@ function makePlan(hpd,examStr){
 function viewPlan(){
  const p=S.plan||{hpd:1.5,date:ymd(new Date(Date.now()+21*DAY))};
  V().innerHTML='<h1>Study plan</h1><p class="muted">Enter your daily hours and exam date. The plan follows the unit order, gives “Skim” units (from the diagnostic) about 40% less time, schedules flashcard review every day, and puts the two practice exams in the last 1–2 days before your exam. It updates as you complete work — regenerate any time.</p>'+
- '<div class="card noprint"><label class="f">Hours per day<input type="number" id="hp" min="0.5" max="10" step="0.25" value="'+p.hpd+'"></label><label class="f">Exam date<input type="date" id="dt" value="'+p.date+'"></label><button class="btn primary" id="mk">Generate plan</button><button class="btn" id="pp">Print</button><p class="small muted">Estimated work remaining: ~'+hoursLeft().toFixed(1)+' hours.</p></div><div id="out"></div>';
+ '<div class="card noprint"><label class="f">Hours per day<input type="number" id="hp" min="0.5" max="10" step="0.25" value="'+p.hpd+'"></label><label class="f">Exam date<input type="date" id="dt" value="'+p.date+'"></label><button class="btn primary" id="mk">Generate plan</button><button class="btn printonly" id="pp">Print</button><p class="small muted">Estimated work remaining: ~'+hoursLeft().toFixed(1)+' hours.</p></div><div id="out"></div>';
  function gen(){
   const hpd=Math.max(0.5,parseFloat($('#hp').value)||1.5),date=$('#dt').value;S.plan={hpd,date};save();
   const r=makePlan(hpd,date);if(r.err){$('#out').innerHTML='<p class="chip bad">'+r.err+'</p>';return;}
@@ -4808,7 +4824,7 @@ function viewAbout(){
  '<h2>Notes</h2><p class="small muted">All lessons, questions, and flashcards were written originally for this guide; none are copied from College Board or commercial prep materials. CLEP and College Board are trademarks of the College Board, which does not endorse this guide.</p>';
  $('#ex').onclick=()=>{const txt=JSON.stringify(S);try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:'application/json'}));a.download='clep-sociology-progress-'+ymd(new Date())+'.json';document.body.appendChild(a);a.click();a.remove();}catch(e){}const d=$('#dump');d.hidden=false;d.value=txt;d.select();};
  $('#im').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const o=JSON.parse(r.result);if(!o||o.v!==1)throw 0;S=Object.assign(fresh(),o);save();applyTheme();toast('Progress imported');route();}catch(err){alert('That file is not a valid progress export.');}};r.readAsText(f);};
- $('#rs').onclick=()=>{if(confirm('Erase all progress, scores, flashcard boxes and the mistake log?')){S=fresh();save();applyTheme();route();}};
+ $('#rs').onclick=()=>askConfirm('Erase all progress, scores, flashcard boxes and the mistake log? This cannot be undone.','Erase everything',()=>{S=fresh();save();applyTheme();route();});
 }
 
 window.__APP={QB,UNITS,CARDS,UNIT,QID,state:()=>S,examQs};

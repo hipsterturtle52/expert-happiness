@@ -171,6 +171,7 @@ async function answerExam(page, chooseCorrect) {
   const flagged = await page.evaluate(() => Object.values(window.__APP.state().exams.a.live.flag).filter(Boolean).length);
   check(flagged === 1, 'flagging did not register');
   await page.click('#sb');
+  await page.click('#mOk');
   await page.waitForTimeout(100);
   const ea = await page.evaluate(() => { const e = window.__APP.state().exams.a; return e.attempts[e.attempts.length - 1]; });
   check(ea && ea.score === 80, 'Practice Exam 1 score ' + (ea && ea.score) + ' (expected 80)');
@@ -200,6 +201,7 @@ async function answerExam(page, chooseCorrect) {
   await page.click('#pl');
   await answerExam(page, () => true);
   await page.click('#sb');
+  await page.click('#mOk');
   await page.waitForTimeout(100);
   await page.goto(URL + '#/');
   const ready = await page.textContent('#readyChip');
