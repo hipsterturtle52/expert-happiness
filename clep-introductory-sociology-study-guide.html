@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CLEP Introductory Sociology Study Guide</title>
+<meta name="description" content="Self-paced, offline study guide for the CLEP Introductory Sociology exam: lessons, quizzes, flashcards, practice exams.">
+<style>
+:root{--bg:#f8f7f4;--panel:#fff;--ink:#1c2127;--muted:#5b646e;--line:#e2dfd8;--soft:#f1efea;--accent:#2b5b87;--accent-ink:#fff;--accent-soft:#e7eef6;--ok:#1d7446;--okbg:#e5f3ea;--bad:#b0261c;--badbg:#fbe8e6;--warn:#7d5300;--warnbg:#fff3d6;--chip:#eceff3;--shadow:0 1px 2px rgba(0,0,0,.05);color-scheme:light}
+[data-theme=dark]{--bg:#121518;--panel:#1a1e23;--ink:#e5e7ea;--muted:#9aa3ad;--line:#2b3138;--soft:#20252b;--accent:#82b2e0;--accent-ink:#0c1520;--accent-soft:#1d2a38;--ok:#5fc68e;--okbg:#14301f;--bad:#f2887e;--badbg:#3a1c19;--warn:#e7b85c;--warnbg:#33290f;--chip:#262c33;--shadow:none;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{line-height:1.25;margin:1.4em 0 .5em}
+h1{font-size:1.6rem;margin-top:.2em}
+h2{font-size:1.3rem}
+h3{font-size:1.1rem}
+p{margin:.6em 0}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.4em .55em;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+/* header */
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:.6rem;height:52px;padding:0 1rem;background:var(--panel);border-bottom:1px solid var(--line)}
+.top .brand{font-weight:700;text-decoration:none;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top .spacer{flex:1}
+.iconbtn{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:.3rem .6rem;cursor:pointer;font-size:.9rem}
+#menuBtn{display:none}
+#examBanner{display:none;background:var(--warnbg);color:var(--warn);border-radius:8px;padding:.2rem .6rem;font-size:.85rem;text-decoration:none;white-space:nowrap}
+/* layout */
+.layout{display:flex;align-items:flex-start;max-width:1180px;margin:0 auto}
+nav#nav{position:sticky;top:52px;width:250px;flex:none;height:calc(100vh - 52px);overflow-y:auto;padding:1rem .6rem 2rem;border-right:1px solid var(--line)}
+nav#nav a{display:flex;justify-content:space-between;gap:.4rem;padding:.32rem .6rem;border-radius:7px;text-decoration:none;color:var(--ink);font-size:.92rem}
+nav#nav a:hover{background:var(--soft)}
+nav#nav a.on{background:var(--accent-soft);color:var(--accent);font-weight:600}
+nav#nav .sec{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:1rem .6rem .3rem}
+nav#nav .mk{font-size:.78rem;color:var(--muted)}
+nav#nav .mk.done{color:var(--ok)}
+main#view{flex:1;min-width:0;padding:1.4rem 1.6rem 4rem;max-width:860px}
+@media (max-width:860px){
+ #menuBtn{display:inline-block}
+ nav#nav{position:fixed;left:0;top:52px;z-index:30;background:var(--panel);transform:translateX(-105%);transition:transform .2s;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+ body.navopen nav#nav{transform:none}
+ main#view{padding:1rem 1rem 4rem}
+}
+/* components */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;margin:1rem 0;box-shadow:var(--shadow)}
+.grid{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem}
+.stat b{display:block;font-size:1.5rem;line-height:1.2}
+.stat span{color:var(--muted);font-size:.85rem}
+.btn{display:inline-block;border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:.5rem .95rem;cursor:pointer;text-decoration:none;color:var(--ink);font-size:.95rem;margin:.2rem .3rem .2rem 0}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.small{padding:.25rem .6rem;font-size:.85rem}
+.muted{color:var(--muted)}
+.small{font-size:.86rem}
+.chip{display:inline-block;background:var(--chip);border-radius:99px;padding:.05rem .55rem;font-size:.78rem;white-space:nowrap}
+.chip.ok{background:var(--okbg);color:var(--ok)}
+.chip.bad{background:var(--badbg);color:var(--bad)}
+.chip.warn{background:var(--warnbg);color:var(--warn)}
+.unverified{display:inline-block;background:var(--warnbg);color:var(--warn);border:1px dashed var(--warn);border-radius:6px;padding:0 .4rem;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;vertical-align:middle}
+.must{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+.must h3{margin:.1rem 0 .4rem}
+.must ol{margin:.2rem 0;padding-left:1.3rem}
+.must li{margin:.25rem 0}
+.lesson h3{border-top:1px solid var(--line);padding-top:1rem}
+.lesson h3:first-child{border-top:0;padding-top:0}
+.lesson .ex{background:var(--soft);border-radius:8px;padding:.5rem .8rem;margin:.6rem 0;font-size:.95rem}
+.lesson .ex::before{content:"Example — ";font-weight:600}
+.visual{margin:1.2rem 0}
+.visual h3{margin-top:.2rem}
+.meter{height:12px;background:var(--soft);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+.meter i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .3s}
+.meter.ok i{background:var(--ok)}
+.bar{height:5px;background:var(--soft);border-radius:9px;overflow:hidden;margin:.4rem 0 1rem}
+.bar i{display:block;height:100%;background:var(--accent)}
+.hbar{display:flex;align-items:center;gap:.5rem;font-size:.88rem;margin:.2rem 0}
+.hbar .lbl{width:44%;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hbar .trk{flex:1;height:10px;background:var(--soft);border-radius:9px;overflow:hidden}
+.hbar .trk i{display:block;height:100%;background:var(--accent)}
+.hbar .val{width:4.6rem;text-align:right;font-variant-numeric:tabular-nums}
+/* quiz */
+.runner .rhead{display:flex;justify-content:space-between;gap:.6rem;align-items:center;font-size:.9rem;color:var(--muted)}
+.qmeta{font-size:.82rem;color:var(--muted);margin-bottom:.3rem}
+.stem{font-size:1.07rem;margin:.4rem 0 .8rem}
+.stem table{margin:.6rem 0;font-size:.9rem}
+.stem blockquote{margin:.6rem 0;padding:.5rem .9rem;border-left:3px solid var(--line);background:var(--soft);border-radius:6px}
+ol.opts{list-style:none;padding:0;margin:0}
+ol.opts li{margin:.45rem 0}
+.opt{display:flex;gap:.7rem;align-items:flex-start;width:100%;text-align:left;background:var(--panel);border:1.5px solid var(--line);border-radius:10px;padding:.6rem .8rem;cursor:pointer;line-height:1.45}
+.opt:hover{border-color:var(--accent)}
+.opt .key{flex:none;display:inline-grid;place-items:center;width:1.6rem;height:1.6rem;border-radius:6px;background:var(--chip);font-weight:700;font-size:.85rem}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft)}
+.opt.right{border-color:var(--ok);background:var(--okbg)}
+.opt.wrong{border-color:var(--bad);background:var(--badbg)}
+.opt.locked{cursor:default}
+.why{font-size:.9rem;margin:.25rem .2rem .2rem 2.5rem;color:var(--muted)}
+.why b.g{color:var(--ok)} .why b.r{color:var(--bad)}
+.ractions{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.hint{font-size:.8rem;color:var(--muted)}
+kbd{border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 .3rem;font-size:.8em;background:var(--panel)}
+.palette{display:grid;grid-template-columns:repeat(auto-fill,minmax(2.3rem,1fr));gap:.3rem;margin:.6rem 0}
+.palette button{border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:.25rem 0;font-size:.8rem;cursor:pointer}
+.palette button.ans{background:var(--accent-soft);border-color:var(--accent)}
+.palette button.flag{outline:2px solid var(--warn)}
+.palette button.cur{font-weight:800;border-width:2px;border-color:var(--ink)}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.05rem;color:var(--ink)}
+.timer.low{color:var(--bad)}
+details.rev{border:1px solid var(--line);border-radius:10px;padding:.5rem .8rem;margin:.5rem 0;background:var(--panel)}
+details.rev summary{cursor:pointer}
+/* flashcards */
+.fc{min-height:220px;display:grid;place-items:center;text-align:center;background:var(--panel);border:1.5px solid var(--line);border-radius:14px;padding:1.4rem;cursor:pointer;font-size:1.2rem;user-select:none}
+.fc .back{font-size:1rem;margin-top:.8rem;color:var(--ink);text-align:left}
+.boxes{display:flex;gap:.3rem;flex-wrap:wrap}
+.boxes span{flex:1;min-width:58px;text-align:center;background:var(--soft);border-radius:8px;padding:.3rem;font-size:.8rem}
+.boxes b{display:block;font-size:1.1rem}
+/* plan */
+.plan td:first-child{white-space:nowrap}
+.plan ul{margin:0;padding-left:1.1rem}
+.plan tr.exam td{background:var(--warnbg)}
+input[type=number],input[type=date],select{font:inherit;padding:.35rem .5rem;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
+label.f{display:inline-flex;flex-direction:column;gap:.2rem;margin:.3rem 1rem .3rem 0;font-size:.9rem}
+/* cheat sheet */
+.cheat{font-size:.8rem;line-height:1.32;columns:2 330px;column-gap:1.2rem}
+.cheat section{break-inside:avoid;margin:0 0 .7rem}
+.cheat h4{margin:0 0 .2rem;font-size:.86rem;border-bottom:1px solid var(--line);color:var(--accent)}
+.cheat table{font-size:.74rem}
+.cheat th,.cheat td{padding:.1rem .25rem}
+.cheat ul{margin:0;padding-left:1rem}
+.cheat p{margin:.15rem 0}
+.toast{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:.5rem 1rem;border-radius:9px;font-size:.9rem;z-index:50}
+@media print{
+ .top,nav#nav,.noprint{display:none!important}
+ body,html{background:#fff;color:#000}
+ main#view{padding:0;max-width:none}
+ .layout{display:block;max-width:none}
+ .card{border:0;padding:0;margin:0;box-shadow:none}
+ a{color:#000;text-decoration:none}
+ body.printcheat .cheat{columns:3;column-gap:.18in;font-size:6.1pt;line-height:1.2}
+ body.printcheat .cheat table{font-size:5.6pt}
+ body.printcheat .cheat h4{font-size:6.6pt;color:#000}
+ body.printcheat h1{font-size:10pt;margin:0 0 .04in}
+ body.printcheat .cheat section{margin:0 0 .05in}
+ @page{size:letter;margin:.25in}
+}
+</style>
+</head>
+<body>
+<header class="top">
+ <button id="menuBtn" class="iconbtn" aria-label="Open menu">☰</button>
+ <a class="brand" href="#/">CLEP Sociology</a>
+ <span class="spacer"></span>
+ <a id="examBanner" href="#/exam"></a>
+ <button id="themeBtn" class="iconbtn" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+</header>
+<div class="layout">
+ <nav id="nav" aria-label="Sections"></nav>
+ <main id="view" tabindex="-1"><noscript>This study guide needs JavaScript enabled.</noscript></main>
+</div>
+
+<script>
+/* ============ CORE DATA ============ */
+const OUTLINE = {
+ exam:"CLEP Introductory Sociology",
+ url:"https://clep.collegeboard.org/history-and-social-sciences/introductory-sociology",
+ glanceUrl:"https://secure-media.collegeboard.org/digitalServices/pdf/clep/clep-introductory-sociology-at-a-glance.pdf",
+ retrieved:"2026-10-15",
+ questions:100, minutes:90, scale:"20–80", passing:50, credit:"3 semester hours",
+ areas:[
+  {id:"inst",name:"Institutions",weight:20,sub:["Economic","Educational","Family","Medicine","Political","Religious"],subVerified:false},
+  {id:"patt",name:"Social Patterns",weight:10,sub:["Community","Demography","Human ecology","Rural/urban patterns"],subVerified:false},
+  {id:"proc",name:"Social Processes",weight:25,sub:["Collective behavior and social movements","Culture","Deviance and social control","Groups and organizations","Social change","Social interaction","Socialization"],subVerified:true},
+  {id:"strat",name:"Social Stratification (Process and Structure)",weight:25,sub:["Aging","Power and social inequality","Professions and occupations","Race and ethnic relations","Sex and gender roles","Social class","Social mobility"],subVerified:true},
+  {id:"persp",name:"The Sociological Perspective",weight:20,sub:["History of sociology","Methods","Sociological theory"],subVerified:true}
+ ],
+ skills:["Identification of specific names, facts, and concepts from sociological literature","Understanding of relationships between concepts, empirical generalizations, and theoretical propositions of sociology","Understanding of the methods by which sociological relationships are established","Application of concepts, propositions, and methods to hypothetical situations","Interpretation of tables and charts"]
+};
+const UNITS = [];   // filled by U({...}) blocks below
+const QB = [];      // filled by Q(...) calls below
+function U(o){ UNITS.push(o); }
+/* Q(unit, set, difficulty, stem, options, explanations)
+   set: q = unit quiz, d = diagnostic, a = practice exam 1, b = practice exam 2
+   difficulty: E / M / H. In the source the CORRECT option is always written first;
+   display order is shuffled deterministically so correct positions are balanced. */
+function Q(u,s,d,q,o,e){ QB.push({u,s,d,q,o,e}); }
+</script>
+
+<!-- ============ UNIT CONTENT ============ -->
+<!--@@UNITS@@-->
+
+<!-- ============ DIAGNOSTIC + PRACTICE EXAM QUESTION BANK ============ -->
+<!--@@QUESTIONS@@-->
+
+<!-- ============ CHEAT SHEET ============ -->
+<template id="tpl-cheat">
+<p class="muted">Cheat sheet is added in the final build stage.</p>
+</template>
+
+<script>
+/* ============ APP ============ */
+(function(){
+'use strict';
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const strip=s=>String(s).replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+function hash(str){let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+function rng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+function shuffle(a,r=Math.random){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+const pct=(c,t)=>t?Math.round(100*c/t):0;
+const DAY=86400000;
+const LETTERS='ABCDE';
+const AREA=Object.fromEntries(OUTLINE.areas.map(a=>[a.id,a]));
+const SETS={q:'Unit quiz',d:'Diagnostic',a:'Practice Exam 1',b:'Practice Exam 2'};
+const DIFF={E:'Easy',M:'Medium',H:'Hard'};
+
+/* ---------- prepare content ---------- */
+const UNIT={};
+UNITS.forEach((u,i)=>{u.n=i+1;u.short='U'+(i+1);UNIT[u.id]=u;u.cards=(u.cards||[]).map((c,j)=>({id:u.id+'-c'+(j+1),u:u.id,f:c[0],b:c[1]}));});
+const CARDS=UNITS.flatMap(u=>u.cards);
+const CARD=Object.fromEntries(CARDS.map(c=>[c.id,c]));
+(function prepQuestions(){
+ const cnt={},groups={};
+ QB.forEach(q=>{const k=q.u+'-'+q.s;cnt[k]=(cnt[k]||0)+1;q.id=k+'-'+cnt[k];const g=q.s==='q'?'q-'+q.u:q.s;(groups[g]=groups[g]||[]).push(q);});
+ Object.entries(groups).forEach(([g,list])=>{
+  const r=rng(hash('pos:'+g));let pos=[];
+  while(pos.length<list.length)pos=pos.concat(shuffle([0,1,2,3,4],r));
+  pos=shuffle(pos.slice(0,list.length),r);
+  list.forEach((q,i)=>{
+   const wrong=shuffle([1,2,3,4],rng(hash('opt:'+q.id)));let w=0;const order=[];
+   for(let k=0;k<5;k++)order.push(k===pos[i]?0:wrong[w++]);
+   q.opts=order.map(k=>({t:q.o[k],e:(q.e||[])[k]||'',ok:k===0}));
+   q.ans=pos[i];
+  });
+ });
+})();
+const QID=Object.fromEntries(QB.map(q=>[q.id,q]));
+UNITS.forEach(u=>{u.qs=QB.filter(q=>q.u===u.id&&q.s==='q');});
+
+/* ---------- state ---------- */
+const KEY='clep-intro-sociology-v1';
+let storageOK=true;
+function fresh(){return{v:1,created:Date.now(),theme:null,diag:null,units:{},cards:{},mistakes:{},exams:{},plan:null,cardSessions:0};}
+function load(){try{const raw=localStorage.getItem(KEY);if(raw){const o=JSON.parse(raw);if(o&&o.v===1)return Object.assign(fresh(),o);}}catch(e){storageOK=false;}return fresh();}
+let S=load();
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));storageOK=true;}catch(e){storageOK=false;}}
+function us(id){return S.units[id]||(S.units[id]={read:false,best:null,last:null,attempts:0});}
+function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2200);}
+
+/* ---------- theme ---------- */
+function applyTheme(){const dark=S.theme?S.theme==='dark':(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dark?'dark':'light';}
+applyTheme();
+$('#themeBtn').onclick=()=>{S.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';save();applyTheme();};
+$('#menuBtn').onclick=()=>document.body.classList.toggle('navopen');
+
+/* ---------- derived progress ---------- */
+function diagTag(id){if(!S.diag||!S.diag.res[id])return null;const[c,t]=S.diag.res[id];return t&&c/t>=0.67?'skim':'study';}
+function unitDone(id){const s=S.units[id];return !!(s&&s.read&&s.best!=null&&s.best>=70);}
+function cardsLearned(u){return u.cards.filter(c=>S.cards[c.id]&&S.cards[c.id].box>=3).length;}
+function unitFactor(u){return diagTag(u.id)==='skim'?0.6:1;}
+function lastExam(k){const e=S.exams[k];return e&&e.attempts&&e.attempts.length?e.attempts[e.attempts.length-1]:null;}
+function tasksRemaining(){
+ const t=[];
+ if(!S.diag)t.push({l:'Diagnostic test ('+QB.filter(q=>q.s==='d').length+' questions)',m:40,href:'#/diag'});
+ UNITS.forEach(u=>{const s=S.units[u.id]||{},f=unitFactor(u);
+  if(!s.read)t.push({l:u.short+' lesson + must-know: '+u.title,m:Math.round(((u.minutes||15)+6)*f),href:'#/unit/'+u.id,u:u.id});
+  if(!(s.best>=70))t.push({l:u.short+' quiz ('+u.qs.length+' Qs) + read every explanation',m:Math.round(u.qs.length*1.6*f)+4,href:'#/quiz/'+u.id,u:u.id});
+  const left=u.cards.length-cardsLearned(u);
+  if(left>0)t.push({l:u.short+' flashcards ('+left+' not yet in box 3+)',m:Math.max(5,Math.round(left*0.7*f)),href:'#/cards/'+u.id,u:u.id,cards:1});
+ });
+ return t;
+}
+function hoursLeft(){
+ let m=tasksRemaining().reduce((a,b)=>a+b.m,0);
+ const mist=Object.values(S.mistakes).filter(x=>x.streak<2).length;m+=mist*1.5;
+ ['a','b'].forEach(k=>{const e=lastExam(k);if(!e)m+=150;else if(e.score<75)m+=60;});
+ if(!S.cheatDone)m+=45;
+ return Math.max(0,m/60);
+}
+function readiness(){
+ const ea=lastExam('a'),eb=lastExam('b');
+ const unitsFrac=UNITS.length?UNITS.filter(u=>unitDone(u.id)).length/UNITS.length:0;
+ const p=0.1*(S.diag?1:0)+0.4*unitsFrac+0.25*Math.min(1,(ea?ea.score:0)/75)+0.25*Math.min(1,(eb?eb.score:0)/75);
+ const ready=!!(ea&&eb&&ea.score>=75&&eb.score>=75);
+ return{p:Math.round(p*100),ready,ea,eb,unitsFrac};
+}
+
+/* ---------- nav ---------- */
+function drawNav(){
+ const mk=u=>unitDone(u.id)?'<span class="mk done">✓</span>':(S.units[u.id]&&S.units[u.id].best!=null?'<span class="mk">'+S.units[u.id].best+'%</span>':'');
+ let h='<a href="#/" data-r="">Dashboard</a><a href="#/diag" data-r="diag">1 · Diagnostic test'+(S.diag?'<span class="mk done">✓</span>':'')+'</a>';
+ OUTLINE.areas.slice().sort((a,b)=>['persp','proc','strat','inst','patt'].indexOf(a.id)-['persp','proc','strat','inst','patt'].indexOf(b.id)).forEach(a=>{
+  const list=UNITS.filter(u=>u.area===a.id);if(!list.length)return;
+  h+='<div class="sec">'+esc(a.name.replace(' (Process and Structure)',''))+' · '+a.weight+'%</div>';
+  list.forEach(u=>h+='<a href="#/unit/'+u.id+'" data-r="unit/'+u.id+'"><span>'+u.short+' · '+esc(u.title)+'</span>'+mk(u)+'</a>');
+ });
+ h+='<div class="sec">Practice</div><a href="#/cards" data-r="cards">Flashcards</a><a href="#/mistakes" data-r="mistakes">Mistake log<span class="mk">'+(Object.values(S.mistakes).filter(x=>x.streak<2).length||'')+'</span></a><a href="#/exam" data-r="exam">Practice exams</a>';
+ h+='<div class="sec">Tools</div><a href="#/cheat" data-r="cheat">Cheat sheet</a><a href="#/plan" data-r="plan">Study plan</a><a href="#/about" data-r="about">About & data</a>';
+ $('#nav').innerHTML=h;
+ const cur=location.hash.replace(/^#\/?/,'');
+ $$('#nav a').forEach(a=>{const r=a.dataset.r;if(r===cur||(r&&cur.startsWith(r+'/'))||(r==='unit/'+cur.split('/')[1]&&cur.startsWith('quiz/')))a.classList.add('on');});
+}
+
+/* ---------- router ---------- */
+let keyHandler=null,viewTimer=null;
+document.addEventListener('keydown',e=>{if(!keyHandler)return;if(e.target&&/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;if(e.ctrlKey||e.metaKey||e.altKey)return;keyHandler(e);});
+const V=()=>$('#view');
+function route(){
+ keyHandler=null;if(viewTimer){clearInterval(viewTimer);viewTimer=null;}
+ document.body.classList.remove('navopen','printcheat');
+ const parts=location.hash.replace(/^#\/?/,'').split('/');
+ const r={'':viewDash,diag:viewDiag,unit:viewUnit,quiz:viewQuiz,cards:viewCards,mistakes:viewMistakes,exam:viewExam,cheat:viewCheat,plan:viewPlan,about:viewAbout}[parts[0]]||viewDash;
+ r(parts[1]);drawNav();examBanner();window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);
+
+/* ---------- shared render helpers ---------- */
+function hbar(label,c,t){const p=pct(c,t);return'<div class="hbar"><span class="lbl" title="'+esc(label)+'">'+esc(label)+'</span><span class="trk"><i style="width:'+p+'%;background:'+(p>=75?'var(--ok)':p>=60?'var(--accent)':'var(--bad)')+'"></i></span><span class="val">'+c+'/'+t+' · '+p+'%</span></div>';}
+function tagChip(id){const t=diagTag(id);return t==='skim'?'<span class="chip ok">Skim</span>':t==='study'?'<span class="chip bad">Must study</span>':'';}
+function optHTML(q,showDiff){
+ return'<div class="qmeta">'+(showDiff?UNIT[q.u].short+' · '+esc(UNIT[q.u].title)+' · '+DIFF[q.d]:'')+'</div><div class="stem">'+q.q+'</div><ol class="opts">'+q.opts.map((o,i)=>'<li><button class="opt" data-i="'+i+'"><span class="key">'+LETTERS[i]+'</span><span>'+o.t+'</span></button><div class="why" hidden></div></li>').join('')+'</ol>';
+}
+function reveal(root,q,chosen){
+ $$('.opt',root).forEach((b,i)=>{const o=q.opts[i];b.classList.add('locked');if(o.ok)b.classList.add('right');else if(i===chosen)b.classList.add('wrong');
+  const w=b.nextElementSibling;w.hidden=false;w.innerHTML=(o.ok?'<b class="g">✓ Why this is right:</b> ':'<b class="r">✗ Why this is wrong:</b> ')+o.e;});
+}
+function reviewHTML(q,chosen){
+ return'<details class="rev"><summary>'+(chosen!=null&&q.opts[chosen]&&q.opts[chosen].ok?'✓':'✗')+' <span class="small muted">'+UNIT[q.u].short+'</span> '+esc(strip(q.q).slice(0,140))+(strip(q.q).length>140?'…':'')+'</summary><div class="stem">'+q.q+'</div><ol class="opts">'+q.opts.map((o,i)=>'<li><div class="opt locked '+(o.ok?'right':i===chosen?'wrong':'')+'"><span class="key">'+LETTERS[i]+'</span><span>'+o.t+(i===chosen?' <span class="chip">your answer</span>':'')+'</span></div><div class="why">'+(o.ok?'<b class="g">✓ Right:</b> ':'<b class="r">✗ Wrong:</b> ')+o.e+'</div></li>').join('')+'</ol>'+(chosen==null?'<p class="small muted">Not answered.</p>':'')+'</details>';
+}
+function addMistake(id,src){const m=S.mistakes[id]||(S.mistakes[id]={n:0,streak:0,src});m.n++;m.streak=0;m.t=Date.now();}
+function byUnit(res){const o={};res.forEach(r=>{const k=r.q.u;o[k]=o[k]||[0,0];o[k][1]++;if(r.ok)o[k][0]++;});return o;}
+function byArea(res){const o={};res.forEach(r=>{const k=UNIT[r.q.u].area;o[k]=o[k]||[0,0];o[k][1]++;if(r.ok)o[k][0]++;});return o;}
+
+/* ---------- generic question runner (quiz / diagnostic / drill) ---------- */
+function runner({qs,mode,title,back,onFinish}){
+ let i=0,chosen=null,locked=false;const res=[];
+ function draw(){
+  const q=qs[i];chosen=null;locked=false;
+  V().innerHTML='<div class="runner"><div class="rhead"><a href="'+back+'">← Exit</a><span>'+esc(title)+'</span><span>'+(i+1)+' / '+qs.length+'</span></div><div class="bar"><i style="width:'+pct(i,qs.length)+'%"></i></div>'+
+   optHTML(q,mode!=='diag')+'<div class="ractions"><button id="nx" class="btn primary" disabled>'+(mode==='diag'?(i<qs.length-1?'Next →':'Finish'):'Choose an answer')+'</button>'+(mode==='diag'?'<button id="skip" class="btn">I don\'t know</button>':'')+'</div>'+
+   '<p class="hint"><kbd>1</kbd>–<kbd>5</kbd> or <kbd>A</kbd>–<kbd>E</kbd> to answer · <kbd>Enter</kbd> for next</p></div>';
+  $$('.opt').forEach(b=>b.onclick=()=>pick(+b.dataset.i));
+  $('#nx').onclick=next;
+  if($('#skip'))$('#skip').onclick=()=>{record(null);};
+ }
+ function record(k){const q=qs[i];const ok=k!=null&&q.opts[k].ok;res.push({q,choice:k,ok});if(!ok)addMistake(q.id,mode);else if(mode==='drill'&&S.mistakes[q.id]){S.mistakes[q.id].streak++;}save();i++;if(i>=qs.length)onFinish(res);else draw();}
+ function pick(k){
+  if(locked)return;chosen=k;
+  if(mode==='diag'){$$('.opt').forEach((b,j)=>b.classList.toggle('sel',j===k));$('#nx').disabled=false;return;}
+  locked=true;reveal(V(),qs[i],k);const nx=$('#nx');nx.disabled=false;nx.textContent=i<qs.length-1?'Next →':'See results';
+ }
+ function next(){if(mode==='diag'){if(chosen==null)return;record(chosen);}else{if(!locked)return;record(chosen);}}
+ keyHandler=e=>{const k=e.key.toLowerCase();if(/^[1-5]$/.test(k))pick(+k-1);else if(/^[a-e]$/.test(k))pick(LETTERS.toLowerCase().indexOf(k));else if(k==='enter'){e.preventDefault();next();}};
+ draw();
+}
+function resultsHTML(res,title,extra){
+ const c=res.filter(r=>r.ok).length,bu=byUnit(res);
+ return'<h1>'+esc(title)+' — results</h1><div class="grid"><div class="stat"><b>'+pct(c,res.length)+'%</b><span>'+c+' of '+res.length+' correct</span></div></div>'+(extra||'')+
+  '<h2>By unit</h2>'+UNITS.filter(u=>bu[u.id]).map(u=>hbar(u.short+' '+u.title,bu[u.id][0],bu[u.id][1])).join('')+
+  '<h2>Review</h2><p class="muted small">Missed questions were added to your <a href="#/mistakes">mistake log</a>.</p>'+res.map(r=>reviewHTML(r.q,r.choice)).join('');
+}
+
+/* ---------- views ---------- */
+function viewDash(){
+ const R=readiness(),done=UNITS.filter(u=>unitDone(u.id)).length,due=dueCards().length,mist=Object.values(S.mistakes).filter(x=>x.streak<2).length;
+ const next=!S.diag?['Take the diagnostic test','#/diag','30 questions, no feedback until the end. It tells you which units you can skim.']:
+  (()=>{const t=tasksRemaining().find(x=>!x.cards);if(t)return['Next: '+t.l,t.href,'About '+t.m+' minutes.'];if(!lastExam('a'))return['Take Practice Exam 1','#/exam/a','100 questions, 90 minutes, no pausing.'];if(!lastExam('b'))return['Take Practice Exam 2','#/exam/b','100 questions, 90 minutes, no pausing.'];return['Drill your mistake log','#/mistakes','Then re-read the cheat sheet.'];})();
+ V().innerHTML='<h1>CLEP Introductory Sociology</h1><p class="muted">'+OUTLINE.questions+' questions · '+OUTLINE.minutes+' minutes · '+UNITS.length+' units · '+QB.length+' original practice questions · '+CARDS.length+' flashcards</p>'+
+ '<div class="card"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap"><h2 style="margin:0">Readiness</h2><span class="chip '+(R.ready?'ok':R.p>=70?'warn':'bad')+'">'+(R.ready?'✓ Ready to book':R.p>=70?'Almost there':'Not ready yet')+'</span></div>'+
+ '<div class="meter '+(R.ready?'ok':'')+'" style="margin:.7rem 0"><i style="width:'+R.p+'%"></i></div>'+
+ '<div class="small muted">Diagnostic '+(S.diag?'✓':'—')+' · Units complete '+done+'/'+UNITS.length+' · Practice Exam 1: '+(R.ea?R.ea.score+'%':'—')+' · Practice Exam 2: '+(R.eb?R.eb.score+'%':'—')+'</div>'+
+ '<p class="small">“Ready to book” appears only when <b>both</b> practice exams are at 75% or higher (ACE’s recommended passing score is '+OUTLINE.passing+' on the 20–80 scale; 75% raw on these practice exams leaves a comfortable margin).</p></div>'+
+ '<div class="card"><h2 style="margin-top:0">'+esc(next[0])+'</h2><p class="muted">'+esc(next[2])+'</p><a class="btn primary" href="'+next[1]+'">Go →</a></div>'+
+ '<div class="grid"><div class="stat"><b>'+done+'/'+UNITS.length+'</b><span>units complete (lesson read + quiz ≥70%)</span></div><div class="stat"><b>~'+hoursLeft().toFixed(1)+' h</b><span>estimated study time left</span></div><div class="stat"><b>'+due+'</b><span>flashcards due now</span></div><div class="stat"><b>'+mist+'</b><span>questions in mistake log</span></div></div>'+
+ '<h2>Learning path</h2><div class="tablewrap"><table><tr><th>Unit</th><th>Weight</th><th>Diagnostic</th><th>Lesson</th><th>Quiz best</th><th>Cards learned</th></tr>'+
+ UNITS.map(u=>{const s=S.units[u.id]||{};return'<tr><td><a href="#/unit/'+u.id+'">'+u.short+' · '+esc(u.title)+'</a></td><td>'+u.weight+'%</td><td>'+(tagChip(u.id)||'<span class="muted">—</span>')+'</td><td>'+(s.read?'✓':'')+'</td><td>'+(s.best!=null?s.best+'%':'')+'</td><td>'+cardsLearned(u)+'/'+u.cards.length+'</td></tr>';}).join('')+'</table></div>'+
+ '<h2>How to use this guide</h2><ol><li><b>Diagnostic first</b> — find what you already know.</li><li><b>Units in order</b> — read the lesson (10–20 min), memorize the must-know box, take the quiz and read every explanation.</li><li><b>Flashcards daily</b> — 10–15 minutes. Missed cards come back sooner.</li><li><b>Mistake log</b> — drill until each missed question is answered right twice in a row.</li><li><b>Practice exams</b> — one or two days before the real exam. Book when both are ≥75%.</li></ol>'+
+ (storageOK?'':'<p class="chip warn">Browser storage is blocked — progress will be lost when you close this tab. Use Export on the About page.</p>');
+}
+
+function viewDiag(){
+ const qs=QB.filter(q=>q.s==='d');
+ if(!qs.length){V().innerHTML='<h1>Diagnostic test</h1><p class="muted">Diagnostic questions have not been added yet.</p>';return;}
+ const start=()=>runner({qs:shuffle(qs,rng(hash('diag'))),mode:'diag',title:'Diagnostic',back:'#/diag',onFinish:res=>{
+  const r={};UNITS.forEach(u=>r[u.id]=[0,0]);res.forEach(x=>{r[x.q.u][1]++;if(x.ok)r[x.q.u][0]++;});
+  S.diag={date:Date.now(),res:r,score:pct(res.filter(x=>x.ok).length,res.length),ans:Object.fromEntries(res.map(x=>[x.q.id,x.choice]))};save();drawNav();
+  V().innerHTML=diagSummary()+'<h2>Review</h2>'+res.map(x=>reviewHTML(x.q,x.choice)).join('');window.scrollTo(0,0);}});
+ if(S.diag){V().innerHTML=diagSummary()+'<p><button class="btn" id="re">Retake diagnostic</button></p>'+
+  '<h2>Review</h2>'+qs.map(q=>reviewHTML(q,S.diag.ans?S.diag.ans[q.id]:null)).join('');$('#re').onclick=start;return;}
+ V().innerHTML='<h1>Diagnostic test</h1><div class="card"><p><b>'+qs.length+' questions</b> spanning every unit in proportion to the official weights. No feedback until the end — answer honestly and use <b>I don\'t know</b> instead of guessing, so the results are accurate.</p><p>Afterward each unit is marked <span class="chip ok">Skim</span> (you got at least two-thirds right) or <span class="chip bad">Must study</span>. Your study plan and hours estimate adjust automatically.</p><button class="btn primary" id="go">Start diagnostic</button><p class="hint">Takes about 25–40 minutes.</p></div>';
+ $('#go').onclick=start;
+}
+function diagSummary(){
+ const d=S.diag;
+ return'<h1>Diagnostic results</h1><div class="grid"><div class="stat"><b>'+d.score+'%</b><span>overall</span></div><div class="stat"><b>'+UNITS.filter(u=>diagTag(u.id)==='skim').length+'</b><span>units to skim</span></div><div class="stat"><b>'+UNITS.filter(u=>diagTag(u.id)==='study').length+'</b><span>units to study fully</span></div></div>'+
+ '<div class="tablewrap"><table><tr><th>Unit</th><th>Weight</th><th>Score</th><th>Verdict</th></tr>'+UNITS.map(u=>{const r=d.res[u.id]||[0,0];return'<tr><td><a href="#/unit/'+u.id+'">'+u.short+' · '+esc(u.title)+'</a></td><td>'+u.weight+'%</td><td>'+r[0]+'/'+r[1]+'</td><td>'+tagChip(u.id)+'</td></tr>';}).join('')+'</table></div>'+
+ '<p class="small muted">Skim = read the must-know box and visual, skim the lesson, then take the quiz. With only 2–3 questions per unit this is a rough signal — the unit quiz is the real check.</p><p><a class="btn primary" href="#/plan">Build my study plan →</a></p>';
+}
+
+function viewUnit(id){
+ const u=UNIT[id];if(!u){viewDash();return;}
+ const s=us(id),tag=diagTag(id);
+ V().innerHTML='<div class="small muted">'+esc(AREA[u.area].name)+' · '+u.short+' of '+UNITS.length+'</div><h1>'+esc(u.title)+'</h1>'+
+ '<p><span class="chip">'+u.weight+'% of exam</span> <span class="chip">~'+u.minutes+' min read</span> <span class="chip">'+u.qs.length+' quiz Qs</span> <span class="chip">'+u.cards.length+' cards</span> '+tagChip(id)+'</p>'+
+ (tag==='skim'?'<p class="chip ok" style="white-space:normal">Diagnostic says skim: read the must-know box and the visual, skim the lesson, then take the quiz.</p>':'')+
+ '<p class="muted">'+(u.intro||'')+'</p>'+
+ '<div class="must"><h3>Must know</h3><ol>'+u.must.map(m=>'<li>'+m+'</li>').join('')+'</ol></div>'+
+ '<article class="lesson">'+u.lesson+'</article>'+
+ '<div class="visual card"><h3>'+esc(u.visualTitle||'Visual')+'</h3><div class="tablewrap">'+u.visual+'</div></div>'+
+ '<div class="card noprint"><h3 style="margin-top:0">Lock it in</h3><button class="btn'+(s.read?'':' primary')+'" id="rd">'+(s.read?'✓ Lesson read':'Mark lesson as read')+'</button><a class="btn'+(s.read?' primary':'')+'" href="#/quiz/'+id+'">Take unit quiz ('+u.qs.length+')</a><a class="btn" href="#/cards/'+id+'">Flashcards ('+u.cards.length+')</a>'+
+ (s.attempts?'<p class="small muted">Quiz: best '+s.best+'%, last '+s.last+'%, '+s.attempts+' attempt(s). Complete = lesson read + quiz ≥70%.</p>':'')+
+ '<p class="small">'+(UNITS[u.n]?'Next: <a href="#/unit/'+UNITS[u.n].id+'">'+UNITS[u.n].short+' · '+esc(UNITS[u.n].title)+'</a>':'Last unit — next up: <a href="#/exam">practice exams</a>.')+'</p></div>';
+ $('#rd').onclick=()=>{s.read=!s.read;save();viewUnit(id);drawNav();};
+}
+
+function viewQuiz(id){
+ const u=UNIT[id];if(!u||!u.qs.length){V().innerHTML='<p>No quiz questions yet.</p>';return;}
+ runner({qs:shuffle(u.qs),mode:'quiz',title:u.short+' quiz',back:'#/unit/'+id,onFinish:res=>{
+  const s=us(id),score=pct(res.filter(r=>r.ok).length,res.length);s.attempts++;s.last=score;s.best=Math.max(s.best||0,score);save();drawNav();
+  V().innerHTML=resultsHTML(res,u.short+' quiz','<p>'+(score>=70?'<span class="chip ok">Unit quiz passed</span> ':'<span class="chip bad">Below 70% — re-read the must-know box and retake</span> ')+'</p><p><a class="btn primary" href="#/quiz/'+id+'">Retake</a><a class="btn" href="#/unit/'+id+'">Back to lesson</a>'+(UNITS[u.n]?'<a class="btn" href="#/unit/'+UNITS[u.n].id+'">Next unit →</a>':'')+'</p>');window.scrollTo(0,0);}});
+}
+
+/* ---------- flashcards (Leitner) ---------- */
+const INTERVAL=[0,0,1,3,7,16]; // days until due, by box 1..5
+function cs(id){return S.cards[id];}
+function unlocked(c){const s=S.units[c.u];return !!(s&&s.read)||!!(S.diag&&S.diag.res[c.u]);}
+function dueCards(unit){const now=Date.now();return CARDS.filter(c=>(!unit||c.u===unit)&&cs(c.id)&&cs(c.id).due<=now);}
+function newCards(unit){return CARDS.filter(c=>(!unit||c.u===unit)&&!cs(c.id)&&(unit||unlocked(c)));}
+function missedCards(unit){return CARDS.filter(c=>(!unit||c.u===unit)&&cs(c.id)&&cs(c.id).miss);}
+function viewCards(unit){
+ const u=unit&&UNIT[unit];
+ const box=[0,0,0,0,0,0];CARDS.filter(c=>!u||c.u===unit).forEach(c=>{const s=cs(c.id);box[s?s.box:0]++;});
+ const due=dueCards(unit),nw=newCards(unit),ms=missedCards(unit);
+ V().innerHTML='<h1>Flashcards'+(u?' — '+u.short+' '+esc(u.title):'')+'</h1><p class="muted">Leitner boxes: a card you get right moves up a box and comes back later (box 2: 1 day, 3: 3 days, 4: 7 days, 5: 16 days). A card you miss drops to box 1 and returns in the same session.</p>'+
+ '<div class="boxes"><span><b>'+box[0]+'</b>new</span>'+[1,2,3,4,5].map(i=>'<span><b>'+box[i]+'</b>box '+i+'</span>').join('')+'</div>'+
+ '<div class="card"><button class="btn primary" id="d1" '+(due.length+Math.min(nw.length,20)?'':'disabled')+'>Study due + new ('+due.length+' due, '+Math.min(nw.length,20)+' new)</button><button class="btn" id="d2" '+(ms.length?'':'disabled')+'>Review missed only ('+ms.length+')</button>'+(u?'<button class="btn" id="d3">Whole unit deck ('+u.cards.length+')</button>':'')+
+ '<p class="small muted">'+(u?'':'New cards unlock when you mark a unit\'s lesson as read (or after the diagnostic). Pick a unit deck below to study any unit now.')+'</p></div>'+
+ (u?'':'<h2>Unit decks</h2><div class="tablewrap"><table><tr><th>Unit</th><th>Cards</th><th>Learned (box 3+)</th><th>Due</th></tr>'+UNITS.map(x=>'<tr><td><a href="#/cards/'+x.id+'">'+x.short+' · '+esc(x.title)+'</a></td><td>'+x.cards.length+'</td><td>'+cardsLearned(x)+'</td><td>'+dueCards(x.id).length+'</td></tr>').join('')+'</table></div>');
+ $('#d1').onclick=()=>cardSession(due.concat(shuffle(nw).slice(0,20)),unit);
+ $('#d2').onclick=()=>cardSession(ms,unit);
+ if($('#d3'))$('#d3').onclick=()=>cardSession(u.cards,unit);
+}
+function cardSession(list,unit){
+ let q=shuffle(list),flipped=false,right=0,wrong=0;const back='#/cards'+(unit?'/'+unit:'');
+ function draw(){
+  if(!q.length){S.cardSessions++;save();V().innerHTML='<h1>Session done</h1><p>'+right+' right, '+wrong+' missed (missed cards were repeated until you got them).</p><a class="btn primary" href="'+back+'">Back to decks</a>';keyHandler=null;return;}
+  const c=q[0],s=cs(c.id);flipped=false;
+  V().innerHTML='<div class="rhead runner"><div class="rhead"><a href="'+back+'">← Exit</a><span>'+q.length+' left</span><span>'+UNIT[c.u].short+(s?' · box '+s.box:' · new')+'</span></div></div>'+
+  '<div class="fc" id="fc"><div><div>'+esc(c.f)+'</div><div class="back" id="bk" hidden>'+c.b+'</div><div class="hint" id="fh">Click or press <kbd>Space</kbd> to flip</div></div></div>'+
+  '<div class="ractions" id="ra" hidden><button class="btn" id="no">✗ Missed <kbd>1</kbd></button><button class="btn primary" id="yes">✓ Got it <kbd>2</kbd></button></div>';
+  $('#fc').onclick=flip;$('#no').onclick=()=>grade(false);$('#yes').onclick=()=>grade(true);
+ }
+ function flip(){if(flipped)return;flipped=true;$('#bk').hidden=false;$('#fh').hidden=true;$('#ra').hidden=false;}
+ function grade(ok){
+  if(!flipped)return;const c=q.shift();const s=S.cards[c.id]||(S.cards[c.id]={box:0,due:0,miss:false,n:0,lapses:0});s.n++;
+  if(ok){right++;s.box=Math.min(5,Math.max(1,s.box)+1);s.due=Date.now()+INTERVAL[s.box]*DAY;if(s.box>=3)s.miss=false;}
+  else{wrong++;s.box=1;s.due=Date.now();s.miss=true;s.lapses++;q.splice(Math.min(3,q.length),0,c);}
+  save();draw();
+ }
+ keyHandler=e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();flip();}else if(e.key==='1'||e.key==='ArrowLeft')grade(false);else if(e.key==='2'||e.key==='ArrowRight')grade(true);};
+ draw();
+}
+
+/* ---------- mistake log ---------- */
+function viewMistakes(){
+ const open=Object.entries(S.mistakes).filter(([id,m])=>QID[id]&&m.streak<2).sort((a,b)=>b[1].n-a[1].n);
+ const mastered=Object.entries(S.mistakes).filter(([id,m])=>QID[id]&&m.streak>=2).length;
+ V().innerHTML='<h1>Mistake log</h1><p class="muted">Every question you miss anywhere lands here. Drill until you answer each one right <b>twice in a row</b>; then it counts as mastered.</p>'+
+ '<div class="grid"><div class="stat"><b>'+open.length+'</b><span>in review queue</span></div><div class="stat"><b>'+mastered+'</b><span>mastered</span></div></div>'+
+ '<div class="card"><button class="btn primary" id="dr" '+(open.length?'':'disabled')+'>Drill '+Math.min(20,open.length)+' questions</button>'+(mastered?'<button class="btn" id="cl">Clear mastered</button>':'')+'</div>'+
+ (open.length?'<h2>Queue by unit</h2>'+UNITS.map(u=>{const l=open.filter(([id])=>QID[id].u===u.id);return l.length?'<h3>'+u.short+' · '+esc(u.title)+' ('+l.length+')</h3>'+l.map(([id,m])=>reviewHTML(QID[id],null).replace('<summary>✗','<summary>✗ ×'+m.n+(m.streak?' (streak '+m.streak+')':''))).join(''):'';}).join(''):'<p>No mistakes queued. 🎉</p>');
+ $('#dr').onclick=()=>runner({qs:shuffle(open.map(([id])=>QID[id])).slice(0,20),mode:'drill',title:'Mistake drill',back:'#/mistakes',onFinish:res=>{drawNav();V().innerHTML=resultsHTML(res,'Mistake drill','<p><a class="btn primary" href="#/mistakes">Back to mistake log</a></p>');window.scrollTo(0,0);}});
+ if($('#cl'))$('#cl').onclick=()=>{Object.keys(S.mistakes).forEach(id=>{if(S.mistakes[id].streak>=2)delete S.mistakes[id];});save();viewMistakes();drawNav();};
+}
+
+/* ---------- practice exams ---------- */
+const EXAMS={a:'Practice Exam 1',b:'Practice Exam 2'};
+function examQs(k){return shuffle(QB.filter(q=>q.s===k),rng(hash('exam-order-'+k)));}
+function liveExam(){return['a','b'].find(k=>S.exams[k]&&S.exams[k].live);}
+function timeLeft(k){return S.exams[k].live.start+OUTLINE.minutes*60000-Date.now();}
+function fmt(ms){ms=Math.max(0,ms);const s=Math.floor(ms/1000);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+function examBanner(){
+ const k=liveExam(),b=$('#examBanner');
+ if(!k||location.hash.startsWith('#/exam/'+k)){b.style.display='none';return;}
+ b.style.display='inline-block';b.href='#/exam/'+k;b.textContent='⏱ '+EXAMS[k]+' running · '+fmt(timeLeft(k));
+}
+setInterval(()=>{const k=liveExam();if(k&&timeLeft(k)<=0&&!location.hash.startsWith('#/exam/'+k)){submitExam(k,true);toast(EXAMS[k]+': time is up — submitted.');drawNav();}examBanner();},1000);
+function viewExam(k){
+ if(!EXAMS[k]){
+  V().innerHTML='<h1>Practice exams</h1><p class="muted">Two full-length exams in the real format: '+OUTLINE.questions+' questions, '+OUTLINE.minutes+'-minute timer, no pausing. Every question is unique — none appear in the unit quizzes or diagnostic. Take them 1–2 days before your real exam.</p>'+
+  ['a','b'].map(x=>{const e=S.exams[x],n=QB.filter(q=>q.s===x).length,l=lastExam(x);return'<div class="card"><h2 style="margin-top:0">'+EXAMS[x]+'</h2><p class="muted">'+n+' questions'+(l?' · last score <b>'+l.score+'%</b>'+(l.score>=75?' <span class="chip ok">≥75%</span>':' <span class="chip bad">below 75%</span>'):'')+(e&&e.live?' · <span class="chip warn">in progress</span>':'')+'</p><a class="btn primary" href="#/exam/'+x+'">'+(e&&e.live?'Resume':l?'View results / retake':'Start')+'</a></div>';}).join('');
+  return;
+ }
+ const e=S.exams[k];
+ if(e&&e.live){if(timeLeft(k)<=0){submitExam(k,true);return viewExamResult(k);}return examRun(k);}
+ if(lastExam(k)&&!viewExam.intro)return viewExamResult(k);
+ viewExam.intro=false;
+ const n=QB.filter(q=>q.s===k).length,other=liveExam();
+ V().innerHTML='<h1>'+EXAMS[k]+'</h1><div class="card"><ul><li><b>'+n+' questions</b>, five options each, mixed topics in official proportions.</li><li><b>'+OUTLINE.minutes+'-minute timer. No pausing</b> — the clock keeps running if you leave this page or close the tab.</li><li>You can skip, flag, and return to questions; unanswered = wrong. At 0:00 the exam submits automatically.</li><li>Results by topic at the end; every missed question goes to your mistake log.</li></ul>'+
+ (lastExam(k)?'<p class="chip warn" style="white-space:normal">Retake: you have seen these questions, so a retake score overstates readiness.</p>':'')+
+ (other?'<p class="chip bad">Finish '+EXAMS[other]+' first.</p>':'<button class="btn primary" id="st" '+(n?'':'disabled')+'>Start — timer begins now</button>')+'</div>';
+ if($('#st'))$('#st').onclick=()=>{S.exams[k]=S.exams[k]||{attempts:[]};S.exams[k].live={start:Date.now(),ans:{},flag:{},cur:0};save();route();};
+}
+function examRun(k){
+ const L=S.exams[k].live,qs=examQs(k);let showPal=false;
+ function draw(){
+  const i=L.cur,q=qs[i],a=L.ans[q.id];
+  V().innerHTML='<div class="runner"><div class="rhead"><span>'+EXAMS[k]+'</span><span class="timer" id="tm">'+fmt(timeLeft(k))+'</span><span>'+(i+1)+' / '+qs.length+'</span></div><div class="bar"><i style="width:'+pct(Object.keys(L.ans).length,qs.length)+'%"></i></div>'+
+  optHTML(q,false)+'<div class="ractions"><button class="btn" id="pv" '+(i?'':'disabled')+'>← Prev</button><button class="btn primary" id="nx">'+(i<qs.length-1?'Next →':'Review & submit')+'</button><button class="btn" id="fl">'+(L.flag[q.id]?'⚑ Flagged':'⚐ Flag')+'</button><button class="btn" id="pl">Grid</button><span class="spacer" style="flex:1"></span><button class="btn" id="sb">Submit exam</button></div>'+
+  '<div id="pal" '+(showPal?'':'hidden')+'><div class="palette">'+qs.map((x,j)=>'<button data-j="'+j+'" class="'+(L.ans[x.id]!=null?'ans ':'')+(L.flag[x.id]?'flag ':'')+(j===i?'cur':'')+'">'+(j+1)+'</button>').join('')+'</div><p class="hint">'+Object.keys(L.ans).length+' answered · '+Object.keys(L.flag).filter(x=>L.flag[x]).length+' flagged</p></div>'+
+  '<p class="hint"><kbd>1</kbd>–<kbd>5</kbd> answer · <kbd>Enter</kbd> next · <kbd>←</kbd> previous · <kbd>F</kbd> flag</p></div>';
+  if(a!=null)$$('.opt')[a].classList.add('sel');
+  $$('.opt').forEach(b=>b.onclick=()=>pick(+b.dataset.i));
+  $('#pv').onclick=()=>go(i-1);$('#nx').onclick=()=>i<qs.length-1?go(i+1):submitAsk();
+  $('#fl').onclick=()=>{L.flag[q.id]=!L.flag[q.id];save();draw();};
+  $('#pl').onclick=()=>{showPal=!showPal;draw();};
+  $('#sb').onclick=submitAsk;
+  $$('#pal button').forEach(b=>b.onclick=()=>go(+b.dataset.j));
+ }
+ function pick(j){L.ans[qs[L.cur].id]=j;save();$$('.opt').forEach((b,x)=>b.classList.toggle('sel',x===j));}
+ function go(j){if(j<0||j>=qs.length)return;L.cur=j;save();draw();}
+ function submitAsk(){const un=qs.length-Object.keys(L.ans).length;if(confirm('Submit '+EXAMS[k]+'?'+(un?' '+un+' question(s) unanswered.':'')+' You cannot change answers afterward.')){submitExam(k,false);viewExamResult(k);drawNav();}}
+ keyHandler=e=>{const x=e.key.toLowerCase();if(/^[1-5]$/.test(x))pick(+x-1);else if(/^[a-e]$/.test(x))pick(LETTERS.toLowerCase().indexOf(x));else if(x==='enter'){e.preventDefault();L.cur<qs.length-1?go(L.cur+1):submitAsk();}else if(x==='arrowleft')go(L.cur-1);else if(x==='arrowright')go(L.cur+1);else if(x==='f'){L.flag[qs[L.cur].id]=!L.flag[qs[L.cur].id];save();draw();}};
+ viewTimer=setInterval(()=>{const t=timeLeft(k),el=$('#tm');if(el){el.textContent=fmt(t);el.classList.toggle('low',t<5*60000);}if(t<=0){clearInterval(viewTimer);viewTimer=null;keyHandler=null;submitExam(k,true);viewExamResult(k);drawNav();toast('Time is up — exam submitted.');}},500);
+ draw();
+}
+function submitExam(k,timedOut){
+ const E=S.exams[k],L=E.live;if(!L)return;const qs=examQs(k);
+ const res=qs.map(q=>{const c=L.ans[q.id];return{q,choice:c==null?null:c,ok:c!=null&&q.opts[c].ok};});
+ res.forEach(r=>{if(!r.ok)addMistake(r.q.id,k);});
+ const c=res.filter(r=>r.ok).length;
+ E.attempts.push({date:Date.now(),score:pct(c,res.length),correct:c,total:res.length,timedOut:!!timedOut,usedMs:Math.min(OUTLINE.minutes*60000,Date.now()-L.start),ans:L.ans,byArea:byArea(res),byUnit:byUnit(res)});
+ delete E.live;save();
+}
+function viewExamResult(k){
+ const a=lastExam(k),qs=examQs(k),res=qs.map(q=>{const c=a.ans[q.id];return{q,choice:c==null?null:c,ok:c!=null&&q.opts[c].ok};});
+ let filt=false;
+ function draw(){
+  V().innerHTML='<h1>'+EXAMS[k]+' — results</h1><div class="grid"><div class="stat"><b>'+a.score+'%</b><span>'+a.correct+' of '+a.total+' correct</span></div><div class="stat"><b>'+fmt(a.usedMs)+'</b><span>time used'+(a.timedOut?' (timed out)':'')+'</span></div><div class="stat"><b>'+(a.score>=75?'✓':'✗')+'</b><span>'+(a.score>=75?'At or above the 75% readiness bar':'Below the 75% readiness bar')+'</span></div></div>'+
+  '<h2>By content area (official weights)</h2>'+OUTLINE.areas.map(ar=>a.byArea[ar.id]?hbar(ar.name.replace(' (Process and Structure)','')+' ('+ar.weight+'%)',a.byArea[ar.id][0],a.byArea[ar.id][1]):'').join('')+
+  '<h2>By unit</h2>'+UNITS.filter(u=>a.byUnit[u.id]).map(u=>hbar(u.short+' '+u.title,a.byUnit[u.id][0],a.byUnit[u.id][1])).join('')+
+  '<p class="small muted">Weakest units first: re-read their must-know boxes and drill the mistake log.</p><p><a class="btn" href="#/mistakes">Mistake log</a><button class="btn" id="rt">Retake this exam</button><a class="btn" href="#/exam">All exams</a></p>'+
+  (S.exams[k].attempts.length>1?'<p class="small muted">Attempts: '+S.exams[k].attempts.map(x=>x.score+'%').join(' → ')+'</p>':'')+
+  '<h2>Review</h2><label class="small"><input type="checkbox" id="fm" '+(filt?'checked':'')+'> Show missed only</label>'+res.filter(r=>!filt||!r.ok).map(r=>reviewHTML(r.q,r.choice)).join('');
+  $('#fm').onchange=e=>{filt=e.target.checked;draw();};
+  $('#rt').onclick=()=>{viewExam.intro=true;viewExam(k);};
+ }
+ draw();
+}
+
+/* ---------- cheat sheet ---------- */
+function viewCheat(){
+ V().innerHTML='<div class="noprint" style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;justify-content:space-between"><p class="muted" style="margin:0">One page. Print it, then practice redrawing each box from memory.</p><span><button class="btn primary" id="pr">Print (1 page)</button><button class="btn" id="cd">'+(S.cheatDone?'✓ Redrawn from memory':'Mark: redrawn from memory')+'</button></span></div><h1>Introductory Sociology — Cheat Sheet</h1><div class="cheat">'+$('#tpl-cheat').innerHTML+'</div>';
+ $('#pr').onclick=()=>{document.body.classList.add('printcheat');window.print();setTimeout(()=>document.body.classList.remove('printcheat'),500);};
+ $('#cd').onclick=()=>{S.cheatDone=!S.cheatDone;save();viewCheat();};
+}
+
+/* ---------- study plan ---------- */
+function ymd(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function parseYmd(s){const[y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d);}
+function makePlan(hpd,examStr){
+ const today=new Date();today.setHours(0,0,0,0);const exam=parseYmd(examStr);
+ const n=Math.round((exam-today)/DAY);if(!(n>=1))return{err:'Pick an exam date after today.'};
+ const cap=Math.round(hpd*60),days=[];for(let i=0;i<n;i++)days.push({d:new Date(today.getTime()+i*DAY),items:[],used:0});
+ const add=(day,l,m,href,cls)=>{day.items.push({l,m,href,cls});day.used+=m;};
+ // reserve practice exams for the final 1–2 days
+ const needA=!lastExam('a'),needB=!lastExam('b');
+ const dB=days[n-1],dA=n>=2?days[n-2]:days[n-1];
+ if(needA)add(dA,'Practice Exam 1 — 100 Qs, 90 min, timed',90,'#/exam/a','exam');
+ if(needA)add(dA,'Review every Exam 1 miss, then drill the mistake log',45,'#/mistakes','exam');
+ if(needB)add(dB,'Practice Exam 2 — 100 Qs, 90 min, timed',90,'#/exam/b','exam');
+ add(dB,'Cheat sheet: redraw from memory; review weakest unit\'s must-know box',30,'#/cheat','exam');
+ const studyDays=days.filter(d=>d!==dA&&d!==dB);
+ const tasks=tasksRemaining().filter(t=>!t.cards).map(t=>Object.assign({},t));
+ // weave each unit's flashcard first pass right after its quiz
+ const cardT=tasksRemaining().filter(t=>t.cards);
+ const ordered=[];tasks.forEach(t=>{ordered.push(t);if(/quiz/.test(t.l)){const c=cardT.find(x=>x.u===t.u);if(c){ordered.push(c);cardT.splice(cardT.indexOf(c),1);}}});
+ cardT.forEach(c=>ordered.push(c));
+ ordered.push({l:'Mistake-log drill (until queue is under 10)',m:40,href:'#/mistakes'});
+ const review=cap>=60?15:10;
+ let ti=0,rem=ordered.length?ordered[0].m:0,part=1;
+ studyDays.forEach((day,idx)=>{
+  if(idx>0)add(day,'Flashcards: due cards + missed',review,'#/cards');
+  while(ti<ordered.length&&day.used<cap){
+   const t=ordered[ti],room=cap-day.used;
+   if(room<10&&day.items.length)break;
+   if(rem<=room){add(day,t.l+(part>1?' (finish)':''),rem,t.href);ti++;rem=ti<ordered.length?ordered[ti].m:0;part=1;}
+   else{add(day,t.l+' (part '+part+')',room,t.href);rem-=room;part++;}
+  }
+  if(ti>=ordered.length&&day.used<cap-20){add(day,'Retake your lowest-scoring unit quiz + mistake drill',Math.min(45,cap-day.used),'#/mistakes');}
+ });
+ const left=ti<ordered.length?ordered.slice(ti).reduce((a,t,j)=>a+(j===0?rem:t.m),0):0;
+ const need=(ordered.reduce((a,t)=>a+t.m,0)+studyDays.length*review)/Math.max(1,studyDays.length)/60;
+ return{days,exam,left,need:Math.ceil(need*4)/4,n};
+}
+function viewPlan(){
+ const p=S.plan||{hpd:1.5,date:ymd(new Date(Date.now()+21*DAY))};
+ V().innerHTML='<h1>Study plan</h1><p class="muted">Enter your daily hours and exam date. The plan follows the unit order, gives “Skim” units (from the diagnostic) about 40% less time, schedules flashcard review every day, and puts the two practice exams in the last 1–2 days before your exam. It updates as you complete work — regenerate any time.</p>'+
+ '<div class="card noprint"><label class="f">Hours per day<input type="number" id="hp" min="0.5" max="10" step="0.25" value="'+p.hpd+'"></label><label class="f">Exam date<input type="date" id="dt" value="'+p.date+'"></label><button class="btn primary" id="mk">Generate plan</button><button class="btn" id="pp">Print</button><p class="small muted">Estimated work remaining: ~'+hoursLeft().toFixed(1)+' hours.</p></div><div id="out"></div>';
+ function gen(){
+  const hpd=Math.max(0.5,parseFloat($('#hp').value)||1.5),date=$('#dt').value;S.plan={hpd,date};save();
+  const r=makePlan(hpd,date);if(r.err){$('#out').innerHTML='<p class="chip bad">'+r.err+'</p>';return;}
+  const fmtD=d=>d.toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'});
+  $('#out').innerHTML=(r.left?'<div class="card" style="border-color:var(--bad)"><b>Not enough time.</b> About '+(r.left/60).toFixed(1)+' hours of work did not fit. Raise hours per day to about '+r.need.toFixed(1)+', move the exam date later, or rely on the diagnostic to skim more units.</div>':'<p class="chip ok">Everything fits. '+r.n+' day(s) until the exam.</p>')+
+  '<div class="tablewrap"><table class="plan"><tr><th>Day</th><th>Tasks</th><th>Time</th></tr>'+r.days.map((d,i)=>'<tr class="'+(d.items.some(x=>x.cls==='exam')?'exam':'')+'"><td>'+fmtD(d.d)+'<br><span class="small muted">Day '+(i+1)+'</span></td><td><ul>'+(d.items.length?d.items.map(x=>'<li>'+(x.href?'<a href="'+x.href+'">'+esc(x.l)+'</a>':esc(x.l))+' <span class="muted small">'+x.m+'m</span></li>').join(''):'<li class="muted">Rest / light flashcards</li>')+'</ul></td><td>'+(d.used/60).toFixed(1)+'h</td></tr>').join('')+
+  '<tr class="exam"><td>'+fmtD(r.exam)+'</td><td><b>EXAM DAY.</b> 10 minutes of flashcards at most. Bring ID; arrive early.</td><td></td></tr></table></div>';
+ }
+ $('#mk').onclick=gen;$('#pp').onclick=()=>window.print();if(S.plan)gen();
+}
+
+/* ---------- about & data ---------- */
+function viewAbout(){
+ const words=u=>strip(u.lesson+' '+u.must.join(' ')).split(' ').length;
+ const totW=UNITS.reduce((a,u)=>a+words(u),0),totQ=QB.length,totC=CARDS.length;
+ const uv='<span class="unverified">unverified</span>';
+ V().innerHTML='<h1>About this guide</h1>'+
+ '<div class="card"><h2 style="margin-top:0">Exam facts</h2><table><tr><th>Questions</th><td>About '+OUTLINE.questions+' (some are unscored pretest questions)</td></tr><tr><th>Time limit</th><td>'+OUTLINE.minutes+' minutes</td></tr><tr><th>Format</th><td>Multiple choice, five options</td></tr><tr><th>Score scale</th><td>'+OUTLINE.scale+'; ACE-recommended credit-granting score '+OUTLINE.passing+' ('+OUTLINE.credit+'). Individual colleges set their own policies.</td></tr></table>'+
+ '<p class="small">Source: College Board, <a href="'+OUTLINE.url+'" target="_blank" rel="noopener">CLEP Introductory Sociology exam page</a> and the <a href="'+OUTLINE.glanceUrl+'" target="_blank" rel="noopener">“At a Glance” sheet</a>; retrieved '+OUTLINE.retrieved+'. The College Board site could not be loaded directly while this guide was built, so figures were confirmed from search extracts of those pages. Items that could not be confirmed are marked '+uv+'.</p></div>'+
+ '<h2>Official content outline</h2><div class="tablewrap"><table><tr><th>Area</th><th>Weight</th><th>Subtopics</th><th>Units here</th></tr>'+OUTLINE.areas.map(a=>'<tr><td>'+esc(a.name)+'</td><td>'+a.weight+'%</td><td>'+a.sub.map(esc).join(', ')+(a.subVerified?'':' '+uv)+'</td><td>'+UNITS.filter(u=>u.area===a.id).map(u=>u.short).join(', ')+'</td></tr>').join('')+'</table></div>'+
+ '<h3>Skills tested</h3><ul>'+OUTLINE.skills.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul><p class="small muted">The official page does not give a percentage for each skill, so none is shown.</p>'+
+ '<h2>Content budget vs. official weights</h2><div class="tablewrap"><table><tr><th>Unit</th><th>Weight</th><th>Lesson words</th><th>Questions (quiz/diag/ex1/ex2)</th><th>Cards</th></tr>'+UNITS.map(u=>{const c=s=>QB.filter(q=>q.u===u.id&&q.s===s).length,t=QB.filter(q=>q.u===u.id).length;return'<tr><td>'+u.short+' '+esc(u.title)+'</td><td>'+u.weight+'%</td><td>'+words(u)+' ('+pct(words(u),totW)+'%)</td><td>'+t+' ('+pct(t,totQ)+'%) · '+c('q')+'/'+c('d')+'/'+c('a')+'/'+c('b')+'</td><td>'+u.cards.length+' ('+pct(u.cards.length,totC)+'%)</td></tr>';}).join('')+'<tr><th>Total</th><th>100%</th><th>'+totW+'</th><th>'+totQ+'</th><th>'+totC+'</th></tr></table></div>'+
+ '<h2>Keyboard shortcuts</h2><table><tr><td><kbd>1</kbd>–<kbd>5</kbd> or <kbd>A</kbd>–<kbd>E</kbd></td><td>Answer a question</td></tr><tr><td><kbd>Enter</kbd></td><td>Next question</td></tr><tr><td><kbd>←</kbd> <kbd>→</kbd> <kbd>F</kbd></td><td>Practice exam: previous / next / flag</td></tr><tr><td><kbd>Space</kbd>, then <kbd>1</kbd>/<kbd>2</kbd></td><td>Flashcards: flip, then missed / got it</td></tr></table>'+
+ '<h2>Your data</h2><p class="small">Progress is saved in this browser only'+(storageOK?'.':' — <b>but storage is currently blocked</b>, so export before closing the tab.')+' Export a backup file to move progress to another device.</p><p><button class="btn primary" id="ex">Export progress (JSON)</button><label class="btn">Import progress<input type="file" id="im" accept=".json,application/json" hidden></label><button class="btn" id="rs">Reset everything</button></p><textarea id="dump" hidden style="width:100%;height:8rem;font:12px monospace"></textarea>'+
+ '<h2>Notes</h2><p class="small muted">All lessons, questions, and flashcards were written originally for this guide; none are copied from College Board or commercial prep materials. CLEP and College Board are trademarks of the College Board, which does not endorse this guide.</p>';
+ $('#ex').onclick=()=>{const txt=JSON.stringify(S);try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:'application/json'}));a.download='clep-sociology-progress-'+ymd(new Date())+'.json';document.body.appendChild(a);a.click();a.remove();}catch(e){}const d=$('#dump');d.hidden=false;d.value=txt;d.select();};
+ $('#im').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const o=JSON.parse(r.result);if(!o||o.v!==1)throw 0;S=Object.assign(fresh(),o);save();applyTheme();toast('Progress imported');route();}catch(err){alert('That file is not a valid progress export.');}};r.readAsText(f);};
+ $('#rs').onclick=()=>{if(confirm('Erase all progress, scores, flashcard boxes and the mistake log?')){S=fresh();save();applyTheme();route();}};
+}
+
+window.__APP={QB,UNITS,CARDS,UNIT,QID,state:()=>S,examQs};
+route();
+})();
+</script>
+</body>
+</html>

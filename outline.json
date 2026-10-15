@@ -1,0 +1,87 @@
+{
+  "exam": "CLEP Introductory Sociology",
+  "source": {
+    "official_page": "https://clep.collegeboard.org/history-and-social-sciences/introductory-sociology",
+    "at_a_glance_pdf": "https://secure-media.collegeboard.org/digitalServices/pdf/clep/clep-introductory-sociology-at-a-glance.pdf",
+    "retrieved": "2026-10-15",
+    "retrieval_note": "collegeboard.org could not be loaded directly from the build environment (blocked by its network policy). Figures were confirmed from search-engine extracts of the official exam page and from a copy of the College Board 'At a Glance' sheet. Fields marked verified:false could not be confirmed and are shown as 'unverified' in the app."
+  },
+  "format": {
+    "questions": 100,
+    "questions_note": "approximately 100; some are unscored pretest questions",
+    "time_limit_minutes": 90,
+    "question_type": "multiple choice, 5 options",
+    "score_scale": "20-80",
+    "ace_recommended_passing_score": 50,
+    "ace_recommended_credit": "3 semester hours",
+    "verified": true
+  },
+  "content_outline": [
+    {
+      "id": "inst",
+      "area": "Institutions",
+      "weight": 20,
+      "weight_verified": true,
+      "subtopics": ["Economic", "Educational", "Family", "Medicine", "Political", "Religious"],
+      "subtopics_verified": false
+    },
+    {
+      "id": "patt",
+      "area": "Social Patterns",
+      "weight": 10,
+      "weight_verified": true,
+      "subtopics": ["Community", "Demography", "Human ecology", "Rural/urban patterns"],
+      "subtopics_verified": false
+    },
+    {
+      "id": "proc",
+      "area": "Social Processes",
+      "weight": 25,
+      "weight_verified": true,
+      "subtopics": ["Collective behavior and social movements", "Culture", "Deviance and social control", "Groups and organizations", "Social change", "Social interaction", "Socialization"],
+      "subtopics_verified": true
+    },
+    {
+      "id": "strat",
+      "area": "Social Stratification (Process and Structure)",
+      "weight": 25,
+      "weight_verified": true,
+      "subtopics": ["Aging", "Power and social inequality", "Professions and occupations", "Race and ethnic relations", "Sex and gender roles", "Social class", "Social mobility"],
+      "subtopics_verified": true
+    },
+    {
+      "id": "persp",
+      "area": "The Sociological Perspective",
+      "weight": 20,
+      "weight_verified": true,
+      "subtopics": ["History of sociology", "Methods", "Sociological theory"],
+      "subtopics_verified": true
+    }
+  ],
+  "knowledge_and_skills": {
+    "items": [
+      "Identification of specific names, facts, and concepts from sociological literature",
+      "Understanding of relationships between concepts, empirical generalizations, and theoretical propositions of sociology",
+      "Understanding of the methods by which sociological relationships are established",
+      "Application of concepts, propositions, and methods to hypothetical situations",
+      "Interpretation of tables and charts"
+    ],
+    "percentages": null,
+    "percentages_note": "The official page lists these abilities without confirmed percentages; none are shown in the app.",
+    "verified": true
+  },
+  "unit_plan": [
+    { "id": "u1",  "area": "persp", "title": "History of Sociology & Major Theories", "weight": 10 },
+    { "id": "u2",  "area": "persp", "title": "Research Methods", "weight": 10 },
+    { "id": "u3",  "area": "proc",  "title": "Culture & Socialization", "weight": 7 },
+    { "id": "u4",  "area": "proc",  "title": "Social Interaction, Groups & Organizations", "weight": 6 },
+    { "id": "u5",  "area": "proc",  "title": "Deviance & Social Control", "weight": 6 },
+    { "id": "u6",  "area": "proc",  "title": "Collective Behavior, Social Movements & Social Change", "weight": 6 },
+    { "id": "u7",  "area": "strat", "title": "Social Class, Power, Occupations & Mobility", "weight": 10 },
+    { "id": "u8",  "area": "strat", "title": "Race & Ethnic Relations", "weight": 8 },
+    { "id": "u9",  "area": "strat", "title": "Sex, Gender & Aging", "weight": 7 },
+    { "id": "u10", "area": "inst",  "title": "Family & Religion", "weight": 10 },
+    { "id": "u11", "area": "inst",  "title": "Education, Economy, Politics & Medicine", "weight": 10 },
+    { "id": "u12", "area": "patt",  "title": "Demography, Community, Human Ecology & Urbanization", "weight": 10 }
+  ]
+}
