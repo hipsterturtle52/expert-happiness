@@ -75,7 +75,7 @@ async function answerExam(page, chooseCorrect) {
     A.QB.forEach(q => {
       const id = q.id;
       if (!A.UNIT[q.u]) problems.push(id + ': bad unit tag');
-      if (!['q', 'd', 'a', 'b'].includes(q.s)) problems.push(id + ': bad set');
+      if (!['q', 'd', 'a', 'b', 'x', 'p'].includes(q.s)) problems.push(id + ': bad set');
       if (!['E', 'M', 'H'].includes(q.d)) problems.push(id + ': bad difficulty');
       if (q.o.length !== 5) problems.push(id + ': needs 5 options');
       if (new Set(q.o.map(strip)).size !== q.o.length) problems.push(id + ': duplicate options');
@@ -94,17 +94,17 @@ async function answerExam(page, chooseCorrect) {
       if (cardFronts[k]) problems.push(c.id + ': duplicate card front of ' + cardFronts[k]); else cardFronts[k] = c.id;
     });
     const units = A.UNITS.map(u => {
-      const qs = A.QB.filter(q => q.u === u.id);
+      const qs = A.QB.filter(q => q.u === u.id && q.s !== 'p');
       const words = strip(u.lesson + ' ' + u.must.join(' ')).split(' ').length;
       return { id: u.id, short: u.short, title: u.title, area: u.area, weight: u.weight, minutes: u.minutes, words,
         must: u.must.length, cards: u.cards.length, visual: !!u.visual,
         q: qs.filter(q => q.s === 'q').length, d: qs.filter(q => q.s === 'd').length,
-        a: qs.filter(q => q.s === 'a').length, b: qs.filter(q => q.s === 'b').length, total: qs.length };
+        a: qs.filter(q => q.s === 'a').length, b: qs.filter(q => q.s === 'b').length, x: qs.filter(q => q.s === 'x').length, total: qs.length };
     });
-    const pos = s => { const p = [0, 0, 0, 0, 0]; A.QB.filter(q => !s || q.s === s).forEach(q => p[q.ans]++); return p; };
-    const diff = ['E', 'M', 'H'].map(d => A.QB.filter(q => q.d === d).length);
-    return { problems, units, total: A.QB.length, cards: A.CARDS.length,
-      sets: { q: A.QB.filter(q => q.s === 'q').length, d: A.QB.filter(q => q.s === 'd').length, a: A.QB.filter(q => q.s === 'a').length, b: A.QB.filter(q => q.s === 'b').length },
+    const pos = s => { const p = [0, 0, 0, 0, 0]; A.QB.filter(q => s ? q.s === s : q.s !== 'p').forEach(q => p[q.ans]++); return p; };
+    const diff = ['E', 'M', 'H'].map(d => A.QB.filter(q => q.s !== 'p' && q.d === d).length);
+    return { problems, units, total: A.QB.filter(q => q.s !== 'p').length, cards: A.CARDS.filter(c => !c.person).length,
+      sets: { q: A.QB.filter(q => q.s === 'q').length, d: A.QB.filter(q => q.s === 'd').length, a: A.QB.filter(q => q.s === 'a').length, b: A.QB.filter(q => q.s === 'b').length, x: A.QB.filter(q => q.s === 'x').length, p: A.QB.filter(q => q.s === 'p').length, people: (typeof PEOPLE !== 'undefined' ? PEOPLE : []).length, pcards: A.CARDS.filter(c => c.person).length },
       pos: { all: pos(), q: pos('q'), d: pos('d'), a: pos('a'), b: pos('b') }, diff,
       areas: window.__APP.UNITS.length && JSON.parse(JSON.stringify(Object.values(window.__APP.UNITS.reduce((m, u) => { m[u.area] = m[u.area] || { area: u.area, weight: 0 }; m[u.area].weight += u.weight; return m; }, {})))) };
   });
@@ -207,6 +207,18 @@ async function answerExam(page, chooseCorrect) {
   const ready = await page.textContent('#readyChip');
   check(/Ready to book/.test(ready), 'readiness should say “Ready to book” when both exams are at least 75%');
 
+  /* ---------------- 2f. extra practice and who's-who quiz ---------------- */
+  await page.goto(URL + '#/extra/u7');
+  const xn = await answerRunner(page, () => true);
+  check(xn > 0, 'extra practice did not run');
+  check(xn === S.units.find(u => u.id === 'u7').x, 'U7 extra practice presented ' + xn + ' questions');
+  await page.goto(URL + '#/people');
+  const peopleRows = await page.$$eval('#pt tr[data-k]', r => r.length);
+  check(peopleRows === S.sets.people, 'Key people table lists ' + peopleRows + ' of ' + S.sets.people + ' people');
+  await page.click('#pq');
+  const pn = await answerRunner(page, (i, id) => /-p-/.test(id));
+  check(pn === 20, "who's-who quiz presented " + pn + ' questions (expected 20)');
+
   /* ---------------- 3. other features ---------------- */
   await page.goto(URL + '#/cards/u3');
   await page.click('#d3');
@@ -281,19 +293,21 @@ async function answerExam(page, chooseCorrect) {
   out('- Diagnostic: ' + dn + ' questions presented, all diagnostic-only, scored ' + (diag && diag.score) + '% as expected; skim/must-study verdicts shown; misses added to mistake log.');
   out('- Practice Exam 1: ' + total + ' questions answered by keyboard (80% correct), scored ' + (ea && ea.score) + '%; results by 5 content areas and 12 units; no overlap with diagnostic.');
   out('- Practice Exam 2: auto-submitted after the 90-minute limit; retake at 100% turned the readiness meter to “Ready to book”.');
+  out('- Extra practice (U7: ' + xn + ' questions) and the 20-question who\'s-who quiz ran; Key People table lists ' + peopleRows + ' people.');
   out('- Unit quiz, Leitner flashcards, study plan (exams on the last two days), JSON export, blocked storage, one-page cheat-sheet print: checked.');
   out('');
   out('## Question bank');
-  out('- Total: ' + S.total + ' original questions — unit quizzes ' + S.sets.q + ', diagnostic ' + S.sets.d + ', Practice Exam 1 ' + S.sets.a + ', Practice Exam 2 ' + S.sets.b + '.');
+  out('- Total: ' + S.total + ' original questions — unit quizzes ' + S.sets.q + ', diagnostic ' + S.sets.d + ', Practice Exam 1 ' + S.sets.a + ', Practice Exam 2 ' + S.sets.b + ', extra practice ' + S.sets.x + '.');
+  out('- Plus ' + S.sets.p + ' who\'s-who questions generated from the Key People list (' + S.sets.people + ' people, ' + S.sets.pcards + ' people flashcards).');
   out('- Every question: unit tag, 5 options, exactly one correct, an explanation for every option, no duplicate stems: ' + (S.problems.length ? S.problems.length + ' problem(s)' : 'OK') + '.');
   out('- Difficulty: easy ' + S.diff[0] + ' (' + pct(S.diff[0], S.total) + '), medium ' + S.diff[1] + ' (' + pct(S.diff[1], S.total) + '), hard ' + S.diff[2] + ' (' + pct(S.diff[2], S.total) + ').');
   out('- Correct-answer positions A/B/C/D/E: all ' + S.pos.all.join('/') + '; diagnostic ' + S.pos.d.join('/') + '; Exam 1 ' + S.pos.a.join('/') + '; Exam 2 ' + S.pos.b.join('/') + '.');
   out('');
   out('## Content per unit vs. official weights');
   out('');
-  out('| Unit | Weight | Lesson (min / words / share) | Must-know | Questions (quiz/diag/ex1/ex2 = total, share) | Flashcards (share) |');
+  out('| Unit | Weight | Lesson (min / words / share) | Must-know | Questions (quiz/diag/ex1/ex2/extra = total, share) | Flashcards (share) |');
   out('|---|---|---|---|---|---|');
-  S.units.forEach(u => out('| ' + u.short + ' ' + u.title + ' | ' + u.weight + '% | ' + u.minutes + ' / ' + u.words + ' / ' + pct(u.words, tot.w) + ' | ' + u.must + ' | ' + u.q + '/' + u.d + '/' + u.a + '/' + u.b + ' = ' + u.total + ', ' + pct(u.total, tot.q) + ' | ' + u.cards + ' (' + pct(u.cards, tot.c) + ') |'));
+  S.units.forEach(u => out('| ' + u.short + ' ' + u.title + ' | ' + u.weight + '% | ' + u.minutes + ' / ' + u.words + ' / ' + pct(u.words, tot.w) + ' | ' + u.must + ' | ' + u.q + '/' + u.d + '/' + u.a + '/' + u.b + '/' + u.x + ' = ' + u.total + ', ' + pct(u.total, tot.q) + ' | ' + u.cards + ' (' + pct(u.cards, tot.c) + ') |'));
   out('| **Total** | 100% | ' + S.units.reduce((a, u) => a + u.minutes, 0) + ' min / ' + tot.w + ' | ' + S.units.reduce((a, u) => a + u.must, 0) + ' | ' + tot.q + ' | ' + tot.c + ' |');
   out('');
   out('## By official content area');

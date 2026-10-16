@@ -121,7 +121,7 @@ details.rev summary{cursor:pointer}
 .plan td:first-child{white-space:nowrap}
 .plan ul{margin:0;padding-left:1.1rem}
 .plan tr.exam td{background:var(--warnbg)}
-input[type=number],input[type=date],select{font:inherit;padding:.35rem .5rem;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
+input[type=number],input[type=date],input[type=search],select{font:inherit;padding:.35rem .5rem;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
 label.f{display:inline-flex;flex-direction:column;gap:.2rem;margin:.3rem 1rem .3rem 0;font-size:.9rem}
 /* cheat sheet */
 .cheat{font-size:.8rem;line-height:1.32;columns:2 330px;column-gap:1.2rem}
@@ -238,13 +238,13 @@ lesson:`
 
 <h3>Sociology in the United States</h3>
 <p>The first U.S. sociology department opened at the <b>University of Chicago</b> in 1892. The <b>Chicago School</b> treated the city as a laboratory, studying neighborhoods, immigrants, and crime (Robert <b>Park</b> and Ernest <b>Burgess</b> — see Unit 12).</p>
-<p><b>W.E.B. Du Bois</b> (1868–1963), the first African American to earn a Harvard Ph.D., wrote <i>The Philadelphia Negro</i> (1899), an early empirical community study, and in <i>The Souls of Black Folk</i> (1903) described <b>double consciousness</b>: Black Americans seeing themselves both through their own eyes and through the eyes of a society that looks down on them. He helped found the NAACP.</p>
+<p><b>W.E.B. Du Bois</b> (1868–1963), the first African American to earn a Harvard Ph.D., wrote <i>The Philadelphia Negro</i> (1899), an early empirical community study, and in <i>The Souls of Black Folk</i> (1903) described <b>double consciousness</b>: Black Americans seeing themselves both through their own eyes and through the eyes of a society that looks down on them. He led the Niagara Movement (1905) and helped found the NAACP (1909). From 1897 he ran yearly empirical studies of Black life at <b>Atlanta University</b> (the Atlanta Sociological Laboratory), so some textbooks list Atlanta University alongside Chicago among the first U.S. sociology programs. Du Bois saw sociology as a tool for <b>social reform</b>.</p>
 <p><b>Jane Addams</b> co-founded <b>Hull House</b> (1889), a Chicago settlement house that served immigrants and gathered data on urban poverty. She won the Nobel Peace Prize in 1931.</p>
 <p><b>W.I. Thomas</b> stated the <b>Thomas theorem</b>: “If men define situations as real, they are real in their consequences.” Beliefs, even false ones, shape behavior.</p>
 
 <h3>The three major perspectives</h3>
 <p><b>Macro-level</b> analysis looks at large structures (the economy, social class); <b>micro-level</b> analysis looks at face-to-face interaction. The three classic theories split along that line.</p>
-<p><b>1. Structural functionalism</b> (macro). Society is a system of interrelated parts (institutions) that each serve a <b>function</b> and keep the whole stable — like organs in a body. Society rests on <b>consensus</b> about values. Roots: Spencer and Durkheim. <b>Talcott Parsons</b> made it the dominant U.S. theory in the 1940s–50s. <b>Robert K. Merton</b> refined it: <b>manifest functions</b> are intended and recognized; <b>latent functions</b> are unintended and often unnoticed; <b>dysfunctions</b> are consequences that disrupt the system. He also favored <b>middle-range theories</b> that can be tested. Critics say functionalism justifies the status quo and struggles to explain conflict and change.</p>
+<p><b>1. Structural functionalism</b> (macro). Society is a system of interrelated parts (institutions) that each serve a <b>function</b> and keep the whole stable — like organs in a body. Society rests on <b>consensus</b> about values. Roots: Spencer and Durkheim. <b>Talcott Parsons</b> made it the dominant U.S. theory in the 1940s–50s with an abstract model of society as a system — Mills mocked it as “<b>grand theory</b>.” <b>Robert K. Merton</b> refined it: <b>manifest functions</b> are intended and recognized; <b>latent functions</b> are unintended and often unnoticed; <b>dysfunctions</b> are consequences that disrupt the system. He also favored <b>middle-range theories</b> that can be tested. Critics say functionalism justifies the status quo and struggles to explain conflict and change.</p>
 <div class="ex">The manifest function of college is education. Latent functions: meeting a spouse, keeping young adults out of the job market. A dysfunction: student debt.</div>
 <p><b>2. Conflict theory</b> (macro). Society is an arena of <b>inequality</b> in which groups compete for <b>scarce resources</b> — wealth, power, prestige — and those on top use institutions to protect their advantage. Change comes from conflict. Roots: Marx. Later conflict theorists: <b>C. Wright Mills</b> (the <b>power elite</b>), <b>Ralf Dahrendorf</b> (conflict over authority, not just ownership), <b>Lewis Coser</b> (conflict can strengthen group unity), <b>Randall Collins</b>. <b>Feminist theory</b> applies a conflict lens to gender inequality. Critics say it overlooks consensus and stability.</p>
 <p><b>3. Symbolic interactionism</b> (micro). People act toward things based on the <b>meanings</b> those things have, and meanings are created and changed in <b>interaction</b> through <b>symbols</b> such as language and gestures. Roots: <b>George Herbert Mead</b> (the self, Unit 3) and <b>Charles Horton Cooley</b> (the looking-glass self). <b>Herbert Blumer</b>, Mead's student, coined the term “symbolic interactionism.” <b>Erving Goffman</b>'s <b>dramaturgy</b> treats life as theater: we manage impressions on a <b>front stage</b> and relax <b>backstage</b> (<i>The Presentation of Self in Everyday Life</i>, 1959). Critics say it neglects large structures like class.</p>
@@ -695,7 +695,7 @@ lesson:`
 
 <h3>Theories of the self</h3>
 <p><b>Charles Horton Cooley</b>: the <b>looking-glass self</b>. We (1) imagine how we appear to others, (2) imagine their judgment, and (3) develop feelings about ourselves (pride or shame) from that imagined judgment. Our self-image may not match how others actually see us. Cooley also named <b>primary groups</b> (Unit 4).</p>
-<p><b>George Herbert Mead</b>: the self emerges through <b>social interaction</b> and <b>role-taking</b>. It has two parts: the <b>“I”</b> (spontaneous, creative, acting) and the <b>“me”</b> (the socialized self that sees itself as others do). Children develop in stages:</p>
+<p><b>George Herbert Mead</b>: the self emerges through <b>social interaction</b> and <b>role-taking</b> — mentally putting yourself in another person's position to see the world from that person's point of view. It has two parts: the <b>“I”</b> (spontaneous, creative, acting) and the <b>“me”</b> (the socialized self that sees itself as others do). Children develop in stages:</p>
 <ol>
 <li><b>Imitation / preparatory stage</b> — mimicking without understanding.</li>
 <li><b>Play stage</b> — pretending to be <b>significant others</b> (“I'm Mommy”).</li>
@@ -854,7 +854,7 @@ must:[
 ],
 lesson:`
 <h3>Social structure: statuses and roles</h3>
-<p><b>Social structure</b> is the stable framework of relationships that guides interaction. Its basic units are statuses and roles.</p>
+<p><b>Social structure</b> is the stable framework of statuses, roles, groups, and institutions that organizes a society and sets limits on individual behavior. Its basic units are statuses and roles.</p>
 <p>A <b>status</b> is a recognized social position. An <b>ascribed status</b> is assigned at birth or involuntarily later in life (sex, race, age, being someone's daughter). An <b>achieved status</b> is earned or chosen (college graduate, nurse, ex-convict). All the statuses a person holds make up a <b>status set</b>. A <b>master status</b> dominates others and shapes how people see you — a serious disability, a famous name, or a criminal record can overshadow everything else.</p>
 <p>A <b>role</b> is the behavior expected of someone in a status: you <i>occupy</i> a status but <i>play</i> a role. One status carries a <b>role set</b> (a student relates to professors, classmates, and advisers). <b>Role conflict</b> is a clash between roles of <b>different</b> statuses (a parent's child is sick on the day the employee has a key meeting). <b>Role strain</b> is tension among demands within <b>one</b> status (a manager who must be friendly with employees and also discipline them). <b>Role exit</b> is the process of leaving a role that was central to one's identity (retirement, divorce, leaving a religious order).</p>
 
@@ -874,7 +874,7 @@ lesson:`
 </ul>
 <p><b>Group size</b> matters (Georg <b>Simmel</b>). A <b>dyad</b> (two people) is the most intimate but also the most fragile — it ends if one person leaves. A <b>triad</b> (three) is more stable because a third person can mediate, but two members can form a <b>coalition</b> against the third.</p>
 <p>Groups have two kinds of leaders: <b>instrumental</b> leaders focus on getting the task done; <b>expressive</b> leaders focus on morale and harmony. Kurt Lewin described three leadership styles: <b>authoritarian</b>, <b>democratic</b>, and <b>laissez-faire</b>.</p>
-<p><b>Social networks</b> link people through ties. Mark Granovetter's “strength of <b>weak ties</b>” shows that acquaintances are often more useful than close friends for finding jobs, because they connect us to new information.</p>
+<p><b>Social networks</b> link people through ties. Mark Granovetter's “strength of <b>weak ties</b>” shows that acquaintances are often more useful than close friends for finding jobs, because they connect us to new information. An “<b>old boy network</b>” — jobs and favors passed among graduates of elite schools — is a social network that historically shut out women and minorities.</p>
 
 <h3>Conformity and obedience</h3>
 <ul>
@@ -1023,7 +1023,7 @@ must:[
 ],
 lesson:`
 <h3>What counts as deviance</h3>
-<p><b>Deviance</b> is behavior that violates a group's norms. It is <b>relative</b>: the same act may be deviant in one time, place, or group and normal in another (tattoos, drinking alcohol, cohabitation). <b>Crime</b> is deviance that violates formal law. <b>Social control</b> is the set of means a society uses to encourage conformity — <b>informal</b> (gossip, praise, shunning) and <b>formal</b> (police, courts, prisons).</p>
+<p><b>Deviance</b> is behavior that violates a group's norms. It is <b>relative</b>: the same act may be deviant in one time, place, or group and normal in another (tattoos, drinking alcohol, cohabitation). <b>Crime</b> is deviance that violates formal law. <b>Social control</b> is the set of means a society uses to encourage conformity. It works <b>internally</b>, through norms people absorb in socialization, and <b>externally</b>, through sanctions — <b>informal</b> (gossip, praise, shunning) and <b>formal</b> (police, courts, prisons).</p>
 <p>Erving Goffman's <b>stigma</b> is a powerfully negative label or mark that spoils a person's identity — a prison record, a visible disability — and can become a master status.</p>
 
 <h3>Early explanations</h3>
@@ -1188,7 +1188,7 @@ must:[
 lesson:`
 <h3>Collective behavior</h3>
 <p><b>Collective behavior</b> is relatively spontaneous, short-lived, and unstructured activity by a large number of people, often outside ordinary norms. It contrasts with <b>institutionalized</b> behavior like attending a scheduled class.</p>
-<p><b>Crowds</b> are temporary gatherings sharing a focus. Herbert <b>Blumer</b> named four types: <b>casual</b> (onlookers at an accident), <b>conventional</b> (a concert audience following norms), <b>expressive</b> (people releasing emotion, as at a revival or New Year's Eve), and <b>acting</b> (aroused and goal-directed). An acting crowd can become a <b>mob</b> (focused, emotional, violent — a lynch mob) or a <b>riot</b> (undirected violence and destruction).</p>
+<p><b>Crowds</b> are temporary gatherings of people in one another's immediate presence who share a focus. A <b>mass</b> is different: many people who share an interest but are not in the same place, such as millions watching a televised final. Herbert <b>Blumer</b> named four types: <b>casual</b> (onlookers at an accident), <b>conventional</b> (a concert audience following norms), <b>expressive</b> (people releasing emotion, as at a revival or New Year's Eve), and <b>acting</b> (aroused and goal-directed). An acting crowd can become a <b>mob</b> (focused, emotional, violent — a lynch mob) or a <b>riot</b> (undirected violence and destruction).</p>
 <p>Dispersed forms of collective behavior involve people who are not in one place:</p>
 <ul>
 <li><b>Panic</b> — fearful, often self-defeating flight or action (a stampede, a bank run, panic buying).</li>
@@ -1394,9 +1394,19 @@ lesson:`
 <p><b>Income</b> is money received (wages, interest); <b>wealth</b> is the total value of assets minus debts. Wealth is <b>far more unequally distributed</b> than income: the top 20% of households receive a little over half of all income but hold the large majority of wealth. The <b>Gini coefficient</b> measures inequality from 0 (perfect equality) to 1 (one person has everything).</p>
 <p>A common model of U.S. classes: the <b>upper class</b> (a few percent; “old money” inherited over generations vs. “new money” recently earned), the <b>upper-middle class</b> (professionals, managers), the <b>middle class</b>, the <b>working class</b> (manual and routine service jobs), the <b>working poor</b>, and the <b>underclass</b> (persistently poor, often outside the labor market).</p>
 
+<h3>More class vocabulary</h3>
+<ul>
+<li><b>Prestige</b> is the respect or regard others give a person or an occupation — Weber's status dimension.</li>
+<li>Upper-class wealth comes mostly from <b>inheritance</b>, often built several generations back. On average, married couples hold more wealth than unmarried people.</li>
+<li>The <b>working poor</b> hold jobs — usually low-paid unskilled or service work with little security — yet live just above or below the poverty line. The <b>underclass</b> is persistently poor with weak ties to the labor market, often in areas of concentrated poverty.</li>
+<li>Marx's <b>exploitation</b>: workers produce goods worth more than their wages, and capitalists keep the difference (<b>surplus value</b>). Conflict theorists say the powerful use <b>ideology</b> — beliefs that make the status quo seem fair — to keep their position. Marx called the economy the <b>base</b> and the institutions that spread such ideas (government, schools, religion) the <b>superstructure</b>.</li>
+<li>Weber held that in modern societies power is concentrated in large <b>bureaucracies</b>.</li>
+<li>The middle-class “American Dream” has been squeezed by rising housing, college, and health costs, stagnant wages, blocked promotion, and the need for a college degree for entry-level jobs.</li>
+</ul>
+
 <h3>Poverty</h3>
 <p><b>Absolute poverty</b> is a lack of resources that threatens survival; <b>relative poverty</b> is being deprived compared with others who have more. The official U.S. <b>poverty line</b> (designed by Mollie Orshansky in the 1960s) was set at about <b>three times the cost of a minimum food budget</b>, adjusted for family size.</p>
-<p>Who is poor? Under the official U.S. measure, <b>children</b> have the highest poverty rate of any age group. Poverty rates are higher for African Americans, Hispanics, and Native Americans than for non-Hispanic whites, though whites are the largest number of poor people. Households headed by single women are much more likely to be poor — the <b>feminization of poverty</b>. Most poor adults who can work do work at least part of the year.</p>
+<p>Who is poor? Under the official U.S. measure, <b>children</b> have the highest poverty rate of any age group. Poverty rates are higher for African Americans, Hispanics, and Native Americans than for non-Hispanic whites, though whites are the largest number of poor people. Households headed by single women are much more likely to be poor — the <b>feminization of poverty</b>. Most poor adults who can work do work at least part of the year. Worldwide, women and children are the majority of the poor (<b>global feminization of poverty</b>): poor women have less access to credit, land, education, and paid work time.</p>
 <p>Explanations:</p>
 <ul>
 <li><b>Individual / cultural</b>: Oscar <b>Lewis</b>'s <b>culture of poverty</b> — poor people develop values (present-time orientation, fatalism) that keep them poor across generations. Critics call this <b>“blaming the victim”</b> (William Ryan's phrase).</li>
@@ -1417,6 +1427,7 @@ lesson:`
 <h3>Professions and occupations</h3>
 <p>A <b>profession</b> is a prestigious white-collar occupation with: (1) <b>theoretical, specialized knowledge</b>, (2) <b>long formal training</b> and credentials, (3) <b>self-regulation</b> through professional associations and codes of ethics, (4) <b>authority over clients</b>, and (5) a <b>service orientation</b> toward the community. Medicine and law are the models; many occupations seek this status (<b>professionalization</b>).</p>
 <p><b>Occupational prestige</b> rankings are remarkably stable over time and across countries: physicians, scientists, lawyers, and professors rank near the top; jobs requiring little training and paying little rank lowest. Other labels: <b>white-collar</b> (office/professional), <b>blue-collar</b> (manual), <b>pink-collar</b> (low-paid service and clerical jobs historically held by women). The <b>dual labor market</b> divides a <b>primary</b> sector (good pay, benefits, security) from a <b>secondary</b> sector (low pay, little security). Harry Braverman warned of <b>deskilling</b> — breaking skilled jobs into simple tasks, which lowers workers' control and pay.</p>
+<p><b>Deprofessionalization</b> is the loss of a profession's defining features, such as autonomy or specialized skill (pharmacists once compounded drugs; now most dispense factory-made products). <b>Contingent work</b> — part-time, temporary, and subcontracted jobs, found even in universities, government, and health care — cuts employers' costs but gives workers low pay and little security. <b>Labor unions</b> represent workers in <b>collective bargaining</b>, negotiating wages and conditions with employers as one voice; union membership in the U.S. has declined since the 1950s.</p>
 
 <h3>Global stratification</h3>
 <p>Nations are grouped as high-, middle-, and low-income. Three theories explain the gap:</p>
@@ -1602,7 +1613,7 @@ lesson:`
 
 <h3>Minority and dominant groups</h3>
 <p>Louis <b>Wirth</b> defined a <b>minority group</b> as a category of people singled out for <b>unequal treatment</b> because of physical or cultural traits. Characteristics: (1) members experience <b>unequal treatment and less power</b>; (2) they share distinctive physical or cultural traits; (3) membership is <b>ascribed</b>; (4) members have a sense of <b>group solidarity</b>; (5) they tend to marry within the group (<b>endogamy</b>).</p>
-<p>“Minority” refers to <b>power, not numbers</b>. Under apartheid, Black South Africans were the large majority of the population but a minority group. The <b>dominant group</b> holds the most power, wealth, and prestige.</p>
+<p>“Minority” refers to <b>power, not numbers</b>. Under apartheid, Black South Africans were the large majority of the population but a minority group. The <b>dominant group</b> (also called the <b>majority group</b>, again in the sense of power) holds the most power, wealth, and prestige and enjoys superior resources and rights.</p>
 
 <h3>Prejudice and discrimination</h3>
 <p><b>Prejudice</b> is a rigid, irrational <b>attitude</b> — prejudging a whole category of people. A <b>stereotype</b> is an exaggerated description applied to everyone in a category. <b>Racism</b> is the belief that one racial category is innately superior or inferior to another. <b>Discrimination</b> is <b>behavior</b>: treating people unequally because of their category.</p>
@@ -1614,7 +1625,7 @@ lesson:`
 <li><b>Prejudiced discriminator</b> (“active bigot”).</li>
 </ul>
 <p><b>Individual discrimination</b> is one person's act. <b>Institutional discrimination</b> (Stokely Carmichael and Charles Hamilton's “institutional racism”) is bias built into the normal operation of institutions — schools, banks, courts — often with <b>no intent to discriminate</b>.</p>
-<div class="ex">A company hires only through referrals from current employees. If the current staff is nearly all white, the policy keeps excluding minority applicants even though no one intends to discriminate — institutional discrimination.</div>
+<div class="ex">A company hires only through referrals from current employees. If the current staff is nearly all white, the policy keeps excluding minority applicants even though no one intends to discriminate — institutional discrimination. <b>Redlining</b> — banks refusing home and business loans in poor or minority neighborhoods outlined (originally in red) on maps — is a classic example.</div>
 
 <h3>Why prejudice exists</h3>
 <ul>
@@ -1795,7 +1806,7 @@ must:[
 ],
 lesson:`
 <h3>Sex and gender</h3>
-<p><b>Sex</b> refers to biological differences — chromosomes, anatomy, hormones. <b>Gender</b> refers to the <b>social and cultural</b> meanings attached to being male or female: the personality traits, behaviors, and roles a society expects. <b>Gender roles</b> are those expectations; <b>gender identity</b> is a person's own sense of being male, female, or another gender.</p>
+<p><b>Sex</b> refers to biological differences — chromosomes, anatomy, hormones. <b>Gender</b> refers to the <b>social and cultural</b> meanings attached to being male or female: the personality traits, behaviors, and roles a society expects. <b>Gender roles</b> are those expectations (for example, that men be aggressive and women nurturing); <b>gender identity</b> is a person's own sense of being male, female, or another gender. <b>Primary sex characteristics</b> are the reproductive organs present at birth; <b>secondary sex characteristics</b> develop at puberty (breasts, facial hair, a deeper voice). <b>Sexual orientation</b> is a person's emotional and sexual attraction to the other sex, the same sex, or both.</p>
 <p>The best evidence that gender is learned comes from cross-cultural variation. Anthropologist Margaret <b>Mead</b> (<i>Sex and Temperament in Three Primitive Societies</i>, 1935) studied three New Guinea societies: among the <b>Arapesh</b>, both sexes were gentle and nurturing; among the <b>Mundugumor</b>, both were aggressive; among the <b>Tchambuli</b>, gender roles were roughly reversed from Western norms, with women dominant and practical and men more emotional and concerned with appearance.</p>
 <p><b>Gender socialization</b> begins at birth through parents (pink vs. blue, dolls vs. trucks), peers, schools (teachers' differing attention), and the media. Candace West and Don Zimmerman describe “<b>doing gender</b>”: people continually perform gender in everyday interaction.</p>
 
@@ -1822,7 +1833,7 @@ lesson:`
 <p><b>Symbolic interactionists</b> study how gender is created in everyday talk and display — who interrupts, who is called by first name.</p>
 
 <h3>Aging</h3>
-<p><b>Gerontology</b> is the study of aging and the elderly. The U.S. population is <b>“graying”</b>: life expectancy has risen, birth rates have fallen, and the large <b>baby boom</b> generation (born 1946–1964) is reaching old age. Women outlive men by several years, so the oldest age groups are mostly female. Because of <b>Social Security</b> and <b>Medicare</b> (1965), poverty among people 65 and over has fallen dramatically since the 1960s. The <b>sandwich generation</b> cares for both children and aging parents.</p>
+<p><b>Gerontology</b> is the study of aging and the elderly. The U.S. population is <b>“graying”</b>: life expectancy has risen, birth rates have fallen, and the large <b>baby boom</b> generation (born 1946–1964) is reaching old age. Women outlive men by several years, so the oldest age groups are mostly female. Because of <b>Social Security</b> and <b>Medicare</b> (1965), poverty among people 65 and over has fallen dramatically since the 1960s; children are now far more likely to be poor than older people. Among the elderly, women are more likely than men to be poor, and older Black and Hispanic adults more likely than older whites. The <b>sandwich generation</b> cares for both children and aging parents.</p>
 <p><b>Ageism</b> (a term coined by Robert <b>Butler</b>, 1969) is prejudice and discrimination against people because of their age, usually the old. Stereotypes include seeing older people as frail, forgetful, or unproductive.</p>
 <p>Theories of aging:</p>
 <ul>
@@ -2216,7 +2227,7 @@ lesson:`
 <p>Current debates include school choice (<b>vouchers</b>, <b>charter schools</b>, homeschooling), standardized testing, and grade inflation.</p>
 
 <h3>The economy</h3>
-<p>The <b>economy</b> is the institution that organizes the production, distribution, and consumption of goods and services. Three revolutions transformed it: the <b>Agricultural Revolution</b>, the <b>Industrial Revolution</b> (factories, wage labor, specialization), and the <b>Information Revolution</b> that produced a <b>postindustrial</b> economy based on services and information (Daniel Bell).</p>
+<p>The <b>economy</b> is the institution that organizes the production, distribution, and consumption of <b>goods</b> (tangible objects people need or want) and <b>services</b> (intangible work done for others, such as teaching or a haircut). Because it affects every other institution, many sociologists treat it as the most basic one. Three revolutions transformed it: the <b>Agricultural Revolution</b>, the <b>Industrial Revolution</b> (factories, wage labor, specialization), and the <b>Information Revolution</b> that produced a <b>postindustrial</b> economy based on services and information (Daniel Bell).</p>
 <p>Economic <b>sectors</b>:</p>
 <ul>
 <li><b>Primary</b> — extracting raw materials from nature (farming, fishing, mining). Dominant in low-income nations.</li>
@@ -2232,7 +2243,7 @@ lesson:`
 <p>Large <b>corporations</b> dominate the U.S. economy. A <b>monopoly</b> is one company controlling a market; an <b>oligopoly</b> is a few companies doing so; <b>conglomerates</b> own many businesses in different industries; <b>interlocking directorates</b> link boards through shared members; <b>multinational corporations</b> operate across many countries. <b>Deindustrialization</b> (the decline of factory work), <b>outsourcing</b>, automation, the decline of <b>labor unions</b>, and growth in <b>contingent</b> (temporary, gig) work have reshaped jobs.</p>
 
 <h3>Politics and government</h3>
-<p><b>Power</b> is the ability to get one's way despite resistance (Unit 7). <b>Authority</b> is power that people see as <b>legitimate</b>. The <b>state</b>, Weber said, is the institution that successfully claims a <b>monopoly on the legitimate use of force</b> in a territory.</p>
+<p><b>Politics</b> is the process through which power is acquired and exercised; <b>government</b> is the formal organization that does so. <b>Power</b> is the ability to get one's way despite resistance (Unit 7). <b>Authority</b> is power that people see as <b>legitimate</b>. The <b>state</b>, Weber said, is the institution that successfully claims a <b>monopoly on the legitimate use of force</b> in a territory.</p>
 <p>Weber's three types of authority:</p>
 <ul>
 <li><b>Traditional</b> — legitimate because of long-standing <b>custom</b> (hereditary kings, tribal chiefs).</li>
@@ -2249,7 +2260,7 @@ lesson:`
 <p>In the U.S., two major parties dominate; <b>interest groups</b> and <b>political action committees (PACs)</b> raise money and lobby. <b>Voter turnout</b> is low compared with many democracies and is highest among people who are <b>older, more educated, and higher-income</b>. The <b>family</b> is the most important agent of political socialization (most people adopt their parents' party). Who really rules is debated: the <b>pluralist</b> model (Dahl) vs. the <b>power-elite</b> model (Mills) — see Unit 7. President Eisenhower warned of a <b>military-industrial complex</b>, the close ties between the armed forces and defense industries.</p>
 
 <h3>Health and medicine</h3>
-<p>The World Health Organization defines <b>health</b> as complete physical, mental, and social well-being, not merely the absence of disease. <b>Social epidemiology</b> studies how health and disease are <b>distributed</b> across a population by class, race, sex, and age. Health follows the class ladder: people with more income and education live longer and healthier lives. In the U.S., women live longer than men. The <b>infant mortality rate</b> — deaths of infants under one year old per 1,000 live births — is a key indicator of a society's health, and it is higher in the U.S. than in most other rich nations. As societies develop, leading causes of death shift from infectious diseases to chronic diseases such as heart disease and cancer (the <b>epidemiological transition</b>).</p>
+<p>The World Health Organization defines <b>health</b> as complete physical, mental, and social well-being, not merely the absence of disease. <b>Social epidemiology</b> studies how health and disease are <b>distributed</b> across a population by class, race, sex, and age. Health follows the class ladder: people with more income and education live longer and healthier lives. In the U.S., women live longer than men. The <b>infant mortality rate</b> — deaths of infants under one year old per 1,000 live births — is a key indicator of a society's health, and it is higher in the U.S. than in most other rich nations. <b>Acute</b> illnesses strike suddenly and are short-lived (flu); <b>chronic</b> illnesses are long-term or lifelong and develop gradually or are present from birth (diabetes, heart disease). As societies develop, leading causes of death shift from infectious diseases to chronic diseases such as heart disease and cancer (the <b>epidemiological transition</b>).</p>
 <p><b>Functionalist view — the sick role</b> (Talcott <b>Parsons</b>, 1951): illness is a form of deviance that disrupts society, so society defines a <b>sick role</b> with rights and duties. The sick person (1) is <b>exempt</b> from normal responsibilities and (2) is <b>not blamed</b> for being ill, but (3) must <b>want to get well</b> and (4) must <b>seek competent help</b> and cooperate with medical professionals.</p>
 <p><b>Conflict view</b>: access to care is unequal; the profit motive drives over-treatment of some and neglect of others; physicians historically gained great power and monopolized medical knowledge (Paul Starr, <i>The Social Transformation of American Medicine</i>). <b>Medicalization</b> (Peter Conrad) expands medical control by redefining ordinary or moral problems — childbirth, hyperactivity, alcoholism, aging — as illnesses to be treated by doctors.</p>
 <p><b>Symbolic interactionist view</b>: health and illness are partly <b>socially constructed</b>; what counts as sick varies across cultures, and labels like “mentally ill” shape how people are treated (Thomas Szasz called mental illness a “myth”).</p>
@@ -2433,7 +2444,7 @@ must:[
 ],
 lesson:`
 <h3>Demography: the science of population</h3>
-<p><b>Demography</b> is the study of the size, composition, distribution, and change of human populations. Populations change through three processes: <b>fertility</b> (births), <b>mortality</b> (deaths), and <b>migration</b> (movement).</p>
+<p><b>Demography</b> is the study of the size, composition, distribution, and change of human populations. A <b>population</b> is the people living in a specified area; <b>density</b> is the number of people per unit of area (say, per square mile) and is far higher in cities than in rural areas. Populations change through three processes: <b>fertility</b> (births), <b>mortality</b> (deaths), and <b>migration</b> (movement).</p>
 
 <h3>The key measures</h3>
 <ul>
@@ -2453,7 +2464,7 @@ lesson:`
 <p>Migration has <b>push factors</b> (poverty, war, persecution, disaster) that drive people out and <b>pull factors</b> (jobs, freedom, family, a better climate) that attract them. In the U.S., internal migration since the mid-20th century has flowed from the Northeast and Midwest (“Snow Belt” or “Rust Belt”) to the South and West (“<b>Sun Belt</b>”).</p>
 
 <h3>Population pyramids</h3>
-<p>A <b>population pyramid</b> is a bar graph of a population by age and sex — males on one side, females on the other, youngest at the bottom. A <b>wide base</b> (expansive pyramid) means high fertility and a young population, typical of low-income nations. A <b>narrow base and wide top</b> (constrictive pyramid) means low fertility and an <b>aging</b> population, typical of Japan, Italy, and increasingly the U.S. Bulges show events like a baby boom.</p>
+<p>A <b>population pyramid</b> is a bar graph of a population by age and sex, usually in five-year age groups — males on one side, females on the other, youngest at the bottom. A <b>wide base</b> (expansive pyramid) means high fertility and a young population, typical of low-income nations. A <b>narrow base and wide top</b> (constrictive pyramid) means low fertility and an <b>aging</b> population, typical of Japan, Italy, and increasingly the U.S. Bulges show events like a baby boom.</p>
 
 <h3>Theories of population</h3>
 <p><b>Thomas Robert Malthus</b> (<i>An Essay on the Principle of Population</i>, 1798) warned that population grows <b>geometrically</b> (1, 2, 4, 8, 16) while food supply grows only <b>arithmetically</b> (1, 2, 3, 4, 5). Unless people practice “preventive checks” such as late marriage and abstinence, “positive checks” — <b>famine, war, and disease</b> — will raise death rates. Malthus underestimated technology's ability to raise food production and did not foresee birth control's spread. <b>Neo-Malthusians</b> such as Paul <b>Ehrlich</b> (<i>The Population Bomb</i>, 1968) renewed the warnings. World population passed <b>8 billion</b> in 2022.</p>
@@ -2467,10 +2478,10 @@ lesson:`
 <p><b>Zero population growth</b> is the level of reproduction that keeps population steady.</p>
 
 <h3>Community: from village to city</h3>
-<p>A <b>community</b> is a group of people who share a territory and a sense of belonging. Early sociologists asked what is lost when people move from villages to cities.</p>
+<p>A <b>community</b> is a group of people who share a territory and a sense of belonging. A <b>city</b> is a relatively dense, permanent settlement of people who mostly do not grow their own food; <b>urban sociology</b> studies social relationships and political and economic structures in cities. Early sociologists asked what is lost when people move from villages to cities.</p>
 <p>Ferdinand <b>Tönnies</b> (1887) contrasted <b>Gemeinschaft</b> (“community”) — small, traditional settings where people are bound by <b>kinship, tradition, and personal ties</b> — with <b>Gesellschaft</b> (“society” or “association”) — large urban settings where relationships are <b>impersonal</b>, based on <b>self-interest</b>, contracts, and specialized roles. (Compare Durkheim's mechanical and organic solidarity, Unit 1.) Robert Redfield described a similar <b>folk–urban continuum</b>.</p>
 <p>Louis <b>Wirth</b> (“Urbanism as a Way of Life,” 1938) argued that three features of cities — large <b>size</b>, high <b>density</b>, and social <b>heterogeneity</b> (diversity) — produce impersonal, superficial, <b>secondary</b> relationships, along with tolerance and anonymity. Georg Simmel described the city dweller's “blasé attitude.”</p>
-<p>Not everyone agreed cities destroy community. Herbert <b>Gans</b> (<i>The Urban Villagers</i>, 1962) found that Italian Americans in Boston's West End had tight-knit neighborhoods — “<b>urban villagers</b>.” He also identified other urban types: cosmopolites, singles, “the deprived,” and “the trapped.” Robert and Helen <b>Lynd</b>'s <i>Middletown</i> (1929), a study of Muncie, Indiana, is the classic community study of a typical American town.</p>
+<p>Not everyone agreed cities destroy community. Herbert <b>Gans</b> (<i>The Urban Villagers</i>, 1962) found that Italian Americans in Boston's West End had tight-knit neighborhoods resembling small towns — “<b>urban villagers</b>”; in his typology of city dwellers he calls them <b>ethnic villagers</b>. He also identified other urban types: cosmopolites, singles, “the deprived,” and “the trapped.” Robert and Helen <b>Lynd</b>'s <i>Middletown</i> (1929), a study of Muncie, Indiana, is the classic community study of a typical American town.</p>
 
 <h3>Human ecology: how cities are arranged</h3>
 <p><b>Human ecology</b> — developed by Robert <b>Park</b> and Ernest <b>Burgess</b> at the University of Chicago — studies the relationship between people and their physical environment, borrowing ideas from plant and animal ecology. Key processes: <b>concentration</b>, <b>segregation</b>, and <b>invasion and succession</b> (a new group or land use moves into an area and eventually replaces the old one).</p>
@@ -2489,6 +2500,7 @@ lesson:`
 <li><b>Edge cities</b> (Joel Garreau) are business and shopping centers that grow up at suburban highway interchanges.</li>
 <li><b>Gentrification</b> is the movement of middle- and upper-income people into poorer urban neighborhoods, raising property values and often displacing longtime residents.</li>
 <li><b>Urban sprawl</b> is low-density development spreading out from cities.</li>
+<li><b>Homelessness</b> grew from the 1980s mainly for structural reasons — loss of low-cost housing, fewer unskilled jobs, and cuts in services — not simply personal failings.</li>
 <li><b>Rural</b> America has lost population share; family farms have given way to large <b>agribusiness</b>, and many rural areas face aging populations and fewer services.</li>
 </ul>
 <p>Environmental issues are linked to population and urbanization: Garrett Hardin's “<b>tragedy of the commons</b>” describes how individuals acting in self-interest deplete shared resources, and <b>environmental racism</b> refers to the placement of polluting facilities in poor and minority communities.</p>
@@ -4306,6 +4318,386 @@ Q("u12","b","E","A metropolitan area with a population of 10 million or more, su
 </script>
 <!--@@QUESTIONS@@-->
 
+<!-- ============ COVERAGE UPDATE: gap topics found by checking a published practice test ============ -->
+<script>
+/* Extra flashcards appended to each unit's deck (ids continue after the unit's own cards). */
+const MORECARDS={
+u1:[["Atlanta University (Du Bois)","Where W.E.B. Du Bois ran the Atlanta Sociological Laboratory from 1897; often listed with Chicago among the first U.S. sociology programs."],["Grand theory","C. Wright Mills's critical label for Talcott Parsons's highly abstract model of society as a system."]],
+u3:[["Role-taking (Mead)","Mentally assuming another person's role to see the world from that person's point of view."]],
+u4:[["Social structure","The stable framework of statuses, roles, groups, and institutions that organizes a society and limits individual behavior."],["Old boy network","An informal social network passing jobs and favors among graduates of elite schools; historically excluded women and minorities."]],
+u5:[["Internal vs. external social control","Internal: norms absorbed through socialization. External: sanctions applied by others."]],
+u6:[["Crowd vs. mass","Crowd: people in one another's immediate presence. Mass: many people who share an interest but are not in the same place."]],
+u7:[["Prestige","The respect or regard others give a person or an occupation."],["Working poor","People who hold jobs, usually low-paid unskilled or service work, yet live just above or below the poverty line."],["Underclass","Persistently poor people with weak ties to the labor market, often living in areas of concentrated poverty."],["Surplus value (Marx)","The difference between the value workers produce and the wages they are paid, kept by capitalists; the basis of exploitation."],["Base and superstructure (Marx)","The economy (base) shapes the other institutions and ideas — law, religion, education, government (superstructure)."],["Deprofessionalization","The loss of a profession's defining features, such as autonomy or specialized skill."],["Contingent work","Part-time, temporary, or subcontracted work that cuts employers' costs but gives workers low pay and little security."],["Collective bargaining","Negotiation between employers and union leaders, on behalf of workers, over wages and working conditions."]],
+u8:[["Majority (dominant) group","The group with the most power, resources, and rights in a society, regardless of its size."],["Redlining","Banks refusing loans to people in poor or minority neighborhoods marked off on maps; a form of institutional discrimination."]],
+u9:[["Primary vs. secondary sex characteristics","Primary: reproductive organs present at birth. Secondary: traits that develop at puberty, such as facial hair or breasts."],["Sexual orientation","A person's emotional and sexual attraction to the other sex, the same sex, or both."]],
+u11:[["Goods vs. services","Goods: tangible objects people need or want. Services: intangible activities done for others."],["Politics","The process through which power is acquired and exercised."],["Acute vs. chronic illness","Acute: sudden and short-lived. Chronic: long-term or lifelong, developing gradually or present from birth."]],
+u12:[["Population density","The number of people per unit of area, such as per square mile."],["City (sociological definition)","A relatively dense, permanent settlement of people who mostly do not produce their own food."],["Ethnic villagers (Gans)","City residents of tight-knit ethnic neighborhoods that resemble small towns."]]
+};
+
+/* ---------- Extra practice (set x): original questions on the gap topics ---------- */
+Q("u1","x","M","At which institution did W.E.B. Du Bois, beginning in 1897, direct annual empirical studies of Black American life that some textbooks count among the first U.S. sociology programs?",
+["Atlanta University","Harvard University","The University of Bordeaux","Columbia University","Hull House"],
+["Du Bois ran the Atlanta Sociological Laboratory at Atlanta University, a historically Black university.",
+"Du Bois earned his Ph.D. at Harvard but did not build his research program there.",
+"Bordeaux is where Durkheim taught in France.",
+"Columbia was not where Du Bois worked.",
+"Hull House was Jane Addams's settlement house in Chicago, not a university."]);
+Q("u1","x","H","C. Wright Mills used the phrase “grand theory” to criticize",
+["Talcott Parsons's highly abstract model of society as a system","Karl Marx's theory of class conflict","Erving Goffman's dramaturgy","Durkheim's study of suicide rates","W.I. Thomas's definition of the situation"],
+["Mills argued Parsons's abstract functionalism was too far removed from real social problems.",
+"Mills drew on conflict ideas himself; his target was Parsons.",
+"Goffman's work is concrete and micro-level, the opposite of grand theory.",
+"Durkheim's suicide study is a model of empirical research.",
+"The Thomas theorem was not the target of Mills's critique."]);
+Q("u3","x","E","A little girl pretends to be her teacher, scolding her stuffed animals for talking in class. Mead would say she is practicing",
+["role-taking","anticipatory socialization","resocialization","the looking-glass self","cultural relativism"],
+["Role-taking is imagining oneself in another's position and acting from that viewpoint, as children do in the play stage.",
+"Anticipatory socialization prepares for a role one expects to occupy; she is imitating a significant other in play.",
+"Resocialization replaces old norms, usually in a total institution.",
+"The looking-glass self (Cooley) concerns imagining others' judgments of oneself.",
+"Cultural relativism is a stance toward other cultures."]);
+Q("u3","x","M","Sociologists argue that virtually all patterns of human behavior, from what people eat to how they greet one another, are mainly shaped by",
+["culture learned through socialization","genetic inheritance","climate and geography","individual personality alone","technology alone"],
+["Sociology stresses that behavior is learned through culture, which varies from society to society.",
+"Biology sets limits, but the variety of human behavior across societies shows the weight of learning.",
+"Environment matters, but people in similar climates behave very differently.",
+"Individual differences exist within shared cultural patterns.",
+"Technology is part of material culture, not the whole explanation."]);
+Q("u4","x","M","The framework of statuses, roles, groups, and institutions that organizes a society and places limits on individual behavior is called",
+["social structure","social interaction","social control","culture shock","the generalized other"],
+["Social structure is the stable pattern of positions and institutions that links individuals to society.",
+"Social interaction is the process of people acting toward one another within that structure.",
+"Social control is the set of means used to encourage conformity.",
+"Culture shock is disorientation in an unfamiliar culture.",
+"The generalized other is Mead's term for society's general expectations."]);
+Q("u4","x","E","Graduates of a few elite private schools have long helped one another into top jobs at banks and law firms through personal connections. This “old boy network” is an example of",
+["a social network","a total institution","a counterculture","a dyad","a coercive organization"],
+["A web of ties linking people who share connections is a social network.",
+"A total institution controls all of residents' lives, like a prison.",
+"A counterculture rejects mainstream values.",
+"A dyad is a two-person group.",
+"A coercive organization is one people are forced to join."]);
+Q("u4","x","M","A university president does not need to know how to design the school's website, and a hospital's chief surgeon does not need to know how to run its billing software. This illustrates which feature of bureaucracy?",
+["Division of labor","Goal displacement","Impersonality","The iron law of oligarchy","The Peter principle"],
+["In a bureaucracy each position performs specialized tasks, so no one must master every job.",
+"Goal displacement is following rules at the expense of goals.",
+"Impersonality is treating cases by rules rather than personal feelings.",
+"The iron law of oligarchy concerns rule by a small elite.",
+"The Peter principle concerns promotion to incompetence."]);
+Q("u5","x","M","A driver stops at a red light on an empty road at 3 a.m. because she feels it would be wrong not to. Her behavior shows",
+["internal social control","external social control","a formal sanction","secondary deviance","retreatism"],
+["She has internalized the norm through socialization; no one is there to sanction her.",
+"External control would require others applying sanctions, and no one is present.",
+"No sanction is being applied at all.",
+"Secondary deviance follows a deviant label; she is conforming.",
+"Retreatism is Merton's term for rejecting goals and means."]);
+Q("u6","x","M","Millions of people across the country watch the same championship game on television. Because they share an interest but are not in one another's presence, sociologists call them",
+["a mass","a crowd","a mob","a social movement","a primary group"],
+["A mass is a large number of people with a shared focus who are not physically together.",
+"A crowd is gathered in one place, in one another's immediate presence.",
+"A mob is an emotional crowd bent on violence.",
+"A social movement is an organized effort to promote or resist change.",
+"A primary group is small and intimate."]);
+Q("u7","x","E","The respect or regard that others give to a person or an occupation is called",
+["prestige","wealth","power","authority","income"],
+["Prestige is social honor or respect, Weber's status dimension.",
+"Wealth is total assets minus debts.",
+"Power is the ability to achieve goals despite resistance.",
+"Authority is power viewed as legitimate.",
+"Income is money received over a period."]);
+Q("u7","x","M","Which group is best described as the <b>working poor</b>?",
+["People employed in low-paid service or unskilled jobs who live just above or below the poverty line","People who have been out of the labor market for many years in areas of concentrated poverty","Skilled factory workers with union contracts and pensions","Professionals who earn high salaries but carry heavy debt","Retirees who live mainly on investment income"],
+["The working poor hold jobs but earn too little to escape poverty and have little security.",
+"Long-term detachment from work in concentrated poverty describes the underclass.",
+"Unionized skilled workers are usually working class, not poor.",
+"High earners with debt are not poor.",
+"Investment income is typical of the upper class."]);
+Q("u7","x","E","For members of the U.S. upper class, wealth most often comes from",
+["inheritance","hourly wages","job training programs","government assistance","overtime pay"],
+["Most upper-class fortunes are inherited, often built several generations earlier.",
+"Hourly wages are typical of working-class jobs.",
+"Job training does not usually produce great wealth.",
+"Government assistance supports low-income households.",
+"Overtime pay is a feature of wage work."]);
+Q("u7","x","H","According to Marx, capitalists exploit workers because",
+["workers produce goods worth more than the wages they receive, and owners keep the difference","workers own the means of production but are poorly managed","the state forces workers to accept low wages through law alone","capitalists are personally more greedy than other people","workers refuse to work hard enough to earn higher wages"],
+["This difference is Marx's surplus value, the source of profit and of exploitation.",
+"Workers do not own the means of production in Marx's analysis; capitalists do.",
+"Marx located exploitation in the economic relationship itself, not just in law.",
+"Marx explained exploitation structurally, not by personal character.",
+"Marx argued workers create the value that owners take."]);
+Q("u7","x","M","According to conflict theorists, powerful groups keep their privileged position partly by spreading beliefs that make existing inequality seem natural and fair. Such beliefs are called",
+["ideology","meritocracy","cultural relativism","anomie","value neutrality"],
+["Ideology is a set of beliefs that justifies the existing social order.",
+"Meritocracy is a system ranking people by merit; the claim that society is meritocratic can itself be ideology.",
+"Cultural relativism is a stance for studying other cultures.",
+"Anomie is normlessness.",
+"Value neutrality is Weber's research principle."]);
+Q("u7","x","M","Pharmacists once mixed most medicines themselves; today they mainly dispense drugs made in factories, with less independent judgment. This change is an example of",
+["deprofessionalization","credentialism","structural mobility","conspicuous consumption","collective bargaining"],
+["Deprofessionalization is the loss of a profession's distinctive skills or autonomy.",
+"Credentialism is rising degree requirements.",
+"Structural mobility results from changes in the economy that move many people up or down.",
+"Conspicuous consumption is displaying wealth.",
+"Collective bargaining is union negotiation with employers."]);
+Q("u7","x","M","Which statement about contingent work is <b>false</b>?",
+["It mainly benefits workers while raising employers' costs.","It includes part-time and temporary jobs.","It is common in colleges and universities.","It often involves subcontracting.","It offers workers little job security."],
+["The reverse is true: contingent work lowers employers' costs while giving workers low pay and little security.",
+"Part-time and temporary jobs are core forms of contingent work.",
+"Universities rely heavily on part-time and adjunct instructors.",
+"Subcontracting is a common form of contingent work.",
+"Lack of security is a defining feature."]);
+Q("u7","x","E","When union leaders negotiate wages, hours, and working conditions with an employer on behalf of all the union's members, the process is called",
+["collective bargaining","a lockout","deskilling","credentialism","outsourcing"],
+["Collective bargaining lets workers negotiate as one voice.",
+"A lockout is an employer shutting workers out during a dispute.",
+"Deskilling is breaking skilled jobs into simple tasks.",
+"Credentialism is inflated degree requirements.",
+"Outsourcing is moving work to outside or foreign firms."]);
+Q("u7","x","H","Which factor does <b>not</b> contribute to the global feminization of poverty?",
+["Rich nations recruiting poor women and giving them high-paying jobs and marketable training","Poor women's limited access to commercial credit","Training poor women mainly for low-wage jobs","A persistent income gap between women and men","Heavy unpaid care work that leaves little time for paid work"],
+["Recruiting poor women into high-paying jobs with training would reduce, not cause, women's poverty.",
+"Lack of credit keeps poor women from starting businesses or buying land.",
+"Low-wage training traps women in poorly paid work.",
+"Pay gaps leave women with less income.",
+"Unpaid care work limits women's paid earnings."]);
+Q("u7","x","M","Max Weber argued that in modern societies a person's power depends largely on his or her position within",
+["bureaucracies","kinship networks","religious congregations","primary groups","castes"],
+["Weber saw large bureaucratic organizations as the main seat of power in modern life.",
+"Kinship mattered more in traditional societies.",
+"Religious bodies are not Weber's main source of modern power.",
+"Primary groups are intimate and informal.",
+"Castes belong to closed traditional systems."]);
+Q("u8","x","M","Sociologists use the term <i>majority group</i> (or dominant group) for a group that",
+["has superior power, resources, and rights in a society, whatever its size","always makes up more than half of the population","is the oldest group living in a territory","shares a common religion","has the highest birth rate"],
+["“Majority” here refers to power and advantage, not numbers.",
+"A dominant group can be a numerical minority, as whites were in apartheid South Africa.",
+"Length of residence does not define dominance.",
+"Religion may mark a group but does not define dominance.",
+"Birth rates do not define dominance."]);
+Q("u8","x","E","Banks once drew lines on city maps and refused home loans to anyone living inside the marked minority neighborhoods. This practice is called",
+["redlining","gentrification","pluralism","white flight","scapegoating"],
+["Redlining is denying loans to residents of areas outlined on maps, a form of institutional discrimination.",
+"Gentrification is affluent people moving into poor neighborhoods.",
+"Pluralism is groups coexisting with equal standing.",
+"White flight is white residents leaving cities for suburbs.",
+"Scapegoating is blaming a weak group for problems."]);
+Q("u8","x","M","Members of an ethnic group typically share all of the following EXCEPT",
+["the same level of education","a cultural heritage","a sense of common identity","often a common language","often ties to a homeland or territory"],
+["Education varies widely within any ethnic group, so it is not a shared ethnic trait.",
+"Shared cultural heritage defines an ethnic group.",
+"Members feel a common identity.",
+"A shared language is common.",
+"Many ethnic groups share ties to a homeland."]);
+Q("u9","x","E","The reproductive organs that distinguish male and female infants at birth are called",
+["primary sex characteristics","secondary sex characteristics","gender roles","gender identity","sexual orientation"],
+["Primary sex characteristics are the reproductive organs present at birth.",
+"Secondary sex characteristics, such as facial hair or breasts, develop at puberty.",
+"Gender roles are social expectations, not anatomy.",
+"Gender identity is a person's own sense of gender.",
+"Sexual orientation concerns attraction."]);
+Q("u9","x","E","A person's emotional and sexual attraction to the other sex, the same sex, or both is his or her",
+["sexual orientation","gender role","gender identity","primary sex characteristic","sex ratio"],
+["Sexual orientation refers to whom a person is attracted to.",
+"Gender roles are expectations for behavior.",
+"Gender identity is one's own sense of being male, female, or another gender.",
+"Primary sex characteristics are reproductive organs.",
+"The sex ratio is a demographic measure of males per 100 females."]);
+Q("u9","x","M","Which statement about age and poverty in the United States today is <b>false</b>?",
+["Older people are much more likely to be poor than children.","Among the elderly, women are more likely than men to be poor.","Older Black and Hispanic adults are more likely to be poor than older whites.","Social Security sharply reduced elderly poverty after the 1960s.","Children have the highest official poverty rate of any age group."],
+["The reverse is true: children are more likely to be poor than older people.",
+"Older women, who live longer and earned less, are more likely to be poor.",
+"Racial and ethnic gaps in poverty persist into old age.",
+"Social Security and Medicare greatly reduced elderly poverty.",
+"Under the official measure, children have the highest rate."]);
+Q("u11","x","E","Haircuts, legal advice, and teaching are examples of",
+["services","goods","raw materials","capital","manufactured products"],
+["Services are intangible activities done for others.",
+"Goods are tangible objects, such as cars or bread.",
+"Raw materials come from the primary sector.",
+"Capital is wealth used to produce more wealth.",
+"Manufactured products are goods from the secondary sector."]);
+Q("u11","x","M","The process through which power is acquired and exercised by some people and groups is",
+["politics","the economy","authority","bureaucracy","socialization"],
+["Politics is the process of gaining and using power; government is the formal organization that does so.",
+"The economy organizes production and distribution of goods and services.",
+"Authority is power seen as legitimate, not the process of acquiring it.",
+"Bureaucracy is a form of organization.",
+"Socialization is learning culture."]);
+Q("u11","x","E","Diabetes, arthritis, and heart disease, which last a long time and develop gradually, are examples of",
+["chronic illnesses","acute illnesses","the sick role","epidemics","medicalization"],
+["Chronic illnesses are long-term or lifelong.",
+"Acute illnesses strike suddenly and are short-lived, like the flu.",
+"The sick role is Parsons's set of expectations for the ill.",
+"An epidemic is a sudden spread of disease through a population.",
+"Medicalization is redefining behaviors as medical problems."]);
+Q("u11","x","M","Sociologists often call the economy the most basic social institution because",
+["it organizes the production and distribution of goods and services and shapes every other institution","it is the oldest institution in every society","it is controlled entirely by the government","it is the institution people choose to join voluntarily","it has no effect on family or religion"],
+["The economy affects family life, education, politics, and health, so many sociologists treat it as foundational.",
+"Family and religion are at least as old.",
+"Most economies mix private and public control.",
+"People cannot opt out of the economy.",
+"Economic change strongly affects families and religion."]);
+Q("u12","x","E","The number of people living per square mile in an area is its",
+["population density","crude birth rate","sex ratio","dependency ratio","net migration rate"],
+["Density measures people per unit of area.",
+"The crude birth rate counts births per 1,000 people.",
+"The sex ratio is males per 100 females.",
+"The dependency ratio compares dependents to working-age people.",
+"Net migration measures movement in minus movement out."]);
+Q("u12","x","M","Urban sociologists define a city as",
+["a relatively dense and permanent settlement of people who mostly do not produce their own food","any place with more than one million residents","a suburb with its own shopping centers","a county with a local government","any area that is better organized than a rural region"],
+["Density, permanence, and reliance on others for food define a city sociologically.",
+"Cities can be much smaller than one million.",
+"Suburbs surround cities and are not the definition of one.",
+"A county is a political unit, not the sociological definition.",
+"Organization is not the defining feature."]);
+Q("u12","x","M","Homelessness in the United States grew sharply from the 1980s on. Most sociologists attribute this mainly to",
+["structural changes such as the loss of low-cost housing and unskilled jobs","a sudden rise in people unwilling to work","higher rates of alcoholism than in earlier eras","failures of the education system alone","rising birth rates"],
+["Sociologists stress structural causes, especially vanishing affordable housing and jobs.",
+"There is no evidence of a sudden rise in unwillingness to work.",
+"Substance abuse affects some homeless people but does not explain the overall growth.",
+"Education is one factor at most, not the main cause.",
+"Birth rates were not rising in this period."]);
+Q("u12","x","H","In Herbert Gans's typology of city dwellers, recent immigrants who live in tight-knit neighborhoods that resemble small towns are called",
+["ethnic villagers","cosmopolites","the trapped","the deprived","singles"],
+["Gans's ethnic villagers keep close ties within their own ethnic neighborhood.",
+"Cosmopolites are intellectuals and professionals drawn to city culture.",
+"The trapped cannot leave declining neighborhoods.",
+"The deprived are very poor and often stigmatized residents.",
+"Singles are unmarried people drawn by city jobs and nightlife."]);
+
+/* ---------- Key people: [unit, name, what they are known for] ---------- */
+const PEOPLE=[
+["u1","Auguste Comte","Coined the word “sociology”; positivism; law of three stages (theological, metaphysical, positive)"],
+["u1","Harriet Martineau","Translated Comte into English; wrote Society in America and an early book on research method; often called the first woman sociologist"],
+["u1","Herbert Spencer","Society as an evolving organism; coined “survival of the fittest”; social Darwinism"],
+["u1","Karl Marx","Class conflict between bourgeoisie and proletariat; means of production; alienation; false vs. class consciousness; base and superstructure"],
+["u1","Émile Durkheim","Social facts; anomie; mechanical vs. organic solidarity; the study Suicide; sacred vs. profane"],
+["u1","Max Weber","Verstehen; the Protestant ethic; rationalization and bureaucracy; ideal types; value-free research; class, status, and party"],
+["u1","Georg Simmel","Formal sociology: dyads vs. triads, the stranger, and the blasé attitude of city dwellers"],
+["u1","W.E.B. Du Bois","The Philadelphia Negro; double consciousness; Atlanta University research; Niagara Movement and the NAACP"],
+["u1","Jane Addams","Co-founded Hull House, a Chicago settlement house; Nobel Peace Prize 1931"],
+["u1","C. Wright Mills","The sociological imagination (personal troubles vs. public issues); the power elite"],
+["u1","Talcott Parsons","Structural functionalism as “grand theory”; instrumental vs. expressive family roles; the sick role"],
+["u1","Robert K. Merton","Manifest and latent functions, dysfunctions; strain theory and its five adaptations; self-fulfilling prophecy; middle-range theory"],
+["u1","W.I. Thomas","“If men define situations as real, they are real in their consequences” — the definition of the situation"],
+["u1","Herbert Blumer","Coined the term symbolic interactionism; classified crowds as casual, conventional, expressive, and acting"],
+["u1","Erving Goffman","Dramaturgy and impression management (front stage, backstage); stigma; total institutions"],
+["u1","Harold Garfinkel","Ethnomethodology and breaching experiments; the degradation ceremony"],
+["u1","George Homans","Social exchange theory: relationships as weighing of costs and rewards"],
+["u1","Ralf Dahrendorf","Conflict theory centered on authority rather than ownership alone"],
+["u1","Lewis Coser","The functions of social conflict, such as strengthening in-group unity"],
+["u1","Peter Berger","“Seeing the general in the particular”; co-author of The Social Construction of Reality; The Sacred Canopy"],
+["u2","Laud Humphreys","Tearoom Trade, a study criticized for observing and tracing subjects without informed consent"],
+["u2","Philip Zimbardo","The Stanford prison experiment (1971), halted after “guards” abused “prisoners”"],
+["u2","William Foote Whyte","Street Corner Society, a classic participant-observation study"],
+["u3","William Graham Sumner","Folkways and mores; coined ethnocentrism; in-groups and out-groups"],
+["u3","William Ogburn","Cultural lag; noted the family losing functions to other institutions"],
+["u3","Edward Sapir and Benjamin Whorf","Linguistic relativity: language shapes how people perceive reality"],
+["u3","George Murdock","Cultural universals found in every society"],
+["u3","Kingsley Davis","Studied isolated children (Anna and Isabelle); co-author with Wilbert Moore of the functionalist theory of stratification"],
+["u3","Harry Harlow","Rhesus-monkey experiments showing the need for contact comfort"],
+["u3","George Herbert Mead","The self (“I” and “me”); role-taking; play and game stages; the generalized other"],
+["u3","Charles Horton Cooley","The looking-glass self; primary groups"],
+["u3","Sigmund Freud","Personality as id, ego, and superego"],
+["u3","Jean Piaget","Four stages of cognitive development: sensorimotor, preoperational, concrete operational, formal operational"],
+["u3","Lawrence Kohlberg","Stages of moral reasoning: preconventional, conventional, postconventional"],
+["u3","Carol Gilligan","Care-and-responsibility vs. justice perspectives in moral reasoning"],
+["u3","Erik Erikson","Eight psychosocial stages across the life span, such as identity vs. role confusion"],
+["u4","Solomon Asch","Line-judgment experiments showing conformity to group pressure"],
+["u4","Stanley Milgram","Experiments showing obedience to authority"],
+["u4","Irving Janis","Groupthink"],
+["u4","Robert Michels","The iron law of oligarchy"],
+["u4","George Ritzer","McDonaldization: efficiency, calculability, predictability, control"],
+["u4","Amitai Etzioni","Normative, coercive, and utilitarian organizations"],
+["u4","Gerhard Lenski","Societies classified by technology: hunting and gathering to postindustrial"],
+["u4","Mark Granovetter","The strength of weak ties"],
+["u5","Edwin Sutherland","Differential association; coined white-collar crime"],
+["u5","Howard Becker","Labeling theory: deviance is behavior that people so label"],
+["u5","Edwin Lemert","Primary vs. secondary deviance"],
+["u5","Travis Hirschi","Control (social bond) theory: attachment, commitment, involvement, belief"],
+["u5","Richard Cloward and Lloyd Ohlin","Differential opportunity: access to illegitimate opportunity structures"],
+["u5","William Chambliss","“The Saints and the Roughnecks”: class shapes who gets labeled delinquent"],
+["u5","David Rosenhan","Sane people admitted to mental hospitals: labels shape how behavior is read"],
+["u5","Cesare Lombroso","Discredited claim that criminals have “primitive” physical features"],
+["u5","Gresham Sykes and David Matza","Techniques of neutralization offenders use to excuse deviance"],
+["u6","Gustave Le Bon","Contagion theory: crowds hypnotize members into irrational behavior"],
+["u6","Neil Smelser","Value-added theory of collective behavior (six conditions)"],
+["u6","Ralph Turner and Lewis Killian","Emergent-norm theory of crowd behavior"],
+["u6","David Aberle","Four types of social movements: alternative, redemptive, reformative, revolutionary"],
+["u6","James Davies","The J-curve theory of revolution (rising expectations, sudden reversal)"],
+["u6","Pitirim Sorokin","Cyclical theory: societies swing between ideational and sensate cultures"],
+["u6","David Riesman","The Lonely Crowd: tradition-, inner-, and other-directed personalities"],
+["u7","Wilbert Moore","With Kingsley Davis, argued that unequal rewards attract talent to important positions"],
+["u7","Melvin Tumin","Critic of the functionalist theory of stratification"],
+["u7","Thorstein Veblen","Conspicuous consumption; The Theory of the Leisure Class"],
+["u7","Oscar Lewis","The culture of poverty"],
+["u7","William Julius Wilson","Urban poverty driven by disappearing inner-city jobs (The Truly Disadvantaged)"],
+["u7","Robert Dahl","Pluralism: power dispersed among competing interest groups"],
+["u7","Peter Blau and Otis Dudley Duncan","The American Occupational Structure: education as the key to occupational attainment"],
+["u7","W.W. Rostow","Modernization theory's stages of growth, including take-off"],
+["u7","Immanuel Wallerstein","World-systems theory: core, semiperiphery, periphery"],
+["u7","Harry Braverman","Deskilling of work under capitalism"],
+["u8","Louis Wirth","Defined minority groups by unequal treatment; “Urbanism as a Way of Life”"],
+["u8","Gordon Allport","The Nature of Prejudice; the contact hypothesis"],
+["u8","Theodor Adorno","The authoritarian personality"],
+["u8","Emory Bogardus","The social distance scale"],
+["u8","Milton Gordon","Stages of assimilation: cultural, structural, marital"],
+["u8","Muzafer Sherif","The Robbers Cave experiment and superordinate goals"],
+["u8","Edna Bonacich","The split labor market theory of ethnic antagonism"],
+["u9","Margaret Mead","Sex and Temperament: the Arapesh, Mundugumor, and Tchambuli show gender is cultural"],
+["u9","Arlie Hochschild","The second shift"],
+["u9","Christine Williams","The glass escalator"],
+["u9","Betty Friedan","The Feminine Mystique (1963) and second-wave feminism"],
+["u9","Kimberlé Crenshaw","Intersectionality"],
+["u9","Elaine Cumming and William Henry","Disengagement theory of aging"],
+["u9","Elisabeth Kübler-Ross","Five stages of dying: denial, anger, bargaining, depression, acceptance"],
+["u9","Robert Butler","Coined the term ageism"],
+["u10","Robert Bellah","Civil religion"],
+["u10","Ernst Troeltsch","With Weber, the church–sect typology of religious organizations"],
+["u10","Stephanie Coontz","The Way We Never Were: the idealized 1950s family was historically unusual"],
+["u11","Samuel Bowles and Herbert Gintis","The correspondence principle: schooling mirrors the workplace"],
+["u11","Randall Collins","Credentialism (The Credential Society)"],
+["u11","Pierre Bourdieu","Cultural capital"],
+["u11","Robert Rosenthal and Lenore Jacobson","Pygmalion in the Classroom: teacher expectations as a self-fulfilling prophecy"],
+["u11","James Coleman","Report (1966) finding family background outweighs school resources"],
+["u11","Jonathan Kozol","Savage Inequalities: unequal school funding"],
+["u11","Ray Rist","Kindergarten teachers grouping children by class-based impressions"],
+["u11","Thomas Szasz","Argued mental illness is largely a label — “the myth of mental illness”"],
+["u11","Daniel Bell","The postindustrial society"],
+["u12","Thomas Robert Malthus","Population grows geometrically, food arithmetically"],
+["u12","Paul Ehrlich","The Population Bomb (1968); neo-Malthusian"],
+["u12","Ferdinand Tönnies","Gemeinschaft vs. Gesellschaft"],
+["u12","Robert Park and Ernest Burgess","Human ecology at the University of Chicago; Burgess's concentric zone model"],
+["u12","Homer Hoyt","The sector model of city growth"],
+["u12","Chauncy Harris and Edward Ullman","The multiple nuclei model of city growth"],
+["u12","Herbert Gans","The Urban Villagers; typology of city dwellers (ethnic villagers, cosmopolites, the trapped)"],
+["u12","Jean Gottmann","Megalopolis"],
+["u12","Robert and Helen Lynd","Middletown, a study of Muncie, Indiana"],
+["u12","Garrett Hardin","The tragedy of the commons"]
+];
+/* Who's-who questions (set p), generated deterministically from PEOPLE.
+   Distractors come from the same content area where possible, skipping names that share a word. */
+(function(){
+ function h(s){let x=2166136261;for(let i=0;i<s.length;i++){x^=s.charCodeAt(i);x=Math.imul(x,16777619);}return x>>>0;}
+ function r(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+ const AREA_OF={u1:'persp',u2:'persp',u3:'proc',u4:'proc',u5:'proc',u6:'proc',u7:'strat',u8:'strat',u9:'strat',u10:'inst',u11:'inst',u12:'patt'};
+ const words=n=>n.toLowerCase().replace(/[^a-zé ]/g,' ').split(' ').filter(w=>w.length>2&&w!=='and');
+ PEOPLE.forEach((p,i)=>{
+  const rand=r(h('who:'+p[1])),mine=words(p[1]);
+  const ok=q=>q!==p&&!words(q[1]).some(w=>mine.includes(w));
+  const same=PEOPLE.filter(q=>ok(q)&&AREA_OF[q[0]]===AREA_OF[p[0]]),other=PEOPLE.filter(q=>ok(q)&&AREA_OF[q[0]]!==AREA_OF[p[0]]);
+  const pick=[],pool=same.slice();
+  while(pick.length<4&&pool.length)pick.push(pool.splice(Math.floor(rand()*pool.length),1)[0]);
+  while(pick.length<4)pick.push(other.splice(Math.floor(rand()*other.length),1)[0]);
+  Q(p[0],"p","M","Who is best known for the following?<blockquote>"+p[2]+"</blockquote>",
+   [p[1]].concat(pick.map(q=>q[1])),
+   [p[1]+" is known for exactly this."].concat(pick.map(q=>q[1]+" is known for something else: "+q[2]+".")));
+ });
+})();
+</script>
+
 <!-- ============ CHEAT SHEET ============ -->
 <template id="tpl-cheat">
 <section><h4>The big three perspectives</h4>
@@ -4396,13 +4788,15 @@ const pct=(c,t)=>t?Math.round(100*c/t):0;
 const DAY=86400000;
 const LETTERS='ABCDE';
 const AREA=Object.fromEntries(OUTLINE.areas.map(a=>[a.id,a]));
-const SETS={q:'Unit quiz',d:'Diagnostic',a:'Practice Exam 1',b:'Practice Exam 2'};
+const SETS={q:'Unit quiz',d:'Diagnostic',a:'Practice Exam 1',b:'Practice Exam 2',x:'Extra practice',p:'Who\'s who'};
 const DIFF={E:'Easy',M:'Medium',H:'Hard'};
 
 /* ---------- prepare content ---------- */
 const UNIT={};
-UNITS.forEach((u,i)=>{u.n=i+1;u.short='U'+(i+1);UNIT[u.id]=u;u.minutes=Math.max(10,Math.round(strip(u.lesson+' '+u.must.join(' ')).split(' ').length/120));u.cards=(u.cards||[]).map((c,j)=>({id:u.id+'-c'+(j+1),u:u.id,f:c[0],b:c[1]}));});
-const CARDS=UNITS.flatMap(u=>u.cards);
+UNITS.forEach((u,i)=>{u.n=i+1;u.short='U'+(i+1);UNIT[u.id]=u;u.minutes=Math.max(10,Math.round(strip(u.lesson+' '+u.must.join(' ')).split(' ').length/120));u.cards=(u.cards||[]).concat((typeof MORECARDS!=='undefined'&&MORECARDS[u.id])||[]).map((c,j)=>({id:u.id+'-c'+(j+1),u:u.id,f:c[0],b:c[1]}));});
+// Key-people deck runs idea → name, the direction the exam asks
+const PCARDS=(typeof PEOPLE!=='undefined'?PEOPLE:[]).map((p,i)=>({id:'p-'+(i+1),u:p[0],f:p[2],b:'<b>'+p[1]+'</b>',person:1}));
+const CARDS=UNITS.flatMap(u=>u.cards).concat(PCARDS);
 const CARD=Object.fromEntries(CARDS.map(c=>[c.id,c]));
 (function prepQuestions(){
  const cnt={},groups={};
@@ -4420,7 +4814,8 @@ const CARD=Object.fromEntries(CARDS.map(c=>[c.id,c]));
  });
 })();
 const QID=Object.fromEntries(QB.map(q=>[q.id,q]));
-UNITS.forEach(u=>{u.qs=QB.filter(q=>q.u===u.id&&q.s==='q');});
+UNITS.forEach(u=>{u.qs=QB.filter(q=>q.u===u.id&&q.s==='q');u.xs=QB.filter(q=>q.u===u.id&&q.s==='x');});
+const PQS=QB.filter(q=>q.s==='p');
 
 /* ---------- state ---------- */
 const KEY='clep-intro-sociology-v1';
@@ -4465,6 +4860,8 @@ function tasksRemaining(){
   const left=u.cards.length-cardsLearned(u);
   if(left>0)t.push({l:u.short+' flashcards ('+left+' not yet in box 3+)',m:Math.max(5,Math.round(left*0.7*f)),href:'#/cards/'+u.id,u:u.id,cards:1});
  });
+ const pl=PCARDS.filter(c=>!(S.cards[c.id]&&S.cards[c.id].box>=3)).length;
+ if(pl)t.push({l:'Key people flashcards ('+pl+' not yet in box 3+)',m:Math.max(5,Math.round(pl*0.5)),href:'#/people',cards:1});
  return t;
 }
 function hoursLeft(){
@@ -4493,7 +4890,7 @@ function drawNav(){
   h+='<div class="sec">'+esc(a.name.replace(' (Process and Structure)',''))+' · '+a.weight+'%</div>';
   list.forEach(u=>h+='<a href="#/unit/'+u.id+'" data-r="unit/'+u.id+'"><span>'+u.short+' · '+esc(u.title)+'</span>'+mk(u)+'</a>');
  });
- h+='<div class="sec">Practice</div><a href="#/cards" data-r="cards">Flashcards</a><a href="#/mistakes" data-r="mistakes">Mistake log<span class="mk">'+(Object.values(S.mistakes).filter(x=>x.streak<2).length||'')+'</span></a><a href="#/exam" data-r="exam">Practice exams</a>';
+ h+='<div class="sec">Practice</div><a href="#/cards" data-r="cards">Flashcards</a><a href="#/people" data-r="people">Key people</a><a href="#/mistakes" data-r="mistakes">Mistake log<span class="mk">'+(Object.values(S.mistakes).filter(x=>x.streak<2).length||'')+'</span></a><a href="#/exam" data-r="exam">Practice exams</a>';
  h+='<div class="sec">Tools</div><a href="#/cheat" data-r="cheat">Cheat sheet</a><a href="#/plan" data-r="plan">Study plan</a><a href="#/about" data-r="about">About & data</a>';
  $('#nav').innerHTML=h;
  const cur=location.hash.replace(/^#\/?/,'');
@@ -4508,7 +4905,7 @@ function route(){
  keyHandler=null;if(viewTimer){clearInterval(viewTimer);viewTimer=null;}
  document.body.classList.remove('navopen','printcheat','examing');
  const parts=location.hash.replace(/^#\/?/,'').split('/');
- const r={'':viewDash,diag:viewDiag,unit:viewUnit,quiz:viewQuiz,cards:viewCards,mistakes:viewMistakes,exam:viewExam,cheat:viewCheat,plan:viewPlan,about:viewAbout}[parts[0]]||viewDash;
+ const r={'':viewDash,diag:viewDiag,unit:viewUnit,quiz:viewQuiz,extra:viewExtra,people:viewPeople,cards:viewCards,mistakes:viewMistakes,exam:viewExam,cheat:viewCheat,plan:viewPlan,about:viewAbout}[parts[0]]||viewDash;
  r(parts[1]);drawNav();examBanner();window.scrollTo(0,0);
 }
 window.addEventListener('hashchange',route);
@@ -4564,7 +4961,7 @@ function viewDash(){
  const R=readiness(),done=UNITS.filter(u=>unitDone(u.id)).length,due=dueCards().length,mist=Object.values(S.mistakes).filter(x=>x.streak<2).length;
  const next=!S.diag?['Take the diagnostic test','#/diag','30 questions, no feedback until the end. It tells you which units you can skim.']:
   (()=>{const t=tasksRemaining().find(x=>!x.cards);if(t)return['Next: '+t.l,t.href,'About '+t.m+' minutes.'];if(!lastExam('a'))return['Take Practice Exam 1','#/exam/a','100 questions, 90 minutes, no pausing.'];if(!lastExam('b'))return['Take Practice Exam 2','#/exam/b','100 questions, 90 minutes, no pausing.'];return['Drill your mistake log','#/mistakes','Then re-read the cheat sheet.'];})();
- V().innerHTML='<h1>CLEP Introductory Sociology</h1><p class="muted">'+OUTLINE.questions+' questions · '+OUTLINE.minutes+' minutes · '+UNITS.length+' units · '+QB.length+' original practice questions · '+CARDS.length+' flashcards</p>'+
+ V().innerHTML='<h1>CLEP Introductory Sociology</h1><p class="muted">'+OUTLINE.questions+' questions · '+OUTLINE.minutes+' minutes · '+UNITS.length+' units · '+QB.filter(q=>q.s!=='p').length+' original practice questions · '+CARDS.length+' flashcards · '+PEOPLE.length+' key people</p>'+
  '<div class="card"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap"><h2 style="margin:0">Readiness</h2><span id="readyChip" class="chip '+(R.ready?'ok':R.p>=70?'warn':'bad')+'">'+(R.ready?'✓ Ready to book':R.p>=70?'Almost there':'Not ready yet')+'</span></div>'+
  '<div class="meter '+(R.ready?'ok':'')+'" style="margin:.7rem 0"><i style="width:'+R.p+'%"></i></div>'+
  '<div class="small muted">Diagnostic '+(S.diag?'✓':'—')+' · Units complete '+done+'/'+UNITS.length+' · Practice Exam 1: '+(R.ea?R.ea.score+'%':'—')+' · Practice Exam 2: '+(R.eb?R.eb.score+'%':'—')+'</div>'+
@@ -4606,7 +5003,7 @@ function viewUnit(id){
  '<div class="must"><h3>Must know</h3><ol>'+u.must.map(m=>'<li>'+m+'</li>').join('')+'</ol></div>'+
  '<article class="lesson">'+u.lesson+'</article>'+
  '<div class="visual card"><h3>'+esc(u.visualTitle||'Visual')+'</h3><div class="tablewrap">'+u.visual+'</div></div>'+
- '<div class="card noprint"><h3 style="margin-top:0">Lock it in</h3><button class="btn'+(s.read?'':' primary')+'" id="rd">'+(s.read?'✓ Lesson read':'Mark lesson as read')+'</button><a class="btn'+(s.read?' primary':'')+'" href="#/quiz/'+id+'">Take unit quiz ('+u.qs.length+')</a><a class="btn" href="#/cards/'+id+'">Flashcards ('+u.cards.length+')</a>'+
+ '<div class="card noprint"><h3 style="margin-top:0">Lock it in</h3><button class="btn'+(s.read?'':' primary')+'" id="rd">'+(s.read?'✓ Lesson read':'Mark lesson as read')+'</button><a class="btn'+(s.read?' primary':'')+'" href="#/quiz/'+id+'">Take unit quiz ('+u.qs.length+')</a><a class="btn" href="#/cards/'+id+'">Flashcards ('+u.cards.length+')</a>'+(u.xs.length?'<a class="btn" href="#/extra/'+id+'">Extra practice ('+u.xs.length+')</a>':'')+
  (s.attempts?'<p class="small muted">Quiz: best '+s.best+'%, last '+s.last+'%, '+s.attempts+' attempt(s). Complete = lesson read + quiz ≥70%.</p>':'')+
  '<p class="small">'+(UNITS[u.n]?'Next: <a href="#/unit/'+UNITS[u.n].id+'">'+UNITS[u.n].short+' · '+esc(UNITS[u.n].title)+'</a>':'Last unit — next up: <a href="#/exam">practice exams</a>.')+'</p></div>';
  $('#rd').onclick=()=>{s.read=!s.read;save();viewUnit(id);drawNav();};
@@ -4617,6 +5014,24 @@ function viewQuiz(id){
  runner({qs:shuffle(u.qs),mode:'quiz',title:u.short+' quiz',back:'#/unit/'+id,onFinish:res=>{
   const s=us(id),score=pct(res.filter(r=>r.ok).length,res.length);s.attempts++;s.last=score;s.best=Math.max(s.best||0,score);save();drawNav();
   V().innerHTML=resultsHTML(res,u.short+' quiz','<p>'+(score>=70?'<span class="chip ok">Unit quiz passed</span> ':'<span class="chip bad">Below 70% — re-read the must-know box and retake</span> ')+'</p><p><a class="btn primary" href="#/quiz/'+id+'">Retake</a><a class="btn" href="#/unit/'+id+'">Back to lesson</a>'+(UNITS[u.n]?'<a class="btn" href="#/unit/'+UNITS[u.n].id+'">Next unit →</a>':'')+'</p>');window.scrollTo(0,0);}});
+}
+
+function viewExtra(id){
+ const u=UNIT[id];if(!u||!u.xs.length){V().innerHTML='<p>No extra practice for this unit.</p>';return;}
+ runner({qs:shuffle(u.xs),mode:'quiz',title:u.short+' extra practice',back:'#/unit/'+id,onFinish:res=>{drawNav();
+  V().innerHTML=resultsHTML(res,u.short+' extra practice','<p><a class="btn primary" href="#/extra/'+id+'">Retry</a><a class="btn" href="#/unit/'+id+'">Back to lesson</a></p>');window.scrollTo(0,0);}});
+}
+function viewPeople(){
+ const learned=PCARDS.filter(c=>S.cards[c.id]&&S.cards[c.id].box>=3).length,missed=PCARDS.filter(c=>S.cards[c.id]&&S.cards[c.id].miss);
+ V().innerHTML='<h1>Key people</h1><p class="muted">'+PEOPLE.length+' sociologists and researchers the exam can name, with what each is known for. Theorist-to-idea matching is one of the most common CLEP question types.</p>'+
+ '<div class="card noprint"><button class="btn primary" id="pq">Who\'s who quiz (20)</button><button class="btn" id="pc">Study people flashcards ('+PCARDS.length+')</button><button class="btn" id="pm" '+(missed.length?'':'disabled')+'>Missed only ('+missed.length+')</button><p class="small muted">'+learned+' of '+PCARDS.length+' people learned (box 3+). Flashcards show the idea; you name the person.</p></div>'+
+ '<label class="f" style="display:flex;max-width:28rem">Filter<input type="search" id="pf" placeholder="Name or idea, e.g. labeling"></label>'+
+ '<div class="tablewrap"><table id="pt"><tr><th>Person</th><th>Known for</th><th>Unit</th></tr>'+PEOPLE.map(p=>'<tr data-k="'+esc((p[1]+' '+p[2]).toLowerCase())+'"><td><b>'+esc(p[1])+'</b></td><td>'+esc(p[2])+'</td><td><a href="#/unit/'+p[0]+'">'+UNIT[p[0]].short+'</a></td></tr>').join('')+'</table></div>';
+ $('#pf').oninput=e=>{const v=e.target.value.toLowerCase().trim();$$('#pt tr[data-k]').forEach(tr=>tr.hidden=!!v&&!tr.dataset.k.includes(v));};
+ $('#pc').onclick=()=>cardSession(PCARDS,null,'#/people');
+ $('#pm').onclick=()=>cardSession(missed,null,'#/people');
+ $('#pq').onclick=()=>runner({qs:shuffle(PQS).slice(0,20),mode:'quiz',title:'Who\'s who',back:'#/people',onFinish:res=>{drawNav();
+  V().innerHTML=resultsHTML(res,'Who\'s who','<p><a class="btn primary" href="#/people">Back to key people</a></p>');window.scrollTo(0,0);}});
 }
 
 /* ---------- flashcards (Leitner) ---------- */
@@ -4639,13 +5054,13 @@ function viewCards(unit){
  $('#d2').onclick=()=>cardSession(ms,unit);
  if($('#d3'))$('#d3').onclick=()=>cardSession(u.cards,unit);
 }
-function cardSession(list,unit){
- let q=shuffle(list),flipped=false,right=0,wrong=0;const back='#/cards'+(unit?'/'+unit:'');
+function cardSession(list,unit,backHref){
+ let q=shuffle(list),flipped=false,right=0,wrong=0;const back=backHref||('#/cards'+(unit?'/'+unit:''));
  function draw(){
   if(!q.length){S.cardSessions++;save();V().innerHTML='<h1>Session done</h1><p>'+right+' right, '+wrong+' missed (missed cards were repeated until you got them).</p><a class="btn primary" href="'+back+'">Back to decks</a>';keyHandler=null;return;}
   const c=q[0],s=cs(c.id);flipped=false;
-  V().innerHTML='<div class="rhead runner"><div class="rhead"><a href="'+back+'">← Exit</a><span>'+q.length+' left</span><span>'+UNIT[c.u].short+(s?' · box '+s.box:' · new')+'</span></div></div>'+
-  '<div class="fc" id="fc"><div><div>'+esc(c.f)+'</div><div class="back" id="bk" hidden>'+c.b+'</div><div class="hint" id="fh">Click or press <kbd>Space</kbd> to flip</div></div></div>'+
+  V().innerHTML='<div class="rhead runner"><div class="rhead"><a href="'+back+'">← Exit</a><span>'+q.length+' left</span><span>'+(c.person?'Who? · ':'')+UNIT[c.u].short+(s?' · box '+s.box:' · new')+'</span></div></div>'+
+  '<div class="fc" id="fc"><div><div>'+(c.person?'<span class="small muted">Who is known for…</span><br>':'')+esc(c.f)+'</div><div class="back" id="bk" hidden>'+c.b+'</div><div class="hint" id="fh">Click or press <kbd>Space</kbd> to flip</div></div></div>'+
   '<div class="ractions" id="ra" hidden><button class="btn" id="no">✗ Missed <kbd>1</kbd></button><button class="btn primary" id="yes">✓ Got it <kbd>2</kbd></button></div>';
   $('#fc').onclick=flip;$('#no').onclick=()=>grade(false);$('#yes').onclick=()=>grade(true);
  }
@@ -4811,17 +5226,17 @@ function viewPlan(){
 /* ---------- about & data ---------- */
 function viewAbout(){
  const words=u=>strip(u.lesson+' '+u.must.join(' ')).split(' ').length;
- const totW=UNITS.reduce((a,u)=>a+words(u),0),totQ=QB.length,totC=CARDS.length;
+ const totW=UNITS.reduce((a,u)=>a+words(u),0),totQ=QB.filter(q=>q.s!=='p').length,totC=CARDS.length-PCARDS.length;
  const uv='<span class="unverified">unverified</span>';
  V().innerHTML='<h1>About this guide</h1>'+
  '<div class="card"><h2 style="margin-top:0">Exam facts</h2><table><tr><th>Questions</th><td>About '+OUTLINE.questions+' (some are unscored pretest questions)</td></tr><tr><th>Time limit</th><td>'+OUTLINE.minutes+' minutes</td></tr><tr><th>Format</th><td>Multiple choice, five options</td></tr><tr><th>Score scale</th><td>'+OUTLINE.scale+'; ACE-recommended credit-granting score '+OUTLINE.passing+' ('+OUTLINE.credit+'). Individual colleges set their own policies.</td></tr></table>'+
  '<p class="small">Source: College Board, <a href="'+OUTLINE.url+'" target="_blank" rel="noopener">CLEP Introductory Sociology exam page</a> and the <a href="'+OUTLINE.glanceUrl+'" target="_blank" rel="noopener">“At a Glance” sheet</a>; retrieved '+OUTLINE.retrieved+'. The College Board site could not be loaded directly while this guide was built, so figures were confirmed from search extracts of those pages. Items that could not be confirmed are marked '+uv+'.</p></div>'+
  '<h2>Official content outline</h2><div class="tablewrap"><table><tr><th>Area</th><th>Weight</th><th>Subtopics</th><th>Units here</th></tr>'+OUTLINE.areas.map(a=>'<tr><td>'+esc(a.name)+'</td><td>'+a.weight+'%</td><td>'+a.sub.map(esc).join(', ')+(a.subVerified?'':' '+uv)+'</td><td>'+UNITS.filter(u=>u.area===a.id).map(u=>u.short).join(', ')+'</td></tr>').join('')+'</table></div>'+
  '<h3>Skills tested</h3><ul>'+OUTLINE.skills.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul><p class="small muted">The official page does not give a percentage for each skill, so none is shown.</p>'+
- '<h2>Content budget vs. official weights</h2><div class="tablewrap"><table><tr><th>Unit</th><th>Weight</th><th>Lesson words</th><th>Questions (quiz/diag/ex1/ex2)</th><th>Cards</th></tr>'+UNITS.map(u=>{const c=s=>QB.filter(q=>q.u===u.id&&q.s===s).length,t=QB.filter(q=>q.u===u.id).length;return'<tr><td>'+u.short+' '+esc(u.title)+'</td><td>'+u.weight+'%</td><td>'+words(u)+' ('+pct(words(u),totW)+'%)</td><td>'+t+' ('+pct(t,totQ)+'%) · '+c('q')+'/'+c('d')+'/'+c('a')+'/'+c('b')+'</td><td>'+u.cards.length+' ('+pct(u.cards.length,totC)+'%)</td></tr>';}).join('')+'<tr><th>Total</th><th>100%</th><th>'+totW+'</th><th>'+totQ+'</th><th>'+totC+'</th></tr></table></div>'+
+ '<h2>Content budget vs. official weights</h2><div class="tablewrap"><table><tr><th>Unit</th><th>Weight</th><th>Lesson words</th><th>Questions (quiz/diag/ex1/ex2 + extra)</th><th>Cards</th></tr>'+UNITS.map(u=>{const c=s=>QB.filter(q=>q.u===u.id&&q.s===s).length,t=QB.filter(q=>q.u===u.id&&q.s!=='p').length;return'<tr><td>'+u.short+' '+esc(u.title)+'</td><td>'+u.weight+'%</td><td>'+words(u)+' ('+pct(words(u),totW)+'%)</td><td>'+t+' ('+pct(t,totQ)+'%) · '+c('q')+'/'+c('d')+'/'+c('a')+'/'+c('b')+' + '+c('x')+'</td><td>'+u.cards.length+' ('+pct(u.cards.length,totC)+'%)</td></tr>';}).join('')+'<tr><th>Total</th><th>100%</th><th>'+totW+'</th><th>'+totQ+'</th><th>'+totC+'</th></tr></table></div>'+
  '<h2>Keyboard shortcuts</h2><table><tr><td><kbd>1</kbd>–<kbd>5</kbd> or <kbd>A</kbd>–<kbd>E</kbd></td><td>Answer a question</td></tr><tr><td><kbd>Enter</kbd></td><td>Next question</td></tr><tr><td><kbd>←</kbd> <kbd>→</kbd> <kbd>F</kbd></td><td>Practice exam: previous / next / flag</td></tr><tr><td><kbd>Space</kbd>, then <kbd>1</kbd>/<kbd>2</kbd></td><td>Flashcards: flip, then missed / got it</td></tr></table>'+
  '<h2>Your data</h2><p class="small">Progress is saved in this browser only'+(storageOK?'.':' — <b>but storage is currently blocked</b>, so export before closing the tab.')+' Export a backup file to move progress to another device.</p><p><button class="btn primary" id="ex">Export progress (JSON)</button><label class="btn">Import progress<input type="file" id="im" accept=".json,application/json" hidden></label><button class="btn" id="rs">Reset everything</button></p><textarea id="dump" hidden style="width:100%;height:8rem;font:12px monospace"></textarea>'+
- '<h2>Notes</h2><p class="small muted">All lessons, questions, and flashcards were written originally for this guide; none are copied from College Board or commercial prep materials. CLEP and College Board are trademarks of the College Board, which does not endorse this guide.</p>';
+ '<h2>Notes</h2><p class="small muted">All lessons, questions, and flashcards were written originally for this guide; none are copied from College Board or commercial prep materials. Coverage was cross-checked against a published practice test (Peterson\'s, 2004) and a user-made “important people” flashcard list; topics they test that were missing were added as new lesson text, flashcards, and original extra-practice questions. The Key People section lists '+PEOPLE.length+' people and generates its who\'s-who questions from that list. CLEP and College Board are trademarks of the College Board, which does not endorse this guide.</p>';
  $('#ex').onclick=()=>{const txt=JSON.stringify(S);try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:'application/json'}));a.download='clep-sociology-progress-'+ymd(new Date())+'.json';document.body.appendChild(a);a.click();a.remove();}catch(e){}const d=$('#dump');d.hidden=false;d.value=txt;d.select();};
  $('#im').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const o=JSON.parse(r.result);if(!o||o.v!==1)throw 0;S=Object.assign(fresh(),o);save();applyTheme();toast('Progress imported');route();}catch(err){alert('That file is not a valid progress export.');}};r.readAsText(f);};
  $('#rs').onclick=()=>askConfirm('Erase all progress, scores, flashcard boxes and the mistake log? This cannot be undone.','Erase everything',()=>{S=fresh();save();applyTheme();route();});

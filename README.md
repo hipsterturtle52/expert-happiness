@@ -1,7 +1,7 @@
 # CLEP Introductory Sociology — study guide
 
 A single self-contained HTML file that takes a beginner to a confident pass on the
-CLEP Introductory Sociology exam in about 20–25 hours. There is no build step and no
+CLEP Introductory Sociology exam in about 25–30 hours. There is no build step and no
 dependencies, and it works offline: download it and open it in any browser.
 
 **Open:** `clep-introductory-sociology-study-guide.html`
@@ -14,8 +14,9 @@ dependencies, and it works offline: download it and open it in any browser.
 | Each unit | Lesson (10–15 min read, theorist → idea → example), must-know box, comparison table or theory grid, 10–15 question quiz, flashcards |
 | Diagnostic | 30 questions across all units, then each unit is marked *Skim* or *Must study* |
 | Practice exams | Two full-length exams: 100 questions each, 90-minute timer that cannot be paused, results by content area and by unit |
-| Question bank | 384 original 5-option questions with an explanation for every option. No question repeats across the quizzes, the diagnostic and the two exams |
-| Flashcards | 251 cards in Leitner boxes (a missed card returns sooner), plus a “review missed only” mode |
+| Question bank | 417 original 5-option questions with an explanation for every option: quizzes, diagnostic, two exams, plus 33 extra-practice questions on topics found missing when the guide was checked against a published practice test. No question repeats across sets |
+| Key people | 107 sociologists with what each is known for, a searchable table, an idea → name flashcard deck, and a who's-who quiz (107 generated questions) |
+| Flashcards | 276 unit cards plus 107 key-people cards in Leitner boxes (a missed card returns sooner), plus a “review missed only” mode |
 | Mistake log | Every question you miss goes into a drill queue until you answer it right twice in a row |
 | Readiness meter | Shows “Ready to book” only when both practice exams are at 75% or higher |
 | Study plan | Enter your hours per day and exam date to get a day-by-day schedule, with the practice exams on the last two days |
